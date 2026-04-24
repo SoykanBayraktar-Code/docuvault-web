@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  /* Vault Meridiem — DocuVault brand tokens */
+  --color-primary: #4a5c3f;
+  --color-primary-light: #6b7f5e;
+  --color-primary-dark: #2e3d27;
+  --color-primary-muted: #eaf0e5;
+
+  --color-secondary: #9c6b3c;
+  --color-secondary-light: #b8844e;
+  --color-secondary-muted: #f5ebe0;
+
+  --color-background: #f9f6f1;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #fdfaf6;
+
+  --color-border-warm: #e6ddd1;
+  --color-border-light: #f0e8df;
+  --color-divider: #ede5dc;
+
+  --color-text-primary: #1c1c1e;
+  --color-text-secondary: #6b6b70;
+  --color-text-tertiary: #9b9ba0;
+  --color-text-inverse: #ffffff;
+
+  --color-success: #4a7c59;
+  --color-warning: #b07c2a;
+  --color-error: #c0392b;
+  --color-info: #2c5f8a;
+
+  --color-cat-fatura: #4a5c3f;
+  --color-cat-kimlik: #9c6b3c;
+  --color-cat-sozlesme: #2c3e50;
+  --color-cat-recete: #a5522a;
+  --color-cat-sigorta: #5c7a9c;
+  --color-cat-banka: #3d7a5c;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, "SF Mono", Menlo,
+    monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+
+  --shadow-warm-sm: 0 1px 4px 0 rgba(155, 142, 126, 0.08);
+  --shadow-warm-md: 0 4px 12px 0 rgba(155, 142, 126, 0.12);
+  --shadow-warm-lg: 0 8px 20px 0 rgba(155, 142, 126, 0.16);
+  --shadow-warm-xl: 0 16px 40px 0 rgba(155, 142, 126, 0.18);
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Archival paper grain — subtle, cheap */
+.paper-grain {
+  background-image:
+    radial-gradient(
+      circle at 1px 1px,
+      rgba(155, 142, 126, 0.06) 1px,
+      transparent 0
+    );
+  background-size: 24px 24px;
+}
+
+/* Olive gradient blob for hero backdrop */
+.hero-blob {
+  background: radial-gradient(
+    60% 60% at 50% 40%,
+    rgba(74, 92, 63, 0.18) 0%,
+    rgba(156, 107, 60, 0.12) 40%,
+    transparent 75%
+  );
+  filter: blur(40px);
+}
+
+/* Glassmorphism for sticky navbar */
+.glass {
+  background: rgba(249, 246, 241, 0.75);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
