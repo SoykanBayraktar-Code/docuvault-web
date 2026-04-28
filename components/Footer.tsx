@@ -94,14 +94,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://soykanbayraktar-code.github.io/docuvault-privacy/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/terms"
                   className="text-text-secondary hover:text-primary transition-colors"
                 >
                   Kullanım Koşulları
-                </a>
+                </Link>
               </li>
               <li>
                 <a
