@@ -26,7 +26,9 @@ export default function AppStoreButtons({ size = "md", className = "" }: Props) 
   return (
     <div className={`flex flex-col sm:flex-row gap-3 ${className}`}>
       <a
-        href="https://apps.apple.com/app/docuvault/id-placeholder"
+        href="https://apps.apple.com/tr/app/docuvault-belge-kasas%C4%B1/id6762083376?l=tr"
+        target="_blank"
+        rel="noopener noreferrer"
         className={`group flex items-center gap-3 ${h} ${px} rounded-xl bg-[#1C1C1E] text-white hover:bg-black transition-colors shadow-warm-md`}
         aria-label="App Store'dan indir"
       >

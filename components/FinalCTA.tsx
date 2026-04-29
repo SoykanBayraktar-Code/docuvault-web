@@ -42,7 +42,7 @@ export default function FinalCTA() {
               <div className="flex flex-col items-center gap-3 p-5 rounded-2xl bg-primary-muted ring-1 ring-primary/15">
                 <div className="p-3 rounded-xl bg-white">
                   <QRCodeSVG
-                    value="https://appdocuvault.com"
+                    value="https://apps.apple.com/tr/app/docuvault-belge-kasas%C4%B1/id6762083376?l=tr"
                     size={128}
                     bgColor="#FFFFFF"
                     fgColor="#2E3D27"
