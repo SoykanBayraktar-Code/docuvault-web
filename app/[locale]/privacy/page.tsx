@@ -31,7 +31,7 @@ export default async function PrivacyPage({
   setRequestLocale(locale as Locale);
   const copy = getPrivacy(locale);
   const HeaderIcon = copy.headerIcon;
-  const supportEmail = "support@appdocuvault.com";
+  const supportEmail = "destek@appdocuvault.com";
 
   return (
     <div className="min-h-screen bg-background">

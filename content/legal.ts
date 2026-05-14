@@ -300,7 +300,7 @@ export const privacyTr: LegalCopy = {
       icon: Cloud,
       title: "Veri Saklama ve İkamet",
       items: [
-        "Yedeklenen belgeler, sektör lideri bulut altyapısı (Supabase + AWS) üzerinde şifrelenmiş olarak saklanır.",
+        "Yedeklenen belgeler, sektör lideri bulut altyapısı (Supabase) üzerinde şifrelenmiş olarak saklanır.",
         "Veri ikamet politikası AB tabanlı uçlarda tutulmaktadır.",
         "Tüm veri trafiği TLS 1.2+ üzerinden gerçekleştirilir.",
         "Yerel arşivdeki belgeler cihazınızda AES-256 simetrik şifreleme ile saklanır.",
@@ -334,7 +334,7 @@ export const privacyTr: LegalCopy = {
         "Verilerinizin düzeltilmesini veya güncellenmesini isteme.",
         "Verilerinizin silinmesini isteme.",
         "Veri işlemeye itiraz etme veya işleme faaliyetlerini kısıtlama.",
-        "Bu hakları kullanmak için support@appdocuvault.com adresinden bize ulaşın.",
+        "Bu hakları kullanmak için destek@appdocuvault.com adresinden bize ulaşın.",
       ],
     },
     {
@@ -414,7 +414,7 @@ export const privacyEn: LegalCopy = {
       icon: Cloud,
       title: "Data Storage & Residency",
       items: [
-        "Backed-up documents are stored encrypted on industry-leading cloud infrastructure (Supabase + AWS).",
+        "Backed-up documents are stored encrypted on industry-leading cloud infrastructure (Supabase).",
         "Data residency is maintained at EU-based endpoints.",
         "All data traffic is performed over TLS 1.2+.",
         "Documents in the local archive are stored on your device with AES-256 symmetric encryption.",
@@ -448,7 +448,7 @@ export const privacyEn: LegalCopy = {
         "Request correction or update of your data.",
         "Request deletion of your data.",
         "Object to processing or restrict processing activities.",
-        "To exercise these rights, contact us at support@appdocuvault.com.",
+        "To exercise these rights, contact us at destek@appdocuvault.com.",
       ],
     },
     {

@@ -3,7 +3,7 @@
     "siteName": "DocuVault",
     "downloadCta": "İndir",
     "backHome": "Ana Sayfa",
-    "supportEmail": "support@appdocuvault.com",
+    "supportEmail": "destek@appdocuvault.com",
     "languageLabel": "Dil",
     "languageTr": "Türkçe",
     "languageEn": "English",
@@ -178,7 +178,7 @@
       },
       "residency": {
         "title": "EU Veri İkameti",
-        "body": "Şifreli bulut, sektör lideri Supabase + AWS altyapısında AB tabanlı uçlarda saklanır. DocuVault ekibi içeriklere erişemez."
+        "body": "Şifreli bulut, sektör lideri Supabase altyapısında AB tabanlı uçlarda saklanır. DocuVault ekibi içeriklere erişemez."
       },
       "biometric": {
         "title": "Face ID + Yedek PIN",
@@ -194,7 +194,7 @@
     "items": [
       {
         "q": "Belgelerim nerede saklanıyor?",
-        "a": "Yerel arşivde cihazınızda AES-256 simetrik şifreleme ile saklanır. Bulut yedekleri sektör lideri Supabase + AWS altyapısında AB tabanlı uçlarda, TLS 1.2+ üzerinden iletilir ve şifreli olarak depolanır. DocuVault ekibinin içeriklerinize düz metin erişimi yoktur."
+        "a": "Yerel arşivde cihazınızda AES-256 simetrik şifreleme ile saklanır. Bulut yedekleri sektör lideri Supabase altyapısında AB tabanlı uçlarda, TLS 1.2+ üzerinden iletilir ve şifreli olarak depolanır. DocuVault ekibinin içeriklerinize düz metin erişimi yoktur."
       },
       {
         "q": "Aboneliğimi nasıl iptal ederim?",
