@@ -4,11 +4,36 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const SHOTS = [
-  { src: "/screenshots/01-kasam.png", label: "Ana Kasa", alt: "Kasa ana ekranı" },
-  { src: "/screenshots/02-ai-search.png", label: "AI Arama", alt: "AI arama ekranı" },
-  { src: "/screenshots/03-upload.png", label: "Yükleme", alt: "Yükleme ekranı" },
-  { src: "/screenshots/04-collections.png", label: "Koleksiyonlar", alt: "Koleksiyonlar ekranı" },
-  { src: "/screenshots/05-security.png", label: "Güvenlik", alt: "Güvenlik ekranı" },
+  {
+    src: "/screenshots-v1.1/tr/01-vault.webp",
+    label: "Tek Kasa",
+    alt: "Belgeleriniz tek yerde — ana kasa ekranı",
+  },
+  {
+    src: "/screenshots-v1.1/tr/02-scanner.webp",
+    label: "Yerleşik Tarayıcı",
+    alt: "Tek tuşla belge ekleme ve yerleşik tarayıcı",
+  },
+  {
+    src: "/screenshots-v1.1/tr/03-collections.webp",
+    label: "Koleksiyonlar",
+    alt: "Kendi koleksiyonlarınız — özel ikon ve renk",
+  },
+  {
+    src: "/screenshots-v1.1/tr/04-ai-summary.webp",
+    label: "AI Özet",
+    alt: "AI Yönetici Özeti — kritik noktalar ve öneriler",
+  },
+  {
+    src: "/screenshots-v1.1/tr/05-ai-search.webp",
+    label: "Doğal Dil Arama",
+    alt: "Doğal dilde AI arama",
+  },
+  {
+    src: "/screenshots-v1.1/tr/06-security.webp",
+    label: "Güvenlik",
+    alt: "Face ID ile güvende — AES-256 ve biyometrik",
+  },
 ];
 
 export default function Screenshots() {

@@ -200,10 +200,10 @@ export default function TermsPage() {
         <div className="mt-10 text-center">
           <p className="text-sm text-text-secondary">Sorularınız için</p>
           <a
-            href="mailto:destek@appdocuvault.com"
+            href="mailto:support@appdocuvault.com"
             className="mt-1 inline-block text-base font-semibold text-primary hover:text-primary-dark transition-colors"
           >
-            destek@appdocuvault.com
+            support@appdocuvault.com
           </a>
         </div>
       </main>

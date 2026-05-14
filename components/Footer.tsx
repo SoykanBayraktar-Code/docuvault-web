@@ -101,11 +101,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:destek@appdocuvault.com"
+                  href="mailto:support@appdocuvault.com"
                   className="inline-flex items-center gap-2 text-text-secondary hover:text-primary transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  destek@appdocuvault.com
+                  support@appdocuvault.com
                 </a>
               </li>
             </ul>

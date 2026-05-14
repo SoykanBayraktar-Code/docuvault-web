@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import {
-  Lock,
+  ScanLine,
+  FileText,
   Sparkles,
   Mic,
-  ScanLine,
   Wand2,
   FolderOpen,
   type LucideIcon,
@@ -15,38 +15,41 @@ type Feature = {
   icon: LucideIcon;
   title: string;
   body: string;
+  badge?: string;
 };
 
 const FEATURES: Feature[] = [
   {
-    icon: Lock,
-    title: "Güvenli Kasa",
-    body: "Face ID ve Touch ID biyometrik erişim. Şifrelenmiş bulut yedekleme ile belgeleriniz hep güvende.",
+    icon: ScanLine,
+    title: "Yerleşik Belge Tarayıcı",
+    body: "Otomatik kenar algılama, çoklu sayfa PDF birleştirme ve hizalama düzeltmesi. Üçüncü taraf uygulamaya gerek yok.",
+    badge: "V1.1",
+  },
+  {
+    icon: FileText,
+    title: "AI Yönetici Özeti",
+    body: "Yüklediğiniz her belge için anlamlı özet, kritik noktalar ve öneriler. Sözleşmeyi okumaya saatler harcamadan, özünü 30 saniyede.",
+    badge: "V1.1",
   },
   {
     icon: Sparkles,
-    title: "AI Destekli Arama",
-    body: "Gelişmiş yapay zeka ile doğal dilde arama. \"Geçen ay ki elektrik faturam\" yazın, saniyede bulsun.",
+    title: "Doğal Dil AI Arama",
+    body: "\"Geçen ay elektrik faturam\" yazın — AI sorgunuzu yorumlar, içerik ve nitelik birlikte değerlendirilir.",
   },
   {
     icon: Mic,
     title: "Sesli Komut",
-    body: "Türkçe sesli arama. Elleriniz doluyken bile belgelerinize sesli komutla ulaşın.",
-  },
-  {
-    icon: ScanLine,
-    title: "Otomatik OCR",
-    body: "Fotoğraf çekin, metni çıkartın. Taranmış belgeler aranabilir metne dönüşür.",
+    body: "Türkçe ve İngilizce sesli arama. Elleriniz doluyken bile belgelerinize tek söylemle ulaşın.",
   },
   {
     icon: Wand2,
-    title: "Akıllı İsimlendirme",
-    body: "AI içeriği okur, belgenizi kategorisine göre otomatik adlandırır: Fatura, Kimlik, Reçete…",
+    title: "Akıllı Adlandırma",
+    body: "AI içeriği okur; \"IMG_4519\" yerine \"Elektrik Faturası — Mart 2026\" gibi anlamlı bir isimle 8 yerleşik kategoriden doğru olanına atar.",
   },
   {
     icon: FolderOpen,
-    title: "Koleksiyonlar",
-    body: "İlgili belgeleri renk ve ikonla gruplayın. Ev, iş, sağlık — her şey yerli yerinde.",
+    title: "Özel Koleksiyonlar",
+    body: "Ev, iş, sağlık — kendi ikon ve renginizle sınırsız koleksiyon. İlgili belgeleri tek bakışta bulun.",
   },
 ];
 
@@ -84,8 +87,15 @@ export default function Features() {
               transition={{ duration: 0.5, delay: i * 0.05 }}
               className="group relative p-6 lg:p-7 rounded-2xl bg-surface ring-1 ring-border-warm shadow-warm-sm hover:shadow-warm-lg hover:-translate-y-0.5 transition-all duration-300"
             >
-              <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-primary-muted text-primary ring-1 ring-primary/10">
-                <f.icon className="w-5 h-5" strokeWidth={1.75} />
+              <div className="flex items-center justify-between">
+                <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-primary-muted text-primary ring-1 ring-primary/10">
+                  <f.icon className="w-5 h-5" strokeWidth={1.75} />
+                </div>
+                {f.badge && (
+                  <span className="px-2 py-0.5 rounded-full bg-secondary-muted text-secondary text-[10px] font-semibold tracking-wider uppercase ring-1 ring-secondary/20">
+                    {f.badge}
+                  </span>
+                )}
               </div>
               <h3 className="mt-5 text-lg font-semibold tracking-tight text-text-primary">
                 {f.title}

@@ -7,18 +7,18 @@ import { Lock, ShieldCheck, Fingerprint, ArrowRight } from "lucide-react";
 const PILLARS = [
   {
     icon: Lock,
-    title: "Uçtan Uca Şifreli",
-    body: "Belgeleriniz yüklenirken ve saklanırken endüstri standardı şifreleme ile korunur.",
+    title: "AES-256 + TLS 1.2+",
+    body: "Yerel arşivde AES-256 simetrik şifreleme. Tüm aktarım TLS 1.2+ üzerinden. Endüstri standardı, müzakere edilmez.",
   },
   {
     icon: ShieldCheck,
-    title: "Güvenli Altyapı",
-    body: "Güvenli bulut altyapısında özel depolama. Verilerinize yalnızca siz erişebilirsiniz.",
+    title: "EU Veri İkameti",
+    body: "Şifreli bulut, sektör lideri Supabase + AWS altyapısında AB tabanlı uçlarda saklanır. DocuVault ekibi içeriklere erişemez.",
   },
   {
     icon: Fingerprint,
-    title: "Biyometrik Kilit",
-    body: "Face ID ve Touch ID. Cihazınız kaybolsa bile kasanız kilitli kalır.",
+    title: "Face ID + Yedek PIN",
+    body: "Biyometrik doğrulama, yedek PIN ve uygulama arka plana alındığında otomatik kilit. Reklam SDK'sı veya IDFA tanımlayıcısı yok.",
   },
 ];
 

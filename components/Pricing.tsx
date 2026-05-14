@@ -5,18 +5,21 @@ import { motion } from "framer-motion";
 import { Check, Star, ArrowRight } from "lucide-react";
 
 const FREE_FEATURES = [
-  "50 MB depolama",
-  "3 belge/ay OCR",
-  "Temel arama",
-  "AI isimlendirme",
-  "Koleksiyonlar",
+  "50 MB şifreli bulut depolama",
+  "Ayda 3 belgeye kadar OCR",
+  "8 yerleşik kategori",
+  "Yerel arama",
+  "Yerleşik belge tarayıcı",
+  "Face ID / PIN koruması",
 ];
 
 const GOLD_COMPARISONS = [
   { label: "Depolama", from: "50 MB", to: "2 GB (40×)" },
   { label: "OCR / ay", from: "3 belge", to: "Sınırsız" },
-  { label: "AI Akıllı Arama", from: "Yok", to: "Aktif" },
-  { label: "Destek", from: "Standart", to: "Öncelikli" },
+  { label: "AI Yönetici Özeti", from: "Yok", to: "Aktif" },
+  { label: "Doğal Dil AI Arama", from: "Yok", to: "Aktif" },
+  { label: "Sesli Komut", from: "Yok", to: "Aktif" },
+  { label: "Özel Koleksiyon", from: "Yok", to: "Sınırsız" },
 ];
 
 export default function Pricing() {
