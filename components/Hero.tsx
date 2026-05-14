@@ -77,12 +77,13 @@ export default function Hero() {
               aria-hidden
             />
             <Image
-              src="/hero.png"
+              src="/hero.webp"
               alt="DocuVault mobil uygulama arayüzü"
               fill
               priority
+              fetchPriority="high"
               sizes="(min-width: 1024px) 520px, 90vw"
-              className="object-contain drop-shadow-[0_30px_60px_rgba(74,92,63,0.25)]"
+              className="object-contain drop-shadow-[0_30px_60px_rgba(74,92,63,0.25)] rounded-[40px]"
             />
           </div>
         </motion.div>
