@@ -85,10 +85,10 @@ export default function Support() {
               Destek e-postamız
             </p>
             <a
-              href="mailto:destek@appdocuvault.com"
+              href="mailto:support@appdocuvault.com"
               className="mt-1 text-lg font-semibold text-primary hover:text-primary-dark transition-colors"
             >
-              destek@appdocuvault.com
+              support@appdocuvault.com
             </a>
           </div>
         </motion.div>

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ShieldCheck, Cloud, Fingerprint } from "lucide-react";
+import { ShieldCheck, Cloud, Fingerprint, Sparkles } from "lucide-react";
 import AppStoreButtons from "./AppStoreButtons";
 
 export default function Hero() {
@@ -28,9 +28,9 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="lg:col-span-6 text-center lg:text-left"
         >
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-muted text-primary-dark text-xs font-medium tracking-wide uppercase ring-1 ring-primary/15">
-            <ShieldCheck className="w-3.5 h-3.5" />
-            Güvenli Belge Kasası
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-muted text-secondary text-xs font-semibold tracking-wide uppercase ring-1 ring-secondary/20">
+            <Sparkles className="w-3.5 h-3.5" />
+            Sürüm 1.1 · Yerleşik Tarayıcı + AI Özet
           </span>
 
           <h1 className="mt-5 text-4xl sm:text-5xl lg:text-[64px] lg:leading-[1.05] font-semibold tracking-tight text-text-primary">
@@ -40,9 +40,9 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 text-lg lg:text-xl text-text-secondary leading-relaxed max-w-xl mx-auto lg:mx-0">
-            Faturalar, kimlikler, sözleşmeler — tüm kritik belgelerinizi tek
-            bir şifrelenmiş kasada saklayın. Gelişmiş AI ile içerik arayın,
-            sesli komutla bulun.
+            Yerleşik tarayıcıyla anında dijitalleştirin. AI&rsquo;nin özetlediği,
+            doğal dille bulduğunuz, AES-256 ile şifrelenmiş bir belge kasası —
+            tek bir uygulamada.
           </p>
 
           <div className="mt-8 flex justify-center lg:justify-start">
@@ -56,7 +56,7 @@ export default function Hero() {
             </li>
             <li className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-primary" />
-              Uçtan uca şifreli
+              AES-256 şifreli
             </li>
             <li className="flex items-center gap-2">
               <Cloud className="w-4 h-4 text-primary" />

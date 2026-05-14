@@ -14,38 +14,38 @@ type Step = {
 const STEPS: Step[] = [
   {
     num: "01",
-    title: "Yükleyin",
-    body: "Kamerayla çekin, galeriden seçin ya da PDF yükleyin. Tek dokunuşla kasanıza düşer.",
-    image: "/screenshots/03-upload.png",
-    alt: "Belge yükleme ekranı",
+    title: "Tarayın veya Yükleyin",
+    body: "Yerleşik tarayıcıyı açın, çerçeveye alın — otomatik kenar algılama, çoklu sayfa PDF ve hizalama düzeltmesi arka planda halleder. Galeri, kamera ve dosya yükleme de açık.",
+    image: "/screenshots-v1.1/tr/02-scanner.webp",
+    alt: "Belge tarama ve yükleme ekranı",
   },
   {
     num: "02",
     title: "AI Düzenler",
-    body: "Yapay zeka içeriği okur, belgeyi otomatik adlandırır ve doğru kategoriye atar.",
-    image: "/screenshots/04-collections.png",
-    alt: "Koleksiyonlar ekranı",
+    body: "Yapay zeka içeriği okur, belgeyi anlamlı bir isimle (örn. \"Elektrik Faturası — Mart 2026\") kaydeder ve 8 yerleşik kategoriden doğru olanına atar.",
+    image: "/screenshots-v1.1/tr/03-collections.webp",
+    alt: "Koleksiyonlar ve kategoriler ekranı",
   },
   {
     num: "03",
-    title: "Güvenle Saklayın",
-    body: "Şifreli bulut kasası. Face ID ile kilitli. Yalnızca siz erişebilirsiniz.",
-    image: "/screenshots/05-security.png",
-    alt: "Güvenlik ekranı",
+    title: "Yönetici Özetini Görün",
+    body: "Belge detayında AI özeti, kritik noktalar ve öneriler birkaç saniyede gözünüzün önünde. Saatlerce tarama yerine, 30 saniyede özü.",
+    image: "/screenshots-v1.1/tr/04-ai-summary.webp",
+    alt: "AI Yönetici Özeti ekranı",
   },
   {
     num: "04",
-    title: "Saniyede Bulun",
-    body: "Yazın veya söyleyin. AI, binlerce belgenin içinden aradığınızı anında bulur.",
-    image: "/screenshots/02-ai-search.png",
-    alt: "AI arama ekranı",
+    title: "Doğal Dilde Bulun",
+    body: "Yazın veya söyleyin — \"geçen ay ki elektrik faturam\" gibi doğal sorgular için AI içerik ve niteliği birlikte değerlendirir.",
+    image: "/screenshots-v1.1/tr/05-ai-search.webp",
+    alt: "Doğal dil AI arama ekranı",
   },
   {
     num: "05",
-    title: "Kolayca Paylaşın",
-    body: "İhtiyaç duyduğunuz anda istediğiniz kişilerle tek dokunuşla paylaşın. Bir bağlantı gönderin — karşınızdaki uygulamaya gerek duymadan belgeye erişsin.",
-    image: "/screenshots/03-upload.png",
-    alt: "Belge paylaşım ekranı",
+    title: "Güvenle Saklayın",
+    body: "AES-256 yerel şifreleme, TLS 1.2+ aktarım, Face ID/Touch ID kilidi ve şifreli bulut yedek. Yalnızca siz erişebilirsiniz.",
+    image: "/screenshots-v1.1/tr/06-security.webp",
+    alt: "Güvenlik ve kilit ekranı",
   },
 ];
 
@@ -67,10 +67,11 @@ export default function HowItWorks() {
             Nasıl Çalışır
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-text-primary">
-            Dört adımda belge kaosunun sonu.
+            Beş adımda belge kaosunun sonu.
           </h2>
           <p className="mt-4 text-lg text-text-secondary leading-relaxed">
-            Yükleyin, düzenleyin, saklayın, bulun. Gerisini DocuVault halleder.
+            Tarayın, düzenleyin, özetleyin, bulun ve güvenle saklayın. Gerisini
+            DocuVault halleder.
           </p>
         </motion.div>
 
