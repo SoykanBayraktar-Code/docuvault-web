@@ -1,0 +1,215 @@
+{
+  "common": {
+    "siteName": "DocuVault",
+    "downloadCta": "İndir",
+    "backHome": "Ana Sayfa",
+    "supportEmail": "support@appdocuvault.com",
+    "languageLabel": "Dil",
+    "languageTr": "Türkçe",
+    "languageEn": "English"
+  },
+  "metadata": {
+    "title": "DocuVault — Belgeleriniz Güvende, Saniyeler İçinde Bulun",
+    "titleTemplate": "%s | DocuVault",
+    "description": "Yerleşik belge tarayıcı, AI özetleme ve doğal dil arama ile tüm kritik belgelerinizi tek bir şifrelenmiş kasada toplayın. iOS için. Türkçe ve İngilizce.",
+    "ogTitle": "DocuVault — Belgeleriniz Güvende, Saniyeler İçinde Bulun",
+    "ogDescription": "Yerleşik tarayıcı, AI özetleme ve doğal dil arama — tüm belgeleriniz tek bir şifreli kasada. iOS için.",
+    "twTitle": "DocuVault — Belgeleriniz Güvende",
+    "twDescription": "Yerleşik tarayıcı, AI özet ve doğal dil arama. iOS için şifreli belge kasası."
+  },
+  "nav": {
+    "features": "Özellikler",
+    "howItWorks": "Nasıl Çalışır",
+    "pricing": "Fiyatlandırma",
+    "support": "Destek",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "homeAriaLabel": "DocuVault ana sayfa"
+  },
+  "hero": {
+    "badge": "Sürüm 1.1 · Yerleşik Tarayıcı + AI Özet",
+    "title1": "Belgeleriniz güvende.",
+    "title2Highlight": "Saniyeler içinde",
+    "title2Rest": "bulun.",
+    "subtitle": "Yerleşik tarayıcıyla anında dijitalleştirin. AI'nin özetlediği, doğal dille bulduğunuz, AES-256 ile şifrelenmiş bir belge kasası — tek bir uygulamada.",
+    "trustFaceId": "Face ID / Touch ID",
+    "trustEncrypted": "AES-256 şifreli",
+    "trustCloud": "Bulut yedekli",
+    "imageAlt": "DocuVault mobil uygulama arayüzü"
+  },
+  "features": {
+    "eyebrow": "Özellikler",
+    "title1": "Modern belge yönetimi,",
+    "titleHighlight": "el yapımı gibi",
+    "title2": ".",
+    "subtitle": "Güvenliği, hızı ve zekâyı tek bir uygulamada birleştiriyoruz. Her detay, bir arşivcinin titizliğiyle tasarlandı.",
+    "items": {
+      "scanner": {
+        "title": "Yerleşik Belge Tarayıcı",
+        "body": "Otomatik kenar algılama, çoklu sayfa PDF birleştirme ve hizalama düzeltmesi. Üçüncü taraf uygulamaya gerek yok.",
+        "badge": "V1.1"
+      },
+      "aiSummary": {
+        "title": "AI Yönetici Özeti",
+        "body": "Yüklediğiniz her belge için anlamlı özet, kritik noktalar ve öneriler. Sözleşmeyi okumaya saatler harcamadan, özünü 30 saniyede.",
+        "badge": "V1.1"
+      },
+      "naturalLanguage": {
+        "title": "Doğal Dil AI Arama",
+        "body": "\"Geçen ay elektrik faturam\" yazın — AI sorgunuzu yorumlar, içerik ve nitelik birlikte değerlendirilir."
+      },
+      "voice": {
+        "title": "Sesli Komut",
+        "body": "Türkçe ve İngilizce sesli arama. Elleriniz doluyken bile belgelerinize tek söylemle ulaşın."
+      },
+      "smartNaming": {
+        "title": "Akıllı Adlandırma",
+        "body": "AI içeriği okur; \"IMG_4519\" yerine \"Elektrik Faturası — Mart 2026\" gibi anlamlı bir isimle 8 yerleşik kategoriden doğru olanına atar."
+      },
+      "collections": {
+        "title": "Özel Koleksiyonlar",
+        "body": "Ev, iş, sağlık — kendi ikon ve renginizle sınırsız koleksiyon. İlgili belgeleri tek bakışta bulun."
+      }
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "Nasıl Çalışır",
+    "title": "Beş adımda belge kaosunun sonu.",
+    "subtitle": "Tarayın, düzenleyin, özetleyin, bulun ve güvenle saklayın. Gerisini DocuVault halleder.",
+    "steps": {
+      "scan": {
+        "title": "Tarayın veya Yükleyin",
+        "body": "Yerleşik tarayıcıyı açın, çerçeveye alın — otomatik kenar algılama, çoklu sayfa PDF ve hizalama düzeltmesi arka planda halleder. Galeri, kamera ve dosya yükleme de açık.",
+        "alt": "Belge tarama ve yükleme ekranı"
+      },
+      "organize": {
+        "title": "AI Düzenler",
+        "body": "Yapay zeka içeriği okur, belgeyi anlamlı bir isimle (örn. \"Elektrik Faturası — Mart 2026\") kaydeder ve 8 yerleşik kategoriden doğru olanına atar.",
+        "alt": "Koleksiyonlar ve kategoriler ekranı"
+      },
+      "summary": {
+        "title": "Yönetici Özetini Görün",
+        "body": "Belge detayında AI özeti, kritik noktalar ve öneriler birkaç saniyede gözünüzün önünde. Saatlerce tarama yerine, 30 saniyede özü.",
+        "alt": "AI Yönetici Özeti ekranı"
+      },
+      "find": {
+        "title": "Doğal Dilde Bulun",
+        "body": "Yazın veya söyleyin — \"geçen ay ki elektrik faturam\" gibi doğal sorgular için AI içerik ve niteliği birlikte değerlendirir.",
+        "alt": "Doğal dil AI arama ekranı"
+      },
+      "secure": {
+        "title": "Güvenle Saklayın",
+        "body": "AES-256 yerel şifreleme, TLS 1.2+ aktarım, Face ID/Touch ID kilidi ve şifreli bulut yedek. Yalnızca siz erişebilirsiniz.",
+        "alt": "Güvenlik ve kilit ekranı"
+      }
+    }
+  },
+  "screenshots": {
+    "eyebrow": "Uygulamadan Kareler",
+    "title": "Her ekran, bir arşivin huzuru.",
+    "items": {
+      "vault": { "label": "Tek Kasa", "alt": "Belgeleriniz tek yerde — ana kasa ekranı" },
+      "scanner": { "label": "Yerleşik Tarayıcı", "alt": "Tek tuşla belge ekleme ve yerleşik tarayıcı" },
+      "collections": { "label": "Koleksiyonlar", "alt": "Kendi koleksiyonlarınız — özel ikon ve renk" },
+      "aiSummary": { "label": "AI Özet", "alt": "AI Yönetici Özeti — kritik noktalar ve öneriler" },
+      "aiSearch": { "label": "Doğal Dil Arama", "alt": "Doğal dilde AI arama" },
+      "security": { "label": "Güvenlik", "alt": "Face ID ile güvende — AES-256 ve biyometrik" }
+    }
+  },
+  "pricing": {
+    "eyebrow": "Fiyatlandırma",
+    "title": "Size uyan bir plan var.",
+    "subtitle": "Ücretsiz başlayın, ihtiyacınız büyüdükçe yükseltin. İstediğiniz zaman iptal edin.",
+    "freeTitle": "Ücretsiz",
+    "freePrice": "₺0",
+    "freeCurrentBadge": "Mevcut Plan",
+    "freeCta": "Uygulamayı İndir",
+    "freeFeatures": [
+      "50 MB şifreli bulut depolama",
+      "Ayda 3 belgeye kadar OCR",
+      "8 yerleşik kategori",
+      "Yerel arama",
+      "Yerleşik belge tarayıcı",
+      "Face ID / PIN koruması"
+    ],
+    "goldTitle": "Gold",
+    "popularBadge": "En Popüler",
+    "monthly": "Aylık",
+    "yearly": "Yıllık",
+    "yearlyDiscount": "%8,3 indirim",
+    "monthlyPrice": "₺999,99",
+    "monthlyPerUnit": "/ay",
+    "monthlyNote": "Aylık fatura",
+    "yearlyPrice": "₺10.999",
+    "yearlyPerUnit": "/yıl",
+    "yearlyNote": "₺916,58/ay · %8,3 indirim",
+    "goldComparisons": {
+      "storage": { "label": "Depolama", "from": "50 MB", "to": "2 GB (40×)" },
+      "ocr": { "label": "OCR / ay", "from": "3 belge", "to": "Sınırsız" },
+      "aiSummary": { "label": "AI Yönetici Özeti", "from": "Yok", "to": "Aktif" },
+      "naturalLanguage": { "label": "Doğal Dil AI Arama", "from": "Yok", "to": "Aktif" },
+      "voice": { "label": "Sesli Komut", "from": "Yok", "to": "Aktif" },
+      "collections": { "label": "Özel Koleksiyon", "from": "Yok", "to": "Sınırsız" }
+    },
+    "goldCta": "Gold'a Yükselt",
+    "footnote": "Aboneliğiniz, satın alma onayında Apple ID hesabınızdan ücretlendirilir. Abonelikler App Store üzerinden yönetilir."
+  },
+  "security": {
+    "eyebrow": "Güvenlik & Gizlilik",
+    "title": "Gizliliğiniz bizim için kutsaldır.",
+    "subtitle": "Belgeleriniz hayatınızın en mahrem parçalarından biri. Biz de böyle davranıyoruz.",
+    "pillars": {
+      "encryption": {
+        "title": "AES-256 + TLS 1.2+",
+        "body": "Yerel arşivde AES-256 simetrik şifreleme. Tüm aktarım TLS 1.2+ üzerinden. Endüstri standardı, müzakere edilmez."
+      },
+      "residency": {
+        "title": "EU Veri İkameti",
+        "body": "Şifreli bulut, sektör lideri Supabase + AWS altyapısında AB tabanlı uçlarda saklanır. DocuVault ekibi içeriklere erişemez."
+      },
+      "biometric": {
+        "title": "Face ID + Yedek PIN",
+        "body": "Biyometrik doğrulama, yedek PIN ve uygulama arka plana alındığında otomatik kilit. Reklam SDK'sı veya IDFA tanımlayıcısı yok."
+      }
+    },
+    "privacyLinkLabel": "Gizlilik Politikasını İncele"
+  },
+  "support": {
+    "eyebrow": "Destek",
+    "title": "Yardıma mı ihtiyacınız var?",
+    "subtitle": "Sorularınız, geri bildirimleriniz veya teknik sorunlarınız için buradayız. Size yardımcı olmaktan memnuniyet duyarız.",
+    "items": {
+      "fast": {
+        "title": "Hızlı Yanıt",
+        "body": "Sorularınızı e-posta ile iletebilirsiniz. En kısa sürede size dönüş yapıyoruz."
+      },
+      "hours": {
+        "title": "Destek Saatleri",
+        "body": "Hafta içi 09:00 – 18:00 saatleri arasında aktif olarak destek veriyoruz."
+      },
+      "email": {
+        "title": "E-posta Desteği",
+        "body": "Teknik sorunlar, hesap işlemleri veya geri bildirimleriniz için bize yazın."
+      }
+    },
+    "emailLabel": "Destek e-postamız"
+  },
+  "finalCta": {
+    "title": "Belge kaosuna bugün son verin.",
+    "subtitle": "DocuVault'u ücretsiz indirin. Dakikalar içinde kasanızı kurun, belgelerinizi güvenle saklayın.",
+    "qrLabel": "Telefonunuzla tara\nuygulamayı aç"
+  },
+  "appStore": {
+    "topLine": "App Store'dan",
+    "brand": "İndir",
+    "ariaLabel": "App Store'dan indir"
+  },
+  "footer": {
+    "tagline": "Belgeleriniz güvende, saniyeler içinde bulunur. Türkiye'de tasarlandı, dünyada kullanılıyor.",
+    "productHeading": "Ürün",
+    "legalHeading": "Yasal & Destek",
+    "linkPrivacy": "Gizlilik Politikası",
+    "linkTerms": "Kullanım Koşulları",
+    "rights": "© {year} DocuVault. Tüm hakları saklıdır."
+  }
+}

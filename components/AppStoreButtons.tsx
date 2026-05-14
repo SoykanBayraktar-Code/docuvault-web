@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 type Props = {
   size?: "md" | "lg";
   className?: string;
@@ -17,6 +21,7 @@ function AppleLogo({ className }: { className?: string }) {
 }
 
 export default function AppStoreButtons({ size = "md", className = "" }: Props) {
+  const t = useTranslations("appStore");
   const isLg = size === "lg";
   const h = isLg ? "h-16" : "h-14";
   const px = isLg ? "px-6" : "px-5";
@@ -30,12 +35,14 @@ export default function AppStoreButtons({ size = "md", className = "" }: Props) 
         target="_blank"
         rel="noopener noreferrer"
         className={`group flex items-center gap-3 ${h} ${px} rounded-xl bg-[#1C1C1E] text-white hover:bg-black transition-colors shadow-warm-md`}
-        aria-label="App Store'dan indir"
+        aria-label={t("ariaLabel")}
       >
         <AppleLogo className={isLg ? "w-7 h-7" : "w-6 h-6"} />
         <div className="flex flex-col leading-tight">
-          <span className={`${topText} text-white/70`}>App Store'dan</span>
-          <span className={`${brandText} font-semibold tracking-tight`}>İndir</span>
+          <span className={`${topText} text-white/70`}>{t("topLine")}</span>
+          <span className={`${brandText} font-semibold tracking-tight`}>
+            {t("brand")}
+          </span>
         </div>
       </a>
     </div>

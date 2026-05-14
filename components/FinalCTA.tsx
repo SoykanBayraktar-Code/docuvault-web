@@ -2,9 +2,13 @@
 
 import { motion } from "framer-motion";
 import { QRCodeSVG } from "qrcode.react";
+import { useTranslations } from "next-intl";
 import AppStoreButtons from "./AppStoreButtons";
 
 export default function FinalCTA() {
+  const t = useTranslations("finalCta");
+  const qrLabel = t("qrLabel");
+
   return (
     <section id="download" className="relative py-24 lg:py-32 overflow-hidden">
       <div
@@ -26,11 +30,10 @@ export default function FinalCTA() {
           <div className="relative grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
             <div className="md:col-span-8">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-text-primary">
-                Belge kaosuna bugün son verin.
+                {t("title")}
               </h2>
               <p className="mt-4 text-lg text-text-secondary max-w-xl leading-relaxed">
-                DocuVault&rsquo;u ücretsiz indirin. Dakikalar içinde kasanızı
-                kurun, belgelerinizi güvenle saklayın.
+                {t("subtitle")}
               </p>
 
               <div className="mt-8">
@@ -50,10 +53,8 @@ export default function FinalCTA() {
                     marginSize={0}
                   />
                 </div>
-                <span className="text-xs text-primary-dark font-medium text-center">
-                  Telefonunuzla tara
-                  <br />
-                  uygulamayı aç
+                <span className="text-xs text-primary-dark font-medium text-center whitespace-pre-line">
+                  {qrLabel}
                 </span>
               </div>
             </div>

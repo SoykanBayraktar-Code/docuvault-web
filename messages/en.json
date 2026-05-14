@@ -1,0 +1,215 @@
+{
+  "common": {
+    "siteName": "DocuVault",
+    "downloadCta": "Download",
+    "backHome": "Home",
+    "supportEmail": "support@appdocuvault.com",
+    "languageLabel": "Language",
+    "languageTr": "Türkçe",
+    "languageEn": "English"
+  },
+  "metadata": {
+    "title": "DocuVault — Your Documents, Safe. Found in Seconds.",
+    "titleTemplate": "%s | DocuVault",
+    "description": "Built-in document scanner, AI summarization and natural-language search. All your critical documents in one encrypted vault. For iOS. Turkish and English.",
+    "ogTitle": "DocuVault — Your Documents, Safe. Found in Seconds.",
+    "ogDescription": "Built-in scanner, AI summarization and natural-language search — all your documents in one encrypted vault. For iOS.",
+    "twTitle": "DocuVault — Your Documents, Safe.",
+    "twDescription": "Built-in scanner, AI summary and natural-language search. Encrypted document vault for iOS."
+  },
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "support": "Support",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "homeAriaLabel": "DocuVault home"
+  },
+  "hero": {
+    "badge": "Version 1.1 · Built-in Scanner + AI Summary",
+    "title1": "Your documents, safe.",
+    "title2Highlight": "Found in seconds",
+    "title2Rest": ".",
+    "subtitle": "Digitize instantly with the built-in scanner. AI summarizes, natural language finds, AES-256 protects — all in one app.",
+    "trustFaceId": "Face ID / Touch ID",
+    "trustEncrypted": "AES-256 encrypted",
+    "trustCloud": "Cloud backup",
+    "imageAlt": "DocuVault mobile app interface"
+  },
+  "features": {
+    "eyebrow": "Features",
+    "title1": "Modern document management,",
+    "titleHighlight": "handcrafted",
+    "title2": ".",
+    "subtitle": "Security, speed and intelligence — combined in a single app. Every detail designed with the discipline of a master archivist.",
+    "items": {
+      "scanner": {
+        "title": "Built-in Document Scanner",
+        "body": "Automatic edge detection, multi-page PDF stitching and skew correction. No third-party app required.",
+        "badge": "V1.1"
+      },
+      "aiSummary": {
+        "title": "AI Executive Summary",
+        "body": "Meaningful summary, critical points and recommendations for every document you upload. Get the gist in 30 seconds instead of hours of reading.",
+        "badge": "V1.1"
+      },
+      "naturalLanguage": {
+        "title": "Natural-Language AI Search",
+        "body": "Type \"last month's electricity bill\" — AI interprets your query, weighing content and document attributes together."
+      },
+      "voice": {
+        "title": "Voice Command",
+        "body": "Voice search in Turkish and English. Reach your documents hands-free, with a single spoken command."
+      },
+      "smartNaming": {
+        "title": "Smart Naming",
+        "body": "AI reads the content and files it as \"Electricity Bill — March 2026\" instead of \"IMG_4519\", sorting it into the right one of 8 built-in categories."
+      },
+      "collections": {
+        "title": "Custom Collections",
+        "body": "Home, work, health — unlimited collections with your own icon and color. Find related documents at a single glance."
+      }
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "How It Works",
+    "title": "Document chaos ends in five steps.",
+    "subtitle": "Scan, organize, summarize, find and store securely. DocuVault handles the rest.",
+    "steps": {
+      "scan": {
+        "title": "Scan or Upload",
+        "body": "Open the built-in scanner and frame the page — automatic edge detection, multi-page PDF and skew correction happen in the background. Gallery, camera and file upload are all supported.",
+        "alt": "Document scan and upload screen"
+      },
+      "organize": {
+        "title": "AI Organizes",
+        "body": "AI reads the content, saves it under a meaningful name (e.g. \"Electricity Bill — March 2026\") and assigns it to the right one of 8 built-in categories.",
+        "alt": "Collections and categories screen"
+      },
+      "summary": {
+        "title": "Read the Executive Summary",
+        "body": "On the document detail screen, AI gives you the summary, critical points and recommendations within seconds. The gist in 30 seconds, not hours of scanning.",
+        "alt": "AI Executive Summary screen"
+      },
+      "find": {
+        "title": "Find with Natural Language",
+        "body": "Type or speak — for natural queries like \"last month's electricity bill\", AI weighs both content and document attributes.",
+        "alt": "Natural-language AI search screen"
+      },
+      "secure": {
+        "title": "Store Securely",
+        "body": "AES-256 local encryption, TLS 1.2+ transport, Face ID/Touch ID lock and encrypted cloud backup. Only you have access.",
+        "alt": "Security and lock screen"
+      }
+    }
+  },
+  "screenshots": {
+    "eyebrow": "From the App",
+    "title": "Every screen, the calm of an archive.",
+    "items": {
+      "vault": { "label": "One Vault", "alt": "All your documents in one place — main vault screen" },
+      "scanner": { "label": "Built-in Scanner", "alt": "One-tap document capture and built-in scanner" },
+      "collections": { "label": "Collections", "alt": "Your own collections — custom icon and color" },
+      "aiSummary": { "label": "AI Summary", "alt": "AI Executive Summary — critical points and recommendations" },
+      "aiSearch": { "label": "Natural-Language Search", "alt": "Natural-language AI search" },
+      "security": { "label": "Security", "alt": "Safe with Face ID — AES-256 and biometric" }
+    }
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "A plan that fits you.",
+    "subtitle": "Start free, upgrade as your needs grow. Cancel anytime.",
+    "freeTitle": "Free",
+    "freePrice": "$0",
+    "freeCurrentBadge": "Current Plan",
+    "freeCta": "Download the App",
+    "freeFeatures": [
+      "50 MB encrypted cloud storage",
+      "Up to 3 documents/month OCR",
+      "8 built-in categories",
+      "Local search",
+      "Built-in document scanner",
+      "Face ID / PIN protection"
+    ],
+    "goldTitle": "Gold",
+    "popularBadge": "Most Popular",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "yearlyDiscount": "8.3% off",
+    "monthlyPrice": "$21.99",
+    "monthlyPerUnit": "/mo",
+    "monthlyNote": "Billed monthly · Approx. ₺999.99",
+    "yearlyPrice": "$241.99",
+    "yearlyPerUnit": "/yr",
+    "yearlyNote": "$20.17/mo · 8.3% off · Approx. ₺10,999",
+    "goldComparisons": {
+      "storage": { "label": "Storage", "from": "50 MB", "to": "2 GB (40×)" },
+      "ocr": { "label": "OCR / mo", "from": "3 docs", "to": "Unlimited" },
+      "aiSummary": { "label": "AI Executive Summary", "from": "None", "to": "Active" },
+      "naturalLanguage": { "label": "Natural-Language AI Search", "from": "None", "to": "Active" },
+      "voice": { "label": "Voice Command", "from": "None", "to": "Active" },
+      "collections": { "label": "Custom Collections", "from": "None", "to": "Unlimited" }
+    },
+    "goldCta": "Upgrade to Gold",
+    "footnote": "Approximate USD prices shown; final charge may differ slightly with App Store conversion. Subscription is charged to your Apple ID on confirmation. Manage subscriptions through the App Store."
+  },
+  "security": {
+    "eyebrow": "Security & Privacy",
+    "title": "Your privacy is sacred to us.",
+    "subtitle": "Your documents are among the most private parts of your life. We treat them that way.",
+    "pillars": {
+      "encryption": {
+        "title": "AES-256 + TLS 1.2+",
+        "body": "AES-256 symmetric encryption in the local archive. All transport over TLS 1.2+. Industry standard, non-negotiable."
+      },
+      "residency": {
+        "title": "EU Data Residency",
+        "body": "Encrypted cloud stored on industry-leading Supabase + AWS infrastructure at EU-based endpoints. The DocuVault team has no access to your content."
+      },
+      "biometric": {
+        "title": "Face ID + Backup PIN",
+        "body": "Biometric authentication, backup PIN and automatic lock when the app moves to the background. No ad SDKs, no IDFA identifier."
+      }
+    },
+    "privacyLinkLabel": "Read the Privacy Policy"
+  },
+  "support": {
+    "eyebrow": "Support",
+    "title": "Need a hand?",
+    "subtitle": "We're here for your questions, feedback or technical issues. Happy to help.",
+    "items": {
+      "fast": {
+        "title": "Quick Response",
+        "body": "Send your questions by email. We get back to you as soon as possible."
+      },
+      "hours": {
+        "title": "Support Hours",
+        "body": "Active support Monday to Friday, 09:00 – 18:00 (UTC+3)."
+      },
+      "email": {
+        "title": "Email Support",
+        "body": "Write to us for technical issues, account matters or product feedback."
+      }
+    },
+    "emailLabel": "Support email"
+  },
+  "finalCta": {
+    "title": "End document chaos today.",
+    "subtitle": "Download DocuVault for free. Set up your vault in minutes and store your documents securely.",
+    "qrLabel": "Scan with your phone\nto open the app"
+  },
+  "appStore": {
+    "topLine": "Download on the",
+    "brand": "App Store",
+    "ariaLabel": "Download on the App Store"
+  },
+  "footer": {
+    "tagline": "Documents safe, found in seconds. Designed in Türkiye, used worldwide.",
+    "productHeading": "Product",
+    "legalHeading": "Legal & Support",
+    "linkPrivacy": "Privacy Policy",
+    "linkTerms": "Terms of Use",
+    "rights": "© {year} DocuVault. All rights reserved."
+  }
+}

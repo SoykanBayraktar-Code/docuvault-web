@@ -2,41 +2,30 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 
-const SHOTS = [
-  {
-    src: "/screenshots-v1.1/tr/01-vault.webp",
-    label: "Tek Kasa",
-    alt: "Belgeleriniz tek yerde — ana kasa ekranı",
-  },
-  {
-    src: "/screenshots-v1.1/tr/02-scanner.webp",
-    label: "Yerleşik Tarayıcı",
-    alt: "Tek tuşla belge ekleme ve yerleşik tarayıcı",
-  },
-  {
-    src: "/screenshots-v1.1/tr/03-collections.webp",
-    label: "Koleksiyonlar",
-    alt: "Kendi koleksiyonlarınız — özel ikon ve renk",
-  },
-  {
-    src: "/screenshots-v1.1/tr/04-ai-summary.webp",
-    label: "AI Özet",
-    alt: "AI Yönetici Özeti — kritik noktalar ve öneriler",
-  },
-  {
-    src: "/screenshots-v1.1/tr/05-ai-search.webp",
-    label: "Doğal Dil Arama",
-    alt: "Doğal dilde AI arama",
-  },
-  {
-    src: "/screenshots-v1.1/tr/06-security.webp",
-    label: "Güvenlik",
-    alt: "Face ID ile güvende — AES-256 ve biyometrik",
-  },
-];
+const SHOT_KEYS = [
+  "vault",
+  "scanner",
+  "collections",
+  "aiSummary",
+  "aiSearch",
+  "security",
+] as const;
+
+const SHOT_IMAGES: Record<(typeof SHOT_KEYS)[number], string> = {
+  vault: "01-vault.webp",
+  scanner: "02-scanner.webp",
+  collections: "03-collections.webp",
+  aiSummary: "04-ai-summary.webp",
+  aiSearch: "05-ai-search.webp",
+  security: "06-security.webp",
+};
 
 export default function Screenshots() {
+  const t = useTranslations("screenshots");
+  const locale = useLocale();
+
   return (
     <section className="relative py-24 lg:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 lg:px-8 mb-14">
@@ -48,10 +37,10 @@ export default function Screenshots() {
           className="max-w-2xl"
         >
           <span className="text-xs font-semibold tracking-[0.14em] uppercase text-secondary">
-            Uygulamadan Kareler
+            {t("eyebrow")}
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-text-primary">
-            Her ekran, bir arşivin huzuru.
+            {t("title")}
           </h2>
         </motion.div>
       </div>
@@ -68,9 +57,9 @@ export default function Screenshots() {
 
         <div className="overflow-x-auto scrollbar-none snap-x snap-mandatory">
           <ul className="flex items-stretch gap-6 lg:gap-8 px-5 lg:px-8 pb-6 min-w-max">
-            {SHOTS.map((s, i) => (
+            {SHOT_KEYS.map((key, i) => (
               <motion.li
-                key={s.src}
+                key={key}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
@@ -84,15 +73,15 @@ export default function Screenshots() {
                       aria-hidden
                     />
                     <Image
-                      src={s.src}
-                      alt={s.alt}
+                      src={`/screenshots-v1.1/${locale}/${SHOT_IMAGES[key]}`}
+                      alt={t(`items.${key}.alt`)}
                       fill
                       sizes="(min-width: 1024px) 320px, 280px"
                       className="object-contain drop-shadow-[0_18px_36px_rgba(74,92,63,0.22)]"
                     />
                   </div>
                   <figcaption className="mt-4 text-sm font-medium text-text-secondary tracking-wide">
-                    {s.label}
+                    {t(`items.${key}.label`)}
                   </figcaption>
                 </figure>
               </motion.li>
