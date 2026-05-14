@@ -31,7 +31,7 @@ export default async function TermsPage({
   setRequestLocale(locale as Locale);
   const copy = getTerms(locale);
   const HeaderIcon = copy.headerIcon;
-  const supportEmail = "support@appdocuvault.com";
+  const supportEmail = "destek@appdocuvault.com";
 
   return (
     <div className="min-h-screen bg-background">

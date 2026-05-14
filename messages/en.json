@@ -3,7 +3,7 @@
     "siteName": "DocuVault",
     "downloadCta": "Download",
     "backHome": "Home",
-    "supportEmail": "support@appdocuvault.com",
+    "supportEmail": "destek@appdocuvault.com",
     "languageLabel": "Language",
     "languageTr": "Türkçe",
     "languageEn": "English",
@@ -178,7 +178,7 @@
       },
       "residency": {
         "title": "EU Data Residency",
-        "body": "Encrypted cloud stored on industry-leading Supabase + AWS infrastructure at EU-based endpoints. The DocuVault team has no access to your content."
+        "body": "Encrypted cloud stored on industry-leading Supabase infrastructure at EU-based endpoints. The DocuVault team has no access to your content."
       },
       "biometric": {
         "title": "Face ID + Backup PIN",
@@ -194,7 +194,7 @@
     "items": [
       {
         "q": "Where are my documents stored?",
-        "a": "They are stored on your device with AES-256 symmetric encryption in the local archive. Cloud backups are kept on industry-leading Supabase + AWS infrastructure at EU-based endpoints, transmitted over TLS 1.2+, and stored encrypted. The DocuVault team has no plaintext access to your content."
+        "a": "They are stored on your device with AES-256 symmetric encryption in the local archive. Cloud backups are kept on industry-leading Supabase infrastructure at EU-based endpoints, transmitted over TLS 1.2+, and stored encrypted. The DocuVault team has no plaintext access to your content."
       },
       {
         "q": "How do I cancel my subscription?",

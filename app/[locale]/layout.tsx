@@ -176,10 +176,10 @@ export default async function LocaleLayout({
     name: "DocuVault",
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
-    email: "support@appdocuvault.com",
+    email: "destek@appdocuvault.com",
     contactPoint: {
       "@type": "ContactPoint",
-      email: "support@appdocuvault.com",
+      email: "destek@appdocuvault.com",
       contactType: "customer support",
       availableLanguage: ["Turkish", "English"],
     },
