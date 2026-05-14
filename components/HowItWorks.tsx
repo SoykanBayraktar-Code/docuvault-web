@@ -6,11 +6,11 @@ import { useLocale, useTranslations } from "next-intl";
 
 const STEP_KEYS = ["scan", "organize", "summary", "find", "secure"] as const;
 const STEP_IMAGES: Record<(typeof STEP_KEYS)[number], string> = {
-  scan: "02-scanner.webp",
-  organize: "03-collections.webp",
-  summary: "04-ai-summary.webp",
-  find: "05-ai-search.webp",
-  secure: "06-security.webp",
+  scan: "02-scanner",
+  organize: "03-collections",
+  summary: "04-ai-summary",
+  find: "05-ai-search",
+  secure: "06-security",
 };
 
 const STEP_NUMS = ["01", "02", "03", "04", "05"];
@@ -70,13 +70,13 @@ export default function HowItWorks() {
                 </div>
 
                 <div className="lg:col-span-6 flex justify-center">
-                  <div className="relative w-full max-w-sm aspect-9/16">
+                  <div className="relative w-full max-w-[360px] aspect-[720/1328]">
                     <div
                       className="absolute inset-4 rounded-[40px] bg-primary/10 blur-2xl"
                       aria-hidden
                     />
                     <Image
-                      src={`/screenshots-v1.1/${locale}/${STEP_IMAGES[key]}`}
+                      src={`/phone/${locale}/${STEP_IMAGES[key]}.webp`}
                       alt={t(`steps.${key}.alt`)}
                       fill
                       sizes="(min-width: 1024px) 360px, 80vw"

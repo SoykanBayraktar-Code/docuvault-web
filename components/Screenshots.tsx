@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
+import Lightbox, { type LightboxImage } from "./Lightbox";
 
 const SHOT_KEYS = [
   "vault",
@@ -14,17 +16,23 @@ const SHOT_KEYS = [
 ] as const;
 
 const SHOT_IMAGES: Record<(typeof SHOT_KEYS)[number], string> = {
-  vault: "01-vault.webp",
-  scanner: "02-scanner.webp",
-  collections: "03-collections.webp",
-  aiSummary: "04-ai-summary.webp",
-  aiSearch: "05-ai-search.webp",
-  security: "06-security.webp",
+  vault: "01-vault",
+  scanner: "02-scanner",
+  collections: "03-collections",
+  aiSummary: "04-ai-summary",
+  aiSearch: "05-ai-search",
+  security: "06-security",
 };
 
 export default function Screenshots() {
   const t = useTranslations("screenshots");
   const locale = useLocale();
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const lightboxImages: LightboxImage[] = SHOT_KEYS.map((key) => ({
+    src: `/phone/${locale}/${SHOT_IMAGES[key]}.webp`,
+    alt: t(`items.${key}.alt`),
+  }));
 
   return (
     <section className="relative py-24 lg:py-32 overflow-hidden">
@@ -67,19 +75,23 @@ export default function Screenshots() {
                 className="snap-center shrink-0"
               >
                 <figure className="flex flex-col items-center">
-                  <div className="relative w-60 sm:w-70 lg:w-80 aspect-9/16">
+                  <button
+                    onClick={() => setOpenIndex(i)}
+                    className="relative w-60 sm:w-72 lg:w-80 aspect-[720/1328] cursor-zoom-in transition-transform duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background rounded-2xl"
+                    aria-label={t(`items.${key}.alt`)}
+                  >
                     <div
                       className="absolute inset-3 rounded-[40px] bg-primary/12 blur-xl"
                       aria-hidden
                     />
                     <Image
-                      src={`/screenshots-v1.1/${locale}/${SHOT_IMAGES[key]}`}
+                      src={`/phone/${locale}/${SHOT_IMAGES[key]}.webp`}
                       alt={t(`items.${key}.alt`)}
                       fill
                       sizes="(min-width: 1024px) 320px, 280px"
                       className="object-contain drop-shadow-[0_18px_36px_rgba(74,92,63,0.22)]"
                     />
-                  </div>
+                  </button>
                   <figcaption className="mt-4 text-sm font-medium text-text-secondary tracking-wide">
                     {t(`items.${key}.label`)}
                   </figcaption>
@@ -89,6 +101,13 @@ export default function Screenshots() {
           </ul>
         </div>
       </div>
+
+      <Lightbox
+        images={lightboxImages}
+        openIndex={openIndex}
+        onClose={() => setOpenIndex(null)}
+        onNavigate={setOpenIndex}
+      />
     </section>
   );
 }
