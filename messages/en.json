@@ -6,7 +6,19 @@
     "supportEmail": "support@appdocuvault.com",
     "languageLabel": "Language",
     "languageTr": "Türkçe",
-    "languageEn": "English"
+    "languageEn": "English",
+    "backToTop": "Back to top",
+    "skipToContent": "Skip to content",
+    "closeDialog": "Close"
+  },
+  "cookieBanner": {
+    "ariaLabel": "Cookie preferences",
+    "title": "Allow cookies?",
+    "body": "We use essential cookies to improve your experience and collect anonymous usage stats. For details, see our",
+    "privacyLink": "Privacy Policy",
+    "accept": "Accept",
+    "reject": "Essential only",
+    "dismiss": "Dismiss this notice"
   },
   "metadata": {
     "title": "DocuVault — Your Documents, Safe. Found in Seconds.",
@@ -21,6 +33,7 @@
     "features": "Features",
     "howItWorks": "How It Works",
     "pricing": "Pricing",
+    "faq": "FAQ",
     "support": "Support",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
@@ -173,6 +186,45 @@
       }
     },
     "privacyLinkLabel": "Read the Privacy Policy"
+  },
+  "faq": {
+    "eyebrow": "Frequently Asked Questions",
+    "title": "Answers up front.",
+    "subtitle": "Quick answers to common questions. For anything else, our support email is one click away.",
+    "items": [
+      {
+        "q": "Where are my documents stored?",
+        "a": "They are stored on your device with AES-256 symmetric encryption in the local archive. Cloud backups are kept on industry-leading Supabase + AWS infrastructure at EU-based endpoints, transmitted over TLS 1.2+, and stored encrypted. The DocuVault team has no plaintext access to your content."
+      },
+      {
+        "q": "How do I cancel my subscription?",
+        "a": "Manage or cancel anytime via Settings > Apple ID > Subscriptions on your iPhone. If you do not cancel at least 24 hours before the end of the current period, the subscription renews automatically."
+      },
+      {
+        "q": "Are my documents used to train AI?",
+        "a": "No. For AI Executive Summary and natural-language search, a small portion of document content is sent to the AI service during processing; no persistent record is kept after processing. Your content is never used or sold for model training or any other data product."
+      },
+      {
+        "q": "When will Android be available?",
+        "a": "The current version is fully optimized for the iPhone interface. An Android implementation is on our roadmap, but no firm date has been announced yet."
+      },
+      {
+        "q": "Can I delete my account?",
+        "a": "Yes — anytime via Profile > Delete Account in the app. Documents are removed from both your device and the cloud simultaneously; complete removal across all backup layers may take up to 30 days."
+      },
+      {
+        "q": "Which devices are supported?",
+        "a": "iOS 15.1 and above on all iPhones (iPhone XR or newer recommended). A dedicated iPad interface is on our roadmap."
+      },
+      {
+        "q": "Is there Family Sharing or multi-device support?",
+        "a": "You can use the app on multiple devices with the same Apple ID. Family Sharing follows Apple's standard subscription framework; DocuVault doesn't currently offer an additional in-app sharing feature."
+      },
+      {
+        "q": "Does it work offline?",
+        "a": "Yes — you can access documents already in your vault offline. Cloud-based features such as AI summarization and natural-language search require an internet connection."
+      }
+    ]
   },
   "support": {
     "eyebrow": "Support",

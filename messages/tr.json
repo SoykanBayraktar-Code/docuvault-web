@@ -6,7 +6,19 @@
     "supportEmail": "support@appdocuvault.com",
     "languageLabel": "Dil",
     "languageTr": "Türkçe",
-    "languageEn": "English"
+    "languageEn": "English",
+    "backToTop": "Yukarı çık",
+    "skipToContent": "İçeriğe geç",
+    "closeDialog": "Kapat"
+  },
+  "cookieBanner": {
+    "ariaLabel": "Çerez tercihleri",
+    "title": "Çerezlere izin verin",
+    "body": "Site deneyiminizi iyileştirmek ve anonim kullanım istatistikleri toplamak için temel çerezler kullanıyoruz. Detaylar için",
+    "privacyLink": "Gizlilik Politikası",
+    "accept": "Kabul Et",
+    "reject": "Sadece Gerekli",
+    "dismiss": "Bu bildirimi kapat"
   },
   "metadata": {
     "title": "DocuVault — Belgeleriniz Güvende, Saniyeler İçinde Bulun",
@@ -21,6 +33,7 @@
     "features": "Özellikler",
     "howItWorks": "Nasıl Çalışır",
     "pricing": "Fiyatlandırma",
+    "faq": "SSS",
     "support": "Destek",
     "openMenu": "Menüyü aç",
     "closeMenu": "Menüyü kapat",
@@ -173,6 +186,45 @@
       }
     },
     "privacyLinkLabel": "Gizlilik Politikasını İncele"
+  },
+  "faq": {
+    "eyebrow": "Sıkça Sorulan Sorular",
+    "title": "Aklınızdaki sorular.",
+    "subtitle": "Hızlı cevaplar. Daha fazlası için destek e-postamıza yazabilirsiniz.",
+    "items": [
+      {
+        "q": "Belgelerim nerede saklanıyor?",
+        "a": "Yerel arşivde cihazınızda AES-256 simetrik şifreleme ile saklanır. Bulut yedekleri sektör lideri Supabase + AWS altyapısında AB tabanlı uçlarda, TLS 1.2+ üzerinden iletilir ve şifreli olarak depolanır. DocuVault ekibinin içeriklerinize düz metin erişimi yoktur."
+      },
+      {
+        "q": "Aboneliğimi nasıl iptal ederim?",
+        "a": "iPhone'unuzun Ayarlar > Apple ID > Abonelikler menüsünden istediğiniz zaman yönetebilir veya iptal edebilirsiniz. Mevcut dönem bitmeden en az 24 saat önce iptal edilmezse abonelik otomatik yenilenir."
+      },
+      {
+        "q": "AI özetleme ve arama belgelerimi eğitime mi kullanıyor?",
+        "a": "Hayır. AI Yönetici Özeti ve doğal dil arama için belge içeriğinin küçük bir parçası işlem süresince yapay zekâ servisine gönderilir; işlem bitince kalıcı kayıt tutulmaz. İçerikleriniz model eğitimi veya başka bir veri ürünü için kullanılmaz, satılmaz."
+      },
+      {
+        "q": "Android sürümü ne zaman çıkacak?",
+        "a": "Mevcut sürüm tamamen iPhone arayüzü için optimize edilmiştir. Android için yol haritamızda bir çalışma yer almakta, ancak henüz kesin bir tarih duyurulmamıştır."
+      },
+      {
+        "q": "Hesabımı silebilir miyim?",
+        "a": "Evet, uygulamadan Profil > Hesabı Sil seçeneğiyle istediğiniz zaman silebilirsiniz. Belgeleriniz hem cihazınızdan hem de buluttan eş zamanlı kaldırılır; tüm yedek katmanlardan tamamen silinmesi 30 günü bulabilir."
+      },
+      {
+        "q": "Hangi cihazları destekliyor?",
+        "a": "iOS 15.1 ve üzeri tüm iPhone'lar (iPhone XR ve sonrası önerilir). iPad'e özgü ayrı bir arayüz çalışması yol haritamızda yer almaktadır."
+      },
+      {
+        "q": "Aile paylaşımı veya çoklu cihaz desteği var mı?",
+        "a": "Aynı Apple ID ile birden çok cihazda kullanılabilir. Aile paylaşımı (Family Sharing) Apple'ın standart abonelik çerçevesinde değerlendirilmektedir; ek bir DocuVault paylaşım özelliği şu an için sunulmuyor."
+      },
+      {
+        "q": "İnternet olmadan da çalışıyor mu?",
+        "a": "Evet, kasaya alınmış belgelerinize çevrimdışı erişebilirsiniz. AI özetleme ve doğal dil arama gibi bulut tabanlı özellikler internet bağlantısı gerektirir."
+      }
+    ]
   },
   "support": {
     "eyebrow": "Destek",

@@ -3,11 +3,12 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ShieldCheck, Cloud, Fingerprint, Sparkles } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import AppStoreButtons from "./AppStoreButtons";
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const locale = useLocale();
 
   return (
     <section className="relative overflow-hidden pt-10 lg:pt-16 pb-20 lg:pb-28">
@@ -69,24 +70,24 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 32, rotate: -1 }}
-          animate={{ opacity: 1, y: 0, rotate: -1 }}
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
           className="lg:col-span-6 relative flex items-center justify-center"
         >
-          <div className="relative w-full max-w-md lg:max-w-lg aspect-3/4">
+          <div className="relative w-full max-w-[420px] lg:max-w-[480px] aspect-[720/1328]">
             <div
-              className="absolute inset-8 rounded-[48px] bg-primary/10 blur-2xl"
+              className="absolute inset-6 rounded-[56px] bg-primary/12 blur-3xl"
               aria-hidden
             />
             <Image
-              src="/hero.webp"
+              src={`/phone/${locale}/01-vault.webp`}
               alt={t("imageAlt")}
               fill
               priority
               fetchPriority="high"
-              sizes="(min-width: 1024px) 520px, 90vw"
-              className="object-contain drop-shadow-[0_30px_60px_rgba(74,92,63,0.25)] rounded-[40px]"
+              sizes="(min-width: 1024px) 480px, 90vw"
+              className="object-contain drop-shadow-[0_30px_60px_rgba(74,92,63,0.22)]"
             />
           </div>
         </motion.div>

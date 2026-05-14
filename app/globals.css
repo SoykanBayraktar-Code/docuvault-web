@@ -61,6 +61,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Anchor offset so sticky navbar doesn't cover section tops */
+:where(section[id]) {
+  scroll-margin-top: 88px;
+}
+
 body {
   background: var(--color-background);
   color: var(--color-text-primary);
