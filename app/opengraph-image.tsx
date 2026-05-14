@@ -32,14 +32,7 @@ export default function OpengraphImage() {
           }}
         />
 
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 16,
-            zIndex: 1,
-          }}
-        >
+        <div style={{ display: "flex", alignItems: "center", gap: 16, zIndex: 1 }}>
           <div
             style={{
               width: 64,
@@ -100,13 +93,20 @@ export default function OpengraphImage() {
           <div
             style={{
               display: "flex",
-              fontSize: 28,
+              flexDirection: "column",
+              gap: 6,
+              fontSize: 24,
               color: "#6B6B70",
               lineHeight: 1.4,
               maxWidth: 900,
             }}
           >
-            AI destekli belge kasası · Yerleşik tarayıcı · Akıllı özetleme
+            <div style={{ display: "flex" }}>
+              AI destekli belge kasası · Yerleşik tarayıcı · Akıllı özetleme
+            </div>
+            <div style={{ display: "flex", color: "#9B9BA0", fontSize: 20 }}>
+              Built-in scanner · AI summary · For iOS
+            </div>
           </div>
         </div>
 

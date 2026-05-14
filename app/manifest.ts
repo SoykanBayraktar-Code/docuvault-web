@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "DocuVault — Belge Kasası",
+    name: "DocuVault — Belge Kasası / Document Vault",
     short_name: "DocuVault",
     description:
-      "Belgeleriniz güvende, saniyeler içinde bulun. AI destekli akıllı belge kasası.",
+      "Belgeleriniz güvende, saniyeler içinde bulun. Your documents, safe, found in seconds.",
     start_url: "/",
     display: "standalone",
     background_color: "#F9F6F1",

@@ -1,18 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-
-const NAV_LINKS = [
-  { href: "#features", label: "Özellikler" },
-  { href: "#how", label: "Nasıl Çalışır" },
-  { href: "#pricing", label: "Fiyatlandırma" },
-  { href: "#support", label: "Destek" },
-];
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
+  const t = useTranslations("nav");
+  const tc = useTranslations("common");
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -22,6 +19,13 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const navLinks: { href: string; label: string }[] = [
+    { href: "#features", label: t("features") },
+    { href: "#how", label: t("howItWorks") },
+    { href: "#pricing", label: t("pricing") },
+    { href: "#support", label: t("support") },
+  ];
 
   return (
     <header
@@ -35,7 +39,7 @@ export default function Navbar() {
         <Link
           href="/"
           className="flex items-center gap-2.5 group"
-          aria-label="DocuVault ana sayfa"
+          aria-label={t("homeAriaLabel")}
         >
           <div className="relative w-9 h-9 rounded-lg overflow-hidden ring-1 ring-border-warm bg-surface">
             <Image
@@ -53,7 +57,7 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          {NAV_LINKS.map((l) => (
+          {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
@@ -65,18 +69,19 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
+          <LanguageSwitcher variant="navbar" />
           <a
             href="#download"
             className="inline-flex items-center h-10 px-5 rounded-full bg-secondary hover:bg-secondary-light text-white text-sm font-medium shadow-warm-sm transition-colors"
           >
-            İndir
+            {tc("downloadCta")}
           </a>
         </div>
 
         <button
           onClick={() => setOpen((v) => !v)}
           className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-text-primary hover:bg-primary-muted transition-colors"
-          aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
+          aria-label={open ? t("closeMenu") : t("openMenu")}
         >
           {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -85,7 +90,7 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden glass border-t border-border-warm/60">
           <div className="mx-auto max-w-7xl px-5 py-4 flex flex-col gap-1">
-            {NAV_LINKS.map((l) => (
+            {navLinks.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
@@ -95,12 +100,15 @@ export default function Navbar() {
                 {l.label}
               </a>
             ))}
+            <div className="pt-3 pb-1 px-2">
+              <LanguageSwitcher variant="menu" />
+            </div>
             <a
               href="#download"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center h-11 rounded-full bg-secondary text-white font-medium"
             >
-              İndir
+              {tc("downloadCta")}
             </a>
           </div>
         </div>

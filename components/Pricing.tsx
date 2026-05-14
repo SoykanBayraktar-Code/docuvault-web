@@ -3,27 +3,21 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Check, Star, ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const FREE_FEATURES = [
-  "50 MB şifreli bulut depolama",
-  "Ayda 3 belgeye kadar OCR",
-  "8 yerleşik kategori",
-  "Yerel arama",
-  "Yerleşik belge tarayıcı",
-  "Face ID / PIN koruması",
-];
-
-const GOLD_COMPARISONS = [
-  { label: "Depolama", from: "50 MB", to: "2 GB (40×)" },
-  { label: "OCR / ay", from: "3 belge", to: "Sınırsız" },
-  { label: "AI Yönetici Özeti", from: "Yok", to: "Aktif" },
-  { label: "Doğal Dil AI Arama", from: "Yok", to: "Aktif" },
-  { label: "Sesli Komut", from: "Yok", to: "Aktif" },
-  { label: "Özel Koleksiyon", from: "Yok", to: "Sınırsız" },
-];
+const COMPARISON_KEYS = [
+  "storage",
+  "ocr",
+  "aiSummary",
+  "naturalLanguage",
+  "voice",
+  "collections",
+] as const;
 
 export default function Pricing() {
+  const t = useTranslations("pricing");
   const [isYearly, setIsYearly] = useState(false);
+  const freeFeatures = t.raw("freeFeatures") as string[];
 
   return (
     <section id="pricing" className="relative py-24 lg:py-32">
@@ -36,14 +30,13 @@ export default function Pricing() {
           className="max-w-2xl"
         >
           <span className="text-xs font-semibold tracking-[0.14em] uppercase text-secondary">
-            Fiyatlandırma
+            {t("eyebrow")}
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-text-primary">
-            Size uyan bir plan var.
+            {t("title")}
           </h2>
           <p className="mt-4 text-lg text-text-secondary leading-relaxed">
-            Ücretsiz başlayın, ihtiyacınız büyüdükçe yükseltin. İstediğiniz
-            zaman iptal edin.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -59,19 +52,19 @@ export default function Pricing() {
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="text-xl font-semibold tracking-tight text-text-primary">
-                  Ücretsiz
+                  {t("freeTitle")}
                 </h3>
                 <p className="mt-1 text-2xl font-semibold text-text-primary">
-                  ₺0
+                  {t("freePrice")}
                 </p>
               </div>
               <span className="px-3 py-1 rounded-full bg-primary-muted text-primary-dark text-[11px] font-semibold tracking-wider uppercase">
-                Mevcut Plan
+                {t("freeCurrentBadge")}
               </span>
             </div>
 
             <ul className="mt-6 space-y-3 flex-1">
-              {FREE_FEATURES.map((f) => (
+              {freeFeatures.map((f) => (
                 <li
                   key={f}
                   className="flex items-start gap-2.5 text-[15px] text-text-secondary"
@@ -89,7 +82,7 @@ export default function Pricing() {
               href="#download"
               className="mt-7 inline-flex items-center justify-center h-11 rounded-full text-sm font-medium bg-primary-muted text-primary-dark hover:bg-primary hover:text-white transition-colors"
             >
-              Uygulamayı İndir
+              {t("freeCta")}
             </a>
           </motion.div>
 
@@ -102,19 +95,17 @@ export default function Pricing() {
             className="relative flex flex-col p-7 rounded-2xl ring-2 ring-secondary shadow-warm-lg"
             style={{ background: "#fffbf3" }}
           >
-            {/* En Popüler badge */}
             <span className="absolute -top-3 right-6 px-3 py-1 rounded-full bg-secondary text-white text-[11px] font-semibold tracking-wider uppercase shadow-warm-sm">
-              En Popüler
+              {t("popularBadge")}
             </span>
 
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5 text-secondary fill-secondary" />
               <h3 className="text-xl font-semibold tracking-tight text-secondary">
-                Gold
+                {t("goldTitle")}
               </h3>
             </div>
 
-            {/* Monthly / Yearly Toggle */}
             <div className="mt-4 flex items-center gap-1 p-1 rounded-full bg-white ring-1 ring-border-warm self-start">
               <button
                 onClick={() => setIsYearly(false)}
@@ -124,7 +115,7 @@ export default function Pricing() {
                     : "text-text-secondary hover:text-text-primary"
                 }`}
               >
-                Aylık
+                {t("monthly")}
               </button>
               <button
                 onClick={() => setIsYearly(true)}
@@ -134,63 +125,65 @@ export default function Pricing() {
                     : "text-text-secondary hover:text-text-primary"
                 }`}
               >
-                Yıllık
+                {t("yearly")}
                 <span
                   className={`text-[11px] font-semibold ${
                     isYearly ? "text-white/80" : "text-secondary"
                   }`}
                 >
-                  %8,3 indirim
+                  {t("yearlyDiscount")}
                 </span>
               </button>
             </div>
 
-            {/* Price */}
             <div className="mt-5">
               {isYearly ? (
                 <>
                   <div className="flex items-baseline gap-1">
                     <span className="text-4xl font-bold tracking-tight text-secondary">
-                      ₺10.999
+                      {t("yearlyPrice")}
                     </span>
-                    <span className="text-text-tertiary text-sm">/yıl</span>
+                    <span className="text-text-tertiary text-sm">
+                      {t("yearlyPerUnit")}
+                    </span>
                   </div>
                   <p className="mt-1 text-sm text-text-secondary">
-                    ₺916,58/ay · %8,3 indirim
+                    {t("yearlyNote")}
                   </p>
                 </>
               ) : (
                 <>
                   <div className="flex items-baseline gap-1">
                     <span className="text-4xl font-bold tracking-tight text-secondary">
-                      ₺999,99
+                      {t("monthlyPrice")}
                     </span>
-                    <span className="text-text-tertiary text-sm">/ay</span>
+                    <span className="text-text-tertiary text-sm">
+                      {t("monthlyPerUnit")}
+                    </span>
                   </div>
                   <p className="mt-1 text-sm text-text-secondary">
-                    Aylık fatura
+                    {t("monthlyNote")}
                   </p>
                 </>
               )}
             </div>
 
-            {/* Feature comparisons */}
             <ul className="mt-6 space-y-3 flex-1">
-              {GOLD_COMPARISONS.map((item) => (
+              {COMPARISON_KEYS.map((key) => (
                 <li
-                  key={item.label}
+                  key={key}
                   className="flex items-center justify-between text-[14px]"
                 >
                   <span className="text-text-secondary font-medium">
-                    {item.label}
+                    {t(`goldComparisons.${key}.label`)}
                   </span>
                   <div className="flex items-center gap-1.5">
                     <span className="text-text-tertiary line-through">
-                      {item.from}
+                      {t(`goldComparisons.${key}.from`)}
                     </span>
                     <ArrowRight className="w-3 h-3 text-text-tertiary shrink-0" />
                     <span className="font-semibold text-secondary">
-                      {item.to}
+                      {t(`goldComparisons.${key}.to`)}
                     </span>
                   </div>
                 </li>
@@ -201,14 +194,13 @@ export default function Pricing() {
               href="#download"
               className="mt-7 inline-flex items-center justify-center h-11 rounded-full text-sm font-semibold bg-secondary hover:bg-secondary-light text-white transition-colors shadow-warm-md"
             >
-              Gold&apos;a Yükselt
+              {t("goldCta")}
             </a>
           </motion.div>
         </div>
 
         <p className="mt-8 text-center text-xs text-text-tertiary">
-          Aboneliğiniz, satın alma onayında Apple ID hesabınızdan ücretlendirilir.
-          Abonelikler App Store üzerinden yönetilir.
+          {t("footnote")}
         </p>
       </div>
     </section>

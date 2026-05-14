@@ -3,9 +3,12 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ShieldCheck, Cloud, Fingerprint, Sparkles } from "lucide-react";
+import { useTranslations } from "next-intl";
 import AppStoreButtons from "./AppStoreButtons";
 
 export default function Hero() {
+  const t = useTranslations("hero");
+
   return (
     <section className="relative overflow-hidden pt-10 lg:pt-16 pb-20 lg:pb-28">
       <div
@@ -30,19 +33,19 @@ export default function Hero() {
         >
           <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-muted text-secondary text-xs font-semibold tracking-wide uppercase ring-1 ring-secondary/20">
             <Sparkles className="w-3.5 h-3.5" />
-            Sürüm 1.1 · Yerleşik Tarayıcı + AI Özet
+            {t("badge")}
           </span>
 
           <h1 className="mt-5 text-4xl sm:text-5xl lg:text-[64px] lg:leading-[1.05] font-semibold tracking-tight text-text-primary">
-            Belgeleriniz güvende.
+            {t("title1")}
             <br />
-            <span className="text-primary">Saniyeler içinde</span> bulun.
+            <span className="text-primary">{t("title2Highlight")}</span>
+            {/^[.,;!?]/.test(t("title2Rest")) ? "" : " "}
+            {t("title2Rest")}
           </h1>
 
           <p className="mt-6 text-lg lg:text-xl text-text-secondary leading-relaxed max-w-xl mx-auto lg:mx-0">
-            Yerleşik tarayıcıyla anında dijitalleştirin. AI&rsquo;nin özetlediği,
-            doğal dille bulduğunuz, AES-256 ile şifrelenmiş bir belge kasası —
-            tek bir uygulamada.
+            {t("subtitle")}
           </p>
 
           <div className="mt-8 flex justify-center lg:justify-start">
@@ -52,15 +55,15 @@ export default function Hero() {
           <ul className="mt-8 flex flex-wrap justify-center lg:justify-start items-center gap-x-6 gap-y-3 text-sm text-text-secondary">
             <li className="flex items-center gap-2">
               <Fingerprint className="w-4 h-4 text-primary" />
-              Face ID / Touch ID
+              {t("trustFaceId")}
             </li>
             <li className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-primary" />
-              AES-256 şifreli
+              {t("trustEncrypted")}
             </li>
             <li className="flex items-center gap-2">
               <Cloud className="w-4 h-4 text-primary" />
-              Bulut yedekli
+              {t("trustCloud")}
             </li>
           </ul>
         </motion.div>
@@ -78,7 +81,7 @@ export default function Hero() {
             />
             <Image
               src="/hero.webp"
-              alt="DocuVault mobil uygulama arayüzü"
+              alt={t("imageAlt")}
               fill
               priority
               fetchPriority="high"
