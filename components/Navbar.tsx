@@ -39,7 +39,7 @@ export default function Navbar() {
         >
           <div className="relative w-9 h-9 rounded-lg overflow-hidden ring-1 ring-border-warm bg-surface">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="DocuVault logo"
               fill
               className="object-contain"

@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Lock, ShieldCheck, Fingerprint, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { Lock, ShieldCheck, Fingerprint, ArrowRight } from "lucide-react";
 
 const PILLARS = [
   {
@@ -77,15 +78,13 @@ export default function Security() {
         </div>
 
         <div className="mt-12">
-          <a
-            href="https://soykanbayraktar-code.github.io/docuvault-privacy/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/privacy"
             className="inline-flex items-center gap-2 text-sm text-secondary-light hover:text-white transition-colors"
           >
             Gizlilik Politikasını İncele
-            <ExternalLink className="w-4 h-4" />
-          </a>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>

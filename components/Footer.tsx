@@ -13,7 +13,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2.5">
               <div className="relative w-10 h-10 rounded-lg overflow-hidden ring-1 ring-border-warm bg-surface">
                 <Image
-                  src="/logo.png"
+                  src="/logo.webp"
                   alt="DocuVault logo"
                   fill
                   className="object-contain"
@@ -84,14 +84,12 @@ export default function Footer() {
             </h4>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
-                <a
-                  href="https://soykanbayraktar-code.github.io/docuvault-privacy/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/privacy"
                   className="text-text-secondary hover:text-primary transition-colors"
                 >
                   Gizlilik Politikası
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
