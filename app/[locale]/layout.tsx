@@ -63,11 +63,24 @@ export async function generateMetadata({
       siteName: "DocuVault",
       title: t("ogTitle"),
       description: t("ogDescription"),
+      images: [
+        {
+          url: `${SITE_URL}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt:
+            locale === "tr"
+              ? "DocuVault — Belgeleriniz güvende, saniyeler içinde bulun."
+              : "DocuVault — Your documents, safe. Found in seconds.",
+          type: "image/png",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: t("twTitle"),
       description: t("twDescription"),
+      images: [`${SITE_URL}/twitter-image`],
     },
     robots: {
       index: true,
