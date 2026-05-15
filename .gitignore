@@ -39,6 +39,10 @@ yarn-error.log*
 # claude code local
 /.claude/
 
+# content-collections (build artifacts)
+.content-collections/
+
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

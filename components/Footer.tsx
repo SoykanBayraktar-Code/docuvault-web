@@ -54,6 +54,11 @@ export default async function Footer() {
                 </a>
               </li>
               <li>
+                <Link href="/blog" className="text-text-secondary hover:text-primary transition-colors">
+                  {tn("blog")}
+                </Link>
+              </li>
+              <li>
                 <a href="#faq" className="text-text-secondary hover:text-primary transition-colors">
                   {tn("faq")}
                 </a>

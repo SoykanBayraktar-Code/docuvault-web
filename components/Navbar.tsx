@@ -32,10 +32,11 @@ export default function Navbar() {
     };
   }, [open]);
 
-  const navLinks: { href: string; label: string }[] = [
+  const navLinks: { href: string; label: string; external?: boolean }[] = [
     { href: "#features", label: t("features") },
     { href: "#how", label: t("howItWorks") },
     { href: "#pricing", label: t("pricing") },
+    { href: "/blog", label: t("blog"), external: true },
     { href: "#faq", label: t("faq") },
     { href: "#support", label: t("support") },
   ];
@@ -76,16 +77,26 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-sm text-text-secondary hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded px-1"
-            >
-              {l.label}
-            </a>
-          ))}
+        <div className="hidden md:flex items-center gap-7">
+          {navLinks.map((l) =>
+            l.external ? (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="text-sm text-text-secondary hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded px-1"
+              >
+                {l.label}
+              </Link>
+            ) : (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-sm text-text-secondary hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded px-1"
+              >
+                {l.label}
+              </a>
+            )
+          )}
         </div>
 
         <div className="hidden md:flex items-center gap-3">
@@ -142,16 +153,27 @@ export default function Navbar() {
                 </button>
               </div>
               <div className="px-5 py-6 flex flex-col gap-1">
-                {navLinks.map((l) => (
-                  <a
-                    key={l.href}
-                    href={l.href}
-                    onClick={() => setOpen(false)}
-                    className="py-3 px-2 text-base text-text-primary hover:text-primary border-b border-border-light"
-                  >
-                    {l.label}
-                  </a>
-                ))}
+                {navLinks.map((l) =>
+                  l.external ? (
+                    <Link
+                      key={l.href}
+                      href={l.href}
+                      onClick={() => setOpen(false)}
+                      className="py-3 px-2 text-base text-text-primary hover:text-primary border-b border-border-light"
+                    >
+                      {l.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={l.href}
+                      href={l.href}
+                      onClick={() => setOpen(false)}
+                      className="py-3 px-2 text-base text-text-primary hover:text-primary border-b border-border-light"
+                    >
+                      {l.label}
+                    </a>
+                  )
+                )}
                 <div className="pt-4 pb-1 px-2">
                   <LanguageSwitcher variant="menu" />
                 </div>

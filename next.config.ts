@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 import { withSentryConfig } from "@sentry/nextjs";
+import { withContentCollections } from "@content-collections/next";
 import path from "path";
 
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
@@ -42,7 +43,13 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withSentryConfig(withNextIntl(nextConfig), {
+// Wrapping order:
+//   next-intl must be the *innermost* plugin so its turbopack rules attach
+//   directly to the config. Sentry then wraps that, and Content Collections
+//   sits on the outside as its own build step (it's a Next.js plugin only by
+//   convention — it doesn't compose into the runtime config).
+const withIntl = withNextIntl(nextConfig);
+const withSentry = withSentryConfig(withIntl, {
   org: "docuvault",
   project: "javascript-nextjs",
   silent: !process.env.CI,
@@ -51,3 +58,5 @@ export default withSentryConfig(withNextIntl(nextConfig), {
     disable: false,
   },
 });
+
+export default withContentCollections(withSentry as NextConfig);
