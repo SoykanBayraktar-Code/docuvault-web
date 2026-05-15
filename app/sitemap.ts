@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
+import { allPosts } from "content-collections";
 
 const SITE = "https://www.appdocuvault.com";
 
@@ -21,8 +22,9 @@ function alternatesFor(path: string) {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const paths = [
+  const staticPaths = [
     { path: "/", changeFrequency: "weekly" as const, priority: 1 },
+    { path: "/blog", changeFrequency: "daily" as const, priority: 0.8 },
     { path: "/terms", changeFrequency: "monthly" as const, priority: 0.5 },
     { path: "/privacy", changeFrequency: "monthly" as const, priority: 0.5 },
     {
@@ -33,7 +35,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const entries: MetadataRoute.Sitemap = [];
-  for (const { path, changeFrequency, priority } of paths) {
+
+  // Static pages
+  for (const { path, changeFrequency, priority } of staticPaths) {
     for (const locale of routing.locales) {
       entries.push({
         url: loc(locale, path),
@@ -44,5 +48,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
   }
+
+  // Blog posts (per-post per-locale)
+  for (const post of allPosts) {
+    const postPath = `/blog/${post.slug}`;
+    entries.push({
+      url: loc(post.locale, postPath),
+      lastModified: new Date(post.updated || post.date),
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: { languages: alternatesFor(postPath) },
+    });
+  }
+
   return entries;
 }

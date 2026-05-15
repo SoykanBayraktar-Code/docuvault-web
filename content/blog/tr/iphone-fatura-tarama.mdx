@@ -1,0 +1,153 @@
+---
+title: "iPhone ile Fatura Nasıl Taranır? (2026 Rehberi)"
+description: "iPhone'la 30 saniyede fatura tarama: adım adım rehber, kalite ipuçları, KVKK uyumlu saklama ve AI özetleme."
+date: "2026-05-22"
+author: "soykan-bayraktar"
+cover: "/blog/covers/iphone-fatura-tarama.webp"
+coverAlt: "iPhone ekranında elektrik faturası tarama ekranı"
+tags: ["fatura", "tarama", "iphone", "ipucu"]
+category: "rehber"
+pillar: "belge-tarayici-rehberi"
+seoTitle: "iPhone ile Fatura Nasıl Taranır? 2026 — DocuVault"
+seoDescription: "iPhone'la fatura tarama adım adım: yerleşik tarayıcıyla 30 saniyede dijitalleştirme, kalite ipuçları ve KVKK saklama."
+---
+
+Faturalar Türkiye'de en sık bürokratik döngünün başlangıcıdır: elektrik, su, doğal gaz, internet, kredi kartı, sigorta… Yılda ortalama bir hane **120-150 fatura** alır. Bunları kâğıt olarak biriktirmek hem zaman alır hem de aradığınızda bulamazsınız.
+
+Bu rehberde **iPhone'unuzla 30 saniyede bir faturayı dijitalleştirmenin** en hızlı yolunu göstereceğim — DocuVault V1.1'in yerleşik tarayıcısıyla, ama prensipler herhangi bir modern tarayıcı için geçerli.
+
+## Faturalarınızı neden dijitalleştirmelisiniz?
+
+- **Yer kazanırsınız.** Bir yıllık fatura yığını rahatlıkla 30 cm yüksekliğe ulaşır. Dijital arşivde 0 cm.
+- **Bulmak saniye sürer.** "Mart 2024 elektrik" diye yazın, gelsin. Klasör karıştırmaya gerek yok.
+- **Vergi mükellefiyseniz büyük kazanç.** Beyanname sezonunda 12 ay öncesinin faturasını bulmak zor; OCR'lı arşivde anında.
+- **KVKK ve veri güvenliği.** Kâğıt belge sigorta poliçeniz kapı önündeyse, kayıp riski yüksek. AES-256 şifreli arşiv kayıp riski sıfır.
+- **Aile paylaşımı.** Anneanne yine fatura kaybetmişse, bulutta yedek olduğu için 30 saniyede çıktı alabilirsiniz.
+
+## Adım adım: DocuVault ile 30 saniyede fatura tarama
+
+DocuVault V1.1'i [App Store'dan](https://apps.apple.com/tr/app/docuvault-belge-kasas%C4%B1/id6762083376?l=tr) indirip aşağıdaki akışı izleyebilirsiniz:
+
+### 1. Faturayı düz bir yüzeye koyun
+
+Masaya, mutfak tezgâhına, hatta yere. Önemli olan **homojen bir arka plan** (kâğıdın renginden açık ya da koyu) ve **iyi ışık**. Doğal ışık en iyisi; gece yapıyorsanız tavan ışığı altında. Telefonun gölgesinin faturanın üzerine düşmemesine dikkat edin.
+
+### 2. DocuVault'u açın
+
+Face ID ile kilit otomatik açılır. Eğer Face ID başarısız olursa yedek PIN'i kullanırsınız.
+
+### 3. Alt orta yeşil "+" butonuna dokunun
+
+"Belge Ekle" panosu açılır. Üç seçenek:
+- **Belge Tara** ← bu seçeneği seçin
+- Kamera
+- Galeri / Dosya
+
+### 4. Çerçeveyi yakalayın
+
+Telefonu faturanın üstüne tuttuğunuzda, **otomatik kenar algılama** faturanın 4 köşesini bulup yeşil bir dikdörtgenle gösterir. Tutamadıysa 1-2 saniye bekleyin ya da hafifçe geriye çekin.
+
+### 5. Çekin
+
+Otomatik çeker veya manuel deklanşöre dokunabilirsiniz. Çekildikten sonra DocuVault arka planda:
+
+- **Perspektif düzeltir** — kâğıdı dik açıdan çekmemiş olsanız bile sonuç dümdüz dikdörtgen
+- **Kontrastı optimize eder** — okunaklı ama kâğıt görünümü korunur
+- **OCR çalıştırır** — içindeki tüm metin aranabilir hâle gelir
+
+### 6. Çoklu sayfa için "Sayfa Ekle"yi tıklayın
+
+Sözleşme veya 2-3 sayfalık fatura için: "Sayfa Ekle" → bir sonraki sayfayı tarayın → tekrar "Sayfa Ekle"... Sayfa sırasını da değiştirebilirsiniz.
+
+### 7. "Bitir"e dokunun
+
+Burada DocuVault sihrini gösterir:
+
+- **AI içeriği okur.** "Bu bir elektrik faturasıdır, Mart 2026 tarihli, 287 TL tutarında" gibi bağlamı çıkarır
+- **Anlamlı isim verir.** `IMG_4519.PNG` yerine `Elektrik Faturası — Mart 2026.pdf`
+- **Kategoriye atar.** 8 yerleşik kategoriden (Fatura, Kimlik, Sözleşme, vb.) doğru olanına
+- **Yönetici Özeti üretir.** Tutar, son ödeme tarihi, kritik notlar bir bakışta
+
+30 saniyede tamamlanır. Eski yöntemle (Notes ile tara → "Adobe Scan'e gönder → Adobe ile düzelt → Files'a kaydet → Files'tan klasöre taşı") aynı işi 5-10 dakika sürerdi.
+
+## Tarama kalitesini artırmanın 5 ipucu
+
+İyi kalite tarama hem **OCR doğruluğunu** hem de **gözle okuma deneyimini** doğrudan etkiler.
+
+### 1. Işığa ve gölgeye dikkat
+
+En iyi tarama, **yumuşak, eşit dağılmış ışıkta** olur. Direkt güneş ışığı kontrastı bozar. Florarsan lambası altında çekim sarımtırak çıkar — OCR'yi yanıltabilir. İdeal: pencereye yakın, gündüz, direkt güneş olmayan saat.
+
+### 2. Telefonu sabit tutun
+
+iPhone'un yerleşik image stabilization'ı iyi ama yine de **iki elle tutarsanız** sonuç daha keskin olur. Çok titrek else ufak bir tripod (~50 TL) düşünebilirsiniz.
+
+### 3. Faturayı düzleştirin
+
+Kıvrılmış, katlanmış, buruşuk fatura tarayıcının "düzleştirme" algoritmasını yorar. Tarama öncesi kâğıdı 5 saniye masaya bastırın, sonra çekin.
+
+### 4. Türkçe karakter kontrolü
+
+Tarama sonrası OCR çıktısına bakın. "İstanbul" → **İstanbul** olarak çıkmalı (büyük İ noktalı). "Hizmet" → **Hizmet** olarak (i noktalı). Eğer "I-stanbul" gibi çıkıyorsa, OCR'niz Türkçe optimize değil demektir.
+
+DocuVault'un OCR'si Türkçe ve İngilizce için optimize edilmiştir; karakter dönüşümü doğru gerçekleşir.
+
+### 5. Bir kez deneyin
+
+İlk taramadan tatmin olmadıysanız tekrar çekin. Her tarama 30 saniye; iyi bir arşiv 10 yıl size eşlik edecek. İlk yatırım buna değer.
+
+## Taranan faturalar nereye gider?
+
+DocuVault'ta tarama sonrası belgeniz:
+
+1. **Yerel cihazınızda** AES-256 simetrik şifreleme ile saklanır
+2. **Şifreli bulut yedek** otomatik gönderilir (TLS 1.2+, AB tabanlı uçlar)
+3. **Profil paneli**'nde toplam depolama, plan durumu, son eklenen belge görünür
+
+Belgeyi açtığınızda:
+- **Önizleme** (PDF veya görüntü)
+- **AI Yönetici Özeti** (kritik noktalar)
+- **Metadata** (kategori, etiket, eklenme tarihi)
+- **Paylaş / kopyala / sil** aksiyonları
+
+## KVKK ve fatura saklama
+
+Faturalar **kişisel veri** içerir: ad, adres, müşteri numarası, ödenen tutar. Bunları saklamak Türkiye'de KVKK kapsamındadır.
+
+**Bireysel kullanım için** bilmeniz gerekenler:
+- Kendi faturalarınızı saklamak için **rıza** gerekmez (kendi verinizdir)
+- Kullandığınız uygulamanın **veri sahibi haklarınızı** koruması gerekir
+- Uygulama **AI eğitimine** belgelerinizi kullanmamalıdır
+- Hesabınızı sildiğinizde belgelerinizin **30 gün içinde** tüm yedeklerden silinmesi gerekir
+
+**KOBİ olarak** kullanıyorsanız (çalışan faturalarını saklamak gibi) — bu durumda **veri sorumlusu** sizsiniz; çalışanlarınızdan açık rıza almanız gerekir.
+
+Detaylı KVKK pratiği için: [KVKK uyumlu belge saklama rehberi](/blog/kvkk-belge-saklama).
+
+## Sıkça sorulan sorular
+
+### Eski yığın faturaları nasıl dijitalleştiririm?
+
+Toplu tarama için bir akşam ayırın. Faturaları yıla / aya göre yığın yapın, sırayla DocuVault'a tarayın. Çoklu sayfa özelliğini kullanarak aynı dönemin tüm faturalarını tek PDF'te birleştirebilirsiniz.
+
+### Tarama sonrası kâğıdı atabilir miyim?
+
+Yasal saklama süresi bireysel faturalar için **5 yıl** (T.C. Sayıştay'a göre). Dijital saklama da geçerli sayılır, ancak hassas belgelerin (örn. kira kontratı orijinali) **belirli bir süre** kâğıt formunda saklanması mahkemelerde delil değeri için tavsiye edilir.
+
+Vergi mükellefiyseniz, e-Arşiv faturalarınız zaten elektronik. Kâğıt nüshalarınızı atabilirsiniz.
+
+### Tarama internet olmadan çalışır mı?
+
+Evet. Yerleşik tarayıcı tamamen yereldir. AI özetleme ve doğal dil arama gibi bulut servisleri internet ister, ama tarama ve OCR cihazda işlenir.
+
+### Birden fazla faturayı tek seferde tarayabilir miyim?
+
+DocuVault'ta birden çok belgeyi peş peşe tarayıp **her birini ayrı bir belge** olarak kaydedebilirsiniz. Sadece her belge için "Bitir" deyip yeni bir tarama başlatın.
+
+### Aynı belgeyi iki kez taradım, nasıl silerim?
+
+Belgeyi açın → 3 nokta menüsü → "Sil". 30 gün içinde tüm yedeklerden temizlenir.
+
+---
+
+Faturalarınız artık dijital, aranabilir, güvenli. Daha fazla ipucu için [belge tarayıcı rehberimizi](/blog/belge-tarayici-rehberi) okuyabilirsiniz.

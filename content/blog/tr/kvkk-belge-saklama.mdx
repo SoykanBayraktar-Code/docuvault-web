@@ -1,0 +1,206 @@
+---
+title: "KVKK Uyumlu Belge Saklama: Bireyler ve KOBİ'ler için 2026 Rehberi"
+description: "KVKK kapsamında belge saklama prensipleri, AES-256 şifreleme, bulut vs yerel kararı, veri sahibi hakları ve pratik uyum kontrol listesi."
+date: "2026-05-24"
+author: "soykan-bayraktar"
+cover: "/blog/covers/kvkk-belge-saklama.webp"
+coverAlt: "KVKK uyumlu güvenli belge saklama"
+tags: ["kvkk", "güvenlik", "veri koruma", "hukuk"]
+category: "güvenlik"
+pillar: "kvkk-belge-saklama"
+pillarOf: true
+seoTitle: "KVKK Uyumlu Belge Saklama Rehberi 2026 — DocuVault"
+seoDescription: "KVKK 2026: bireysel ve KOBİ kullanımı için belge saklama, AES-256 şifreleme, bulut/yerel tercihi, veri sahibi hakları, pratik uyum listesi."
+---
+
+6698 sayılı **Kişisel Verilerin Korunması Kanunu (KVKK)** Türkiye'de tüm kişisel veri işleme süreçlerini düzenler. Kişisel belgelerinizi (faturalar, kimlik, sözleşmeler) telefonunuzda saklamak da bu kapsama girer.
+
+Bu rehberde:
+- Bireysel ve KOBİ kullanım için **KVKK'nın pratik anlamı**
+- Bir mobil belge uygulamasının KVKK uyumu açısından **karşılaması gereken kontrol listesi**
+- **AES-256, TLS 1.2+, biyometrik koruma** gibi teknik terimlerin sade Türkçesi
+- **Bulut mu yerel mi saklama** sorusunun KVKK cevabı
+- **Veri sahibi haklarınız** (KVKK Madde 11) ve nasıl kullanılır
+
+Bu yazıyı DocuVault'un kurucusu olarak yazıyorum; tüm teknik detayları kendi uygulamamızda nasıl ele aldığımıza dayandırıyorum.
+
+## KVKK kısaca ne demek?
+
+KVKK, **kişisel verilerin işlenmesinde uyulması gereken kuralları** belirleyen Türkiye'nin temel veri koruma yasasıdır. Avrupa Birliği'nin GDPR'ı ile büyük ölçüde uyumludur.
+
+Kişisel veri tanımı geniştir: kimliği belirli ya da belirlenebilir kılan **her türlü bilgi**. Yani sadece TC kimlik numarası değil; e-posta, telefon, adres, fotoğraf, hatta IP adresiniz dahi kişisel veridir.
+
+**Belge yönetimi açısından KVKK'nın 3 ana sorusu:**
+
+1. Hangi kişisel verileri **topluyorsunuz / saklıyorsunuz?**
+2. Verileri **kim, nerede, nasıl işliyor / saklıyor?**
+3. **Veri sahibi (yani belgenin asıl sahibi)** ne hak iddia edebilir, nasıl?
+
+## Kişisel belgelerinizi nasıl saklamalısınız? (5 prensip)
+
+### Prensip 1: Veri minimizasyonu
+
+KVKK Madde 4'e göre kişisel veriler **amaca uygun ve sınırlı** olmalıdır. Yani:
+
+- Tarayıcı uygulama, bir fatura için size **TC kimlik numaranızı sormamalı**
+- Belge tarama için **konum izni** gereksizdir
+- Tarama için **mikrofon izni** gereksizdir (sesli arama için ayrı)
+
+Bir uygulama gereksiz izin istiyorsa, KVKK ihlalidir. Kendi uygulamanızı seçerken **izin listesini** inceleyin.
+
+### Prensip 2: Güvenli teknik altyapı (AES-256 + TLS 1.2+)
+
+KVKK Madde 12'ye göre veri sorumluları **uygun teknik ve idari tedbirleri** almalıdır. Pratikte bu:
+
+**Yerel arşivde:** **AES-256** simetrik şifreleme. Bu, NIST onaylı endüstri standardıdır. Bugünkü bilgisayar gücü ile AES-256 ile şifrelenmiş bir veriyi kırmak teorik olarak **trilyonlarca yıl** sürer.
+
+**Aktarım sırasında:** **TLS 1.2+** (Transport Layer Security). Yani belgeleriniz buluta gönderilirken yolda dinlenemez/değiştirilemez.
+
+**Bulutta:** Şifrelenmiş depolama. Bulut sağlayıcısının çalışanları bile içeriği düz metin olarak göremez.
+
+**Cihazda:** Biyometrik kilit + yedek PIN. Telefonunuzu birinin eline almasıyla belgelerinize erişmesi arasında güçlü bir bariyer.
+
+### Prensip 3: Şeffaflık (KVKK Madde 10 — Aydınlatma Yükümlülüğü)
+
+KVKK Madde 10, veri sorumlusunun **veri sahibini bilgilendirmesini** zorunlu kılar. Pratikte: uygulamanın **Aydınlatma Metni** olmalıdır.
+
+İyi bir Aydınlatma Metni şunları belirtir:
+- Veri sorumlusu kim?
+- Hangi verileri topluyor?
+- Hangi amaçlarla işliyor?
+- Verileri kime aktarıyor?
+- Toplama yöntemi ne?
+- Hukuki sebep nedir?
+- Veri sahibi hakları neler?
+
+DocuVault'un kendi [Aydınlatma Metni'mizi](/aydinlatma-metni) bu yapıda hazırladık; sizin için de bir referans olabilir.
+
+### Prensip 4: Açık rıza vs sözleşme zorunluluğu
+
+Tüm kişisel veri işleme rıza gerektirmez. KVKK Madde 5'e göre işleme için **6 farklı hukuki sebep** vardır:
+- Açık rıza
+- Kanunda öngörülmesi
+- Hayati tehlike
+- Sözleşmenin kurulması veya ifası
+- Yasal yükümlülük
+- Veri sorumlusunun meşru menfaati
+
+Bir belge yönetim uygulaması için en yaygın temel **"sözleşmenin ifası"**dır — yani uygulama hizmetini almak için verilerin işlenmesi zorunludur. Bunun için ayrıca rıza vermenize gerek yoktur. Ancak **analitik çerezler** gibi opsiyonel veriler için **açık rıza** gerekir; bu yüzden cookie banner'lar vardır.
+
+### Prensip 5: Saklama süresinde kısıtlama
+
+KVKK Madde 7, **işleme amacının gerektirdiği süre** kadar saklamayı şart koşar. Yani:
+
+- Mali belgeler (vergi mevzuatı): 5 yıl
+- Sözleşme nüshaları (hukuk mevzuatı): genellikle 10 yıl
+- Bireysel günlük kayıtlar: kendi belirlediğiniz
+
+Bir uygulama, hesabınızı sildiğinizde **belirli bir süre** (DocuVault'ta 30 gün) içinde verileri tüm yedek katmanlardan kaldırmalıdır.
+
+## Bulut vs yerel saklama — KVKK açısından
+
+Sık sorulan soru. KVKK her ikisine de izin verir; **kararı uygulama nasıl ele aldığına bakar.**
+
+### Yerel saklama avantajları
+- ✅ Veri cihazınızdan çıkmaz, hiçbir üçüncü taraf görme imkânı yok
+- ✅ İnternet bağlantısı gerekmiyor
+
+### Yerel saklama dezavantajları
+- ❌ Cihaz kaybolursa / kırılırsa, veriler kaybolur
+- ❌ Cihazlar arası senkronizasyon yok
+- ❌ İlla iyi şifrelenmiş olması gerekir (cihaz çalınırsa diye)
+
+### Bulut saklama avantajları
+- ✅ Cihaz kayıp / kırılma durumunda geri yükleme mümkün
+- ✅ Çoklu cihaz senkronu (iPhone + iPad + Mac)
+- ✅ Otomatik yedek
+
+### Bulut saklama dezavantajları (eğer iyi yapılmamışsa)
+- ❌ Üçüncü taraf bulut sağlayıcı verilere erişebilir
+- ❌ Hangi ülkede saklandığı meselesi (KVKK, AB tabanlı uçları tercih eder)
+- ❌ Sağlayıcı hacklenirse, belgeleriniz tehlikeye girer
+
+### Doğru cevap: İkisi de, ama şifreli
+
+Modern bir belge yönetim uygulaması **yerel arşivi cihazda AES-256 ile şifreler**, **bulut yedeği TLS üzerinden iletir** ve **bulutta şifreli depolar**. Hem cihaz hem bulut güvenli olur, hem de cihaz kayıp/kırılma durumunda yedek elinizdedir.
+
+**Önemli KVKK kuralı:** Bulut sağlayıcının **veri ikamet politikası** (yani verilerin fiziksel olarak hangi ülkede saklandığı) **AB tabanlı uçlarda** olmalıdır. ABD merkezli serverlar, KVKK uyumu için ek korumalar gerektirir; AB serverlar GDPR uyumlu olduğundan KVKK ile genelde otomatik uyumludur.
+
+DocuVault, [Supabase](https://supabase.com) altyapısını AB tabanlı uçlarda kullanır.
+
+## AES-256 ve TLS 1.2+ neden önemli?
+
+Bu iki terimi netleştirelim:
+
+### AES-256 nedir?
+- **A**dvanced **E**ncryption **S**tandard, 256-bit anahtar
+- ABD Ulusal Standartlar ve Teknoloji Enstitüsü (NIST) onaylı
+- Banka, savunma, sağlık sektörü için endüstri standardı
+- Kırılması teorik olarak **trilyonlarca yıl** sürer
+
+**Pratikte:** Cihazınız çalınırsa, hırsız belgeleri açamaz. AES-256 anahtarı olmadan dosyalar rasgele baytlardan ibarettir.
+
+### TLS 1.2+ nedir?
+- **T**ransport **L**ayer **S**ecurity, eski adıyla SSL
+- Tarayıcınız bir HTTPS siteye girdiğinde kullandığı protokol
+- Verileri iletim sırasında **şifreli ve değişikliğe karşı korumalı** tutar
+- 1.0 ve 1.1 sürümleri (eski) güvensiz; **1.2 ve 1.3** zorunlu
+
+**Pratikte:** Belgeniz buluta gönderilirken yolda dinlenemez veya değiştirilemez.
+
+Bu iki teknolojinin birlikte çalışması, belgenizin **hem saklarken hem aktarırken** korumalı olmasını sağlar.
+
+## KVKK Madde 11 — Veri sahibi haklarınız
+
+Belgenin sahibi siz olduğunuz için, KVKK size **9 temel hak** verir:
+
+1. **Bilgi talep etme:** Verilerinizin işlenip işlenmediğini sorma
+2. **Bilgi alma:** İşleniyorsa hangi amaçla, hangi süre işlendiğini öğrenme
+3. **Aktarım bilgisi:** Verilerinizin kime aktarıldığını öğrenme
+4. **Düzeltme:** Hatalı bilgilerin düzeltilmesini isteme
+5. **Silme:** Verilerin silinmesini isteme ("unutulma hakkı")
+6. **Aktarım bildirimi:** Düzeltme/silme işleminin aktarılan taraflara bildirilmesini isteme
+7. **Otomatik karar itirazı:** Bir AI veya algoritmanın sizin için aleyhinize karar vermesine itiraz
+8. **Zarar tazmini:** Hukuksuz işleme nedeniyle zarara uğradıysanız tazminat talep etme
+9. **Şikâyet hakkı:** Doğrudan Kişisel Verileri Koruma Kurulu'na şikâyet
+
+Bu hakları kullanmak için DocuVault'un destek e-postasına yazabilirsiniz: destek@appdocuvault.com — yasal süre 30 gündür.
+
+Detaylı KVKK uyum dokümanımız: [Aydınlatma Metni](/aydinlatma-metni).
+
+## DocuVault'un KVKK yaklaşımı
+
+Açık konuşalım: bir KVKK uyum sertifikası **yok**; çünkü Türkiye'de mobil uygulamalar için resmi bir sertifika programı bulunmuyor. Ancak teknik altyapımız KVKK Madde 12'de tarif edilen "uygun teknik ve idari tedbirleri" uygulamaktadır:
+
+- ✅ **AES-256** yerel şifreleme
+- ✅ **TLS 1.2+** aktarım
+- ✅ **AB-bölgeli** Supabase altyapısı
+- ✅ **Aydınlatma metni** hem uygulama içinde hem web sitesinde
+- ✅ **IDFA / reklam tanımlayıcısı** istemiyoruz
+- ✅ **Face ID** + **yedek PIN** + **otomatik kilit**
+- ✅ **30 gün içinde silme** politikası
+- ✅ **AI servislerinde kalıcı kayıt yok** (özetleme/arama anlık)
+- ✅ Belge içerikleriniz **model eğitimine kullanılmaz**
+
+## Pratik KVKK uyum kontrol listesi
+
+Bir mobil belge uygulaması seçerken bu listeyi yanınızdan ayırmayın:
+
+- [ ] Aydınlatma metni var mı? Web sitesinde + uygulamada?
+- [ ] Yerel veri **AES-256** ile şifreli mi?
+- [ ] Bulut aktarım **TLS 1.2+** üzerinden mi?
+- [ ] Bulut sağlayıcı **AB tabanlı uçlarda** mı?
+- [ ] **Reklam SDK'sı / IDFA** isteniyor mu? (İstememeli)
+- [ ] **Biyometrik kilit** mevcut mu?
+- [ ] **Otomatik kilit** (arka plana alınca) çalışıyor mu?
+- [ ] **Veri sahibi başvuru adresi** belirtilmiş mi? (KVKK Madde 11)
+- [ ] **Hesap silme** kolay mı? Süre belli mi?
+- [ ] **AI servisi** belgelerinizi **eğitime kullanıyor mu?** (Kullanmamalı)
+
+Bu listenin 8 ve üzeri checkmark'ı varsa, uygulama KVKK uyumlu sayılabilir. DocuVault tüm 10 maddeyi karşılar.
+
+---
+
+Belgeleriniz hassas. KVKK, onları korumanız için size yasal çerçeveyi veriyor — ama nihai sorumluluk yine sizde. Doğru uygulama seçimi yapın, biyometrik aktivasyon ve bulut yedeklemeyi mutlaka etkinleştirin.
+
+Daha fazla pratik için: [Belge tarayıcı rehberi](/blog/belge-tarayici-rehberi).

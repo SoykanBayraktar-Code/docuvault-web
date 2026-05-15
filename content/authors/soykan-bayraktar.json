@@ -1,0 +1,17 @@
+{
+  "id": "soykan-bayraktar",
+  "name": "Soykan Bayraktar",
+  "title": "DocuVault Kurucusu & Yazılım Mühendisi",
+  "bio": "iOS geliştirme, mobil güvenlik ve belge yönetimi üzerine 10+ yıllık deneyim. DocuVault'un baş geliştiricisi.",
+  "avatar": "/authors/soykan.webp",
+  "social": {
+    "github": "https://github.com/SoykanBayraktar-Code"
+  },
+  "expertise": [
+    "iOS Geliştirme",
+    "Belge Yönetimi",
+    "Yapay Zekâ Entegrasyonu",
+    "KVKK Uyumu",
+    "Mobil Güvenlik"
+  ]
+}
