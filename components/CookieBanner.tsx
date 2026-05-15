@@ -8,6 +8,12 @@ import { Link } from "@/i18n/navigation";
 
 const STORAGE_KEY = "docuvault-cookie-consent";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 export default function CookieBanner() {
   const t = useTranslations("cookieBanner");
   const [show, setShow] = useState(false);
@@ -30,6 +36,14 @@ export default function CookieBanner() {
     } catch {
       // ignore
     }
+
+    // Update Google Analytics Consent Mode v2 in real time
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("consent", "update", {
+        analytics_storage: accept ? "granted" : "denied",
+      });
+    }
+
     setShow(false);
   };
 
