@@ -5,6 +5,7 @@ import { useTransition } from "react";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { Languages } from "lucide-react";
+import { track } from "@/lib/analytics";
 
 type Props = {
   variant?: "navbar" | "menu";
@@ -19,6 +20,7 @@ export default function LanguageSwitcher({ variant = "navbar" }: Props) {
 
   const switchTo = (next: Locale) => {
     if (next === locale) return;
+    track.changeLanguage(locale, next);
     startTransition(() => {
       router.replace(pathname, { locale: next });
     });
