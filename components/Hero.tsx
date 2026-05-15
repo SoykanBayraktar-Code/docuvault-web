@@ -2,11 +2,16 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 import { ShieldCheck, Cloud, Fingerprint, Sparkles } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import AppStoreButtons from "./AppStoreButtons";
 
-export default function Hero() {
+type Props = {
+  ratingBadge?: ReactNode;
+};
+
+export default function Hero({ ratingBadge }: Props) {
   const t = useTranslations("hero");
   const locale = useLocale();
 
@@ -50,8 +55,10 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex justify-center lg:justify-start">
-            <AppStoreButtons size="lg" />
+            <AppStoreButtons size="lg" location="hero" />
           </div>
+
+          {ratingBadge}
 
           <ul className="mt-8 flex flex-wrap justify-center lg:justify-start items-center gap-x-6 gap-y-3 text-sm text-text-secondary">
             <li className="flex items-center gap-2">

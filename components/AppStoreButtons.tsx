@@ -5,6 +5,11 @@ import { useTranslations } from "next-intl";
 type Props = {
   size?: "md" | "lg";
   className?: string;
+  /**
+   * Where the button is mounted — passed as a GA4 event parameter so we can
+   * tell which section drives downloads (hero, finalCTA, pricing, etc.).
+   */
+  location?: "hero" | "final_cta" | "pricing" | "navbar" | "other";
 };
 
 function AppleLogo({ className }: { className?: string }) {
@@ -20,7 +25,14 @@ function AppleLogo({ className }: { className?: string }) {
   );
 }
 
-export default function AppStoreButtons({ size = "md", className = "" }: Props) {
+const APP_STORE_URL =
+  "https://apps.apple.com/tr/app/docuvault-belge-kasas%C4%B1/id6762083376?l=tr";
+
+export default function AppStoreButtons({
+  size = "md",
+  className = "",
+  location = "other",
+}: Props) {
   const t = useTranslations("appStore");
   const isLg = size === "lg";
   const h = isLg ? "h-16" : "h-14";
@@ -28,14 +40,26 @@ export default function AppStoreButtons({ size = "md", className = "" }: Props) 
   const topText = isLg ? "text-[11px]" : "text-[10px]";
   const brandText = isLg ? "text-lg" : "text-base";
 
+  const handleClick = () => {
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", "app_store_click", {
+        location,
+        outbound: true,
+        link_url: APP_STORE_URL,
+      });
+    }
+  };
+
   return (
     <div className={`flex flex-col sm:flex-row gap-3 ${className}`}>
       <a
-        href="https://apps.apple.com/tr/app/docuvault-belge-kasas%C4%B1/id6762083376?l=tr"
+        href={APP_STORE_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className={`group flex items-center gap-3 ${h} ${px} rounded-xl bg-[#1C1C1E] text-white hover:bg-black transition-colors shadow-warm-md`}
+        onClick={handleClick}
+        className={`group flex items-center gap-3 ${h} ${px} rounded-xl bg-[#1C1C1E] text-white hover:bg-black transition-colors shadow-warm-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
         aria-label={t("ariaLabel")}
+        data-location={location}
       >
         <AppleLogo className={isLg ? "w-7 h-7" : "w-6 h-6"} />
         <div className="flex flex-col leading-tight">
