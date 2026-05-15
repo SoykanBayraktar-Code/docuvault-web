@@ -82,6 +82,14 @@ export default async function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/aydinlatma-metni"
+                  className="text-text-secondary hover:text-primary transition-colors"
+                >
+                  {t("linkKvkk")}
+                </Link>
+              </li>
+              <li>
                 <Link href="/terms" className="text-text-secondary hover:text-primary transition-colors">
                   {t("linkTerms")}
                 </Link>

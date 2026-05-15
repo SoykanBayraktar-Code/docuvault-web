@@ -37,7 +37,7 @@ export default function FinalCTA() {
               </p>
 
               <div className="mt-8">
-                <AppStoreButtons size="lg" />
+                <AppStoreButtons size="lg" location="final_cta" />
               </div>
             </div>
 

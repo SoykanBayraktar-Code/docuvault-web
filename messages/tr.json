@@ -256,11 +256,17 @@
     "brand": "İndir",
     "ariaLabel": "App Store'dan indir"
   },
+  "appStoreBadge": {
+    "ariaLabel": "App Store puanı {rating}, {count} oylamadan",
+    "count": "{count} oylama",
+    "onAppStore": "App Store'da"
+  },
   "footer": {
     "tagline": "Belgeleriniz güvende, saniyeler içinde bulunur. Türkiye'de tasarlandı, dünyada kullanılıyor.",
     "productHeading": "Ürün",
     "legalHeading": "Yasal & Destek",
     "linkPrivacy": "Gizlilik Politikası",
+    "linkKvkk": "KVKK Aydınlatma Metni",
     "linkTerms": "Kullanım Koşulları",
     "rights": "© {year} DocuVault. Tüm hakları saklıdır."
   }

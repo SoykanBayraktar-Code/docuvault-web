@@ -256,11 +256,17 @@
     "brand": "App Store",
     "ariaLabel": "Download on the App Store"
   },
+  "appStoreBadge": {
+    "ariaLabel": "App Store rating {rating} from {count} ratings",
+    "count": "{count} ratings",
+    "onAppStore": "on App Store"
+  },
   "footer": {
     "tagline": "Documents safe, found in seconds. Designed in Türkiye, used worldwide.",
     "productHeading": "Product",
     "legalHeading": "Legal & Support",
     "linkPrivacy": "Privacy Policy",
+    "linkKvkk": "KVKK Notice (TR)",
     "linkTerms": "Terms of Use",
     "rights": "© {year} DocuVault. All rights reserved."
   }

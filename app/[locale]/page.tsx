@@ -1,6 +1,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import AppStoreBadge from "@/components/AppStoreBadge";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import Screenshots from "@/components/Screenshots";
@@ -40,7 +41,7 @@ export default async function Home({
     <>
       <Navbar />
       <main id="content">
-        <Hero />
+        <Hero ratingBadge={<AppStoreBadge />} />
         <Features />
         <HowItWorks />
         <Screenshots />

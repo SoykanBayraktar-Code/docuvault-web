@@ -489,3 +489,144 @@ export function getTerms(locale: string): LegalCopy {
 export function getPrivacy(locale: string): LegalCopy {
   return locale === "en" ? privacyEn : privacyTr;
 }
+
+// ─────────────────────────────────────────────────────────
+// KVKK AYDINLATMA METNİ (TR-only — Turkey-specific legal)
+// ─────────────────────────────────────────────────────────
+
+export const kvkkTr: LegalCopy = {
+  pageTitle: "KVKK Aydınlatma Metni",
+  pageDescription:
+    "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında DocuVault aydınlatma metni — veri sorumlusu, işleme amaçları, veri sahibi hakları ve başvuru yöntemleri.",
+  lastUpdated: "Son güncelleme: 14 Mayıs 2026",
+  intro:
+    "6698 sayılı Kişisel Verilerin Korunması Kanunu (\"KVKK\") Madde 10 uyarınca, kişisel verilerinizin işlenmesine ilişkin bu aydınlatma metnini bilgilerinize sunarız.",
+  headerIcon: Scale,
+  backLabel: "Ana Sayfa",
+  questionsLabel: "Veri sahibi başvuruları için",
+  sections: [
+    {
+      icon: Building2,
+      title: "Veri Sorumlusunun Kimliği",
+      items: [
+        "Veri sorumlusu: DocuVault",
+        "İletişim adresi: destek@appdocuvault.com",
+        "Web sitesi: https://www.appdocuvault.com",
+        "Hizmet türü: Mobil belge yönetim uygulaması (iOS)",
+      ],
+    },
+    {
+      icon: Database,
+      title: "İşlenen Kişisel Veriler",
+      items: [
+        "Kimlik Verileri: Apple ile Giriş veya e-posta kayıt sırasında verdiğiniz ad, e-posta adresi.",
+        "İletişim Verileri: Destek talepleri kapsamında ilettiğiniz e-posta içerikleri.",
+        "İşlem Güvenliği Verileri: Cihaz bilgileri (iOS sürümü, cihaz modeli, uygulama sürümü), oturum durumu, hata kayıtları.",
+        "Müşteri İşlem Verileri: Abonelik durumu, plan tercihleri (Apple ID üzerinden yönetilir).",
+        "İçerik Verileri: Uygulamaya yüklediğiniz belgeler — yalnızca size aittir; içeriklerine düz metin olarak erişimimiz yoktur.",
+        "Anonim Kullanım Verileri: Oturum süresi, ekran görüntülenme sayısı (kişiyle ilişkilendirilemez).",
+      ],
+    },
+    {
+      icon: Info,
+      title: "Kişisel Verilerin İşlenme Amaçları",
+      items: [
+        "Hizmetin sunulması: Hesap oluşturma, kimlik doğrulama, belgelerin saklanması ve senkronizasyonu.",
+        "Hizmet kalitesinin iyileştirilmesi: Anonim kullanım istatistikleriyle ürün geliştirme.",
+        "Teknik destek sağlanması: Sorularınıza ve hata bildirimlerinize geri dönüş.",
+        "Yasal yükümlülüklerin yerine getirilmesi: Yetkili kurumların talepleri durumunda mevzuata uygun cevap verilmesi.",
+        "Hizmet güvenliğinin sağlanması: Sahtekârlık ve kötüye kullanım tespiti, hesap güvenliği.",
+      ],
+    },
+    {
+      icon: Scale,
+      title: "İşlemenin Hukuki Sebepleri",
+      items: [
+        "Bir sözleşmenin kurulması veya ifası (KVKK Madde 5/2-c): Hizmetin sağlanması için zorunlu işleme.",
+        "Veri sorumlusunun meşru menfaati (KVKK Madde 5/2-f): Anonim kullanım analitiği, güvenlik kontrolleri.",
+        "Açık rıza (KVKK Madde 5/1): Web sitesinde isteğe bağlı analitik çerezler için.",
+        "Yasal yükümlülük (KVKK Madde 5/2-ç): Yetkili makamların talepleri.",
+      ],
+    },
+    {
+      icon: Cpu,
+      title: "Yapay Zekâ Servisleri ve Veri Aktarımı",
+      items: [
+        "AI Yönetici Özeti ve doğal dil arama özellikleri için belge içeriğinin küçük bir parçası, işlem süresince üçüncü taraf yapay zekâ servislerine şifrelenmiş kanaldan iletilir.",
+        "İşlem tamamlandıktan sonra AI servislerinde kalıcı bir kayıt tutulmaz.",
+        "İçerikleriniz model eğitimi veya başka bir veri ürünü için kullanılmaz, satılmaz, satılmasına izin verilmez.",
+        "Aktarım, KVKK Madde 9 çerçevesinde gerçekleştirilir; veri ikamet politikası AB tabanlı uçlarda tutulmaktadır.",
+      ],
+    },
+    {
+      icon: Cloud,
+      title: "Kişisel Verilerin Aktarıldığı Taraflar",
+      items: [
+        "Bulut altyapı sağlayıcısı (Supabase): Şifreli yedeklerin saklanması amacıyla, AB tabanlı uçlarda.",
+        "Yapay zekâ servis sağlayıcıları: Yalnızca özetleme/arama işlemi süresince, kalıcı kayıt tutulmaksızın.",
+        "Apple Inc.: Apple ile Giriş, App Store ödeme ve abonelik yönetimi için.",
+        "Yetkili kamu kurumları: Yasal zorunluluk veya yargı kararı bulunması hâlinde, ilgili mevzuat çerçevesinde.",
+      ],
+    },
+    {
+      icon: FileText,
+      title: "Kişisel Verilerin Toplanma Yöntemi",
+      items: [
+        "Doğrudan sizden alınan: Hesap oluşturma sırasında manuel olarak girdiğiniz bilgiler.",
+        "Otomatik yöntemlerle: Uygulama içi oturum bilgileri, cihaz bilgileri (otomatik olarak).",
+        "Apple aracılığıyla: Apple ile Giriş kullanılırsa Apple'ın paylaştığı temel kimlik bilgileri.",
+      ],
+    },
+    {
+      icon: Lock,
+      title: "Veri Güvenliği Tedbirleri",
+      items: [
+        "Yerel arşivde AES-256 simetrik şifreleme.",
+        "Bulut iletişiminde TLS 1.2+ üzerinden şifreli aktarım.",
+        "Face ID / Touch ID biyometrik koruma ve yedek PIN.",
+        "Uygulama arka plana alındığında otomatik kilit.",
+        "Düzenli güvenlik denetimleri ve güncellemeler.",
+        "DocuVault ekibinin belge içeriklerinize düz metin erişimi yoktur.",
+      ],
+    },
+    {
+      icon: Scale,
+      title: "Veri Sahibi Olarak Haklarınız (KVKK Madde 11)",
+      items: [
+        "Kişisel verilerinizin işlenip işlenmediğini öğrenme.",
+        "İşlenmişse buna ilişkin bilgi talep etme.",
+        "İşlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme.",
+        "Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme.",
+        "Eksik veya yanlış işlenmiş olması hâlinde düzeltilmesini isteme.",
+        "Silinmesini veya yok edilmesini isteme.",
+        "Düzeltme, silme veya yok edilme işlemlerinin aktarılan üçüncü kişilere bildirilmesini isteme.",
+        "Otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme.",
+        "Kanuna aykırı işleme nedeniyle zarara uğramanız hâlinde zararın giderilmesini talep etme.",
+      ],
+    },
+    {
+      icon: RefreshCw,
+      title: "Başvuru Yöntemi",
+      items: [
+        "Yukarıdaki haklarınızı kullanmak için, kimliğinizi tevsik edici belgelerle birlikte destek@appdocuvault.com adresine yazılı olarak başvurabilirsiniz.",
+        "Başvurunuzda; ad-soyad, T.C. kimlik numarası (yabancı uyruklular için pasaport numarası), iletişim adresi, talep konusu ve hakkınızla ilgili açıklamaların bulunması gerekmektedir.",
+        "Talebiniz, niteliğine göre en geç 30 (otuz) gün içinde ücretsiz olarak sonuçlandırılır.",
+        "Başvurunuza ilişkin Kişisel Verileri Koruma Kurulu'na şikâyette bulunma hakkınız saklıdır.",
+      ],
+    },
+    {
+      icon: Trash2,
+      title: "Veri Saklama Süresi",
+      items: [
+        "Aktif hesaplarda: Hizmet kullanımı devam ettiği sürece.",
+        "Hesap silindiğinde: 30 gün içinde tüm yedek katmanlardan kaldırılır.",
+        "Mevzuat gereği saklanması zorunlu kayıtlar: İlgili mevzuatın öngördüğü süre boyunca (ör. abonelik faturalandırma kayıtları).",
+        "Anonim kullanım istatistikleri: Süresiz, ancak kişiyle ilişkilendirilemez biçimde.",
+      ],
+    },
+  ],
+};
+
+export function getKvkk(): LegalCopy {
+  return kvkkTr;
+}
