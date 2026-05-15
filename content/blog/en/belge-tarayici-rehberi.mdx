@@ -1,0 +1,130 @@
+---
+title: "The Document Scanner Guide: Turn Your iPhone Into a Professional Scanner"
+description: "Seven features a modern mobile document scanner must have, KVKK/GDPR-compliant usage, and a step-by-step digitization guide."
+date: "2026-05-20"
+author: "soykan-bayraktar"
+cover: "/blog/covers/belge-tarayici-rehberi.webp"
+coverAlt: "Scanning a document with an iPhone on a desk"
+tags: ["document management", "scanner", "guide", "tips"]
+category: "guide"
+featured: true
+pillarOf: true
+seoTitle: "The Document Scanner Guide 2026 — DocuVault"
+seoDescription: "Choosing a modern document scanner: edge detection, multi-page PDF, OCR and KVKK/GDPR compliance — a comprehensive 2026 guide for individuals and SMBs."
+---
+
+Paper is modern life's heaviest bureaucratic burden. Bills, contracts, prescriptions, insurance policies… You will need all of them one day, and that day will probably be when they have gone missing. **Mobile document scanner apps** step in here: they turn a single phone into a professional-quality scanner.
+
+This guide covers **what to look for in a scanner app**, **what to watch out for under data-protection laws like KVKK and GDPR**, and **correct usage practices**. Whichever app you end up choosing, you'll know what to look for.
+
+## What does a document scanner app actually do?
+
+A document scanner app turns your phone camera into a **documentation-grade scanner**. Modern apps beat traditional desktop scanners on three fronts:
+
+1. **In your pocket 24/7** — when a bill arrives, you can scan and file it immediately
+2. **AI-augmented** — automatic naming, categorization, OCR makes text searchable
+3. **Cloud-synced** — the document you scanned on one device is available across all your devices
+
+While building the built-in scanner for DocuVault, the most common feedback from users was: **"Opening a third-party app, scanning, sharing, then re-uploading to DocuVault… it's clunky."** That's why in V1.1 we added our [built-in scanner](/en). The rest of this guide helps you make an informed choice — whether you pick DocuVault or another app.
+
+## Seven features to look for in a scanner app
+
+### 1. Automatic edge detection
+
+A good scanner **detects the document in frame** the moment you point your phone at it. Manual corner adjustment should be the exception, not the rule. Without auto edge detection, scanning is a time sink from the start.
+
+Test it: place a sheet of paper on a busy desk and open the app. A good app finds all four corners within 2 seconds and shows a green frame.
+
+### 2. Multi-page PDF stitching
+
+A single image is enough for one-pagers, but contracts, statements and catalogs are usually 3+ pages. Being able to **stitch them into one PDF** matters.
+
+In DocuVault, scanning a contract goes: "Scan" → "Add Page" → "Scan" → … → "Finish". The result is one professional PDF.
+
+### 3. Auto-leveling and perspective correction
+
+You can rarely hold your phone at a **perfectly perpendicular angle** to a document. The result is usually a slightly trapezoidal image. Modern scanners **silently correct this perspective distortion** — the document snaps back to a real rectangle.
+
+Sanity check: scan a document at a 30° angle. If the result is a clean rectangle, the app does its job.
+
+### 4. OCR (optical character recognition)
+
+Without OCR, a scanned document is just an image. With OCR, the **text inside becomes searchable**. So if you type "March 2026 electricity bill", the app can surface the bill you paid that month.
+
+OCR's handling of Turkish characters (ç, ş, ğ, ü, ö, ı, İ) is critical for Türkiye users. Test it: scan a Turkish document and check whether "İstanbul" comes back as "İstanbul" or "Istanbul".
+
+### 5. AES-256 local encryption
+
+Your documents are sensitive. ID photocopies, bank statements, insurance policies — serious consequences if they leak. That's why your device's local archive should be protected with **AES-256 symmetric encryption** — not a nice-to-have, a **must**.
+
+What is AES-256? 256-bit key encryption, NIST-approved industry standard. In practice: even with today's combined computing power, breaking an AES-256 key would take **trillions of years**.
+
+[Detailed write-up on AES-256 is in the works — coming soon.]
+
+### 6. Encrypted cloud backup
+
+If your phone is stolen, broken or lost, your documents shouldn't be. Cloud backup is essential. But carefully: the cloud backup must be **encrypted**. Saving documents on an open cloud is like leaving paper documents at your front door.
+
+For data-protection compliance: cloud infrastructure should sit on **EU-based endpoints** and use **TLS 1.2+** for transport. DocuVault uses Supabase for exactly this reason.
+
+### 7. Biometric lock
+
+Between someone picking up your phone and accessing your documents, there should be **a biometric gate**: Face ID, Touch ID or a backup PIN. A good scanner app can ask for biometric every time you open the app; it should auto-lock when sent to the background.
+
+## Built-in scanner vs third-party — which is better?
+
+Used to be: two apps. A scanner (e.g. Notes, Adobe Scan) and a document manager (e.g. an older DocuVault, Apple Files). Scan, then manually move.
+
+**With V1.1 DocuVault integrated the scanner inline** — scan inside the app, auto-save. The intermediate app is skipped. Advantages of this approach:
+
+- **Faster:** single flow instead of "open third-party → scan → share → upload"
+- **Safer:** document never leaves the app; goes straight to the encrypted vault
+- **More consistent:** same app, same quality standards
+
+Third-party scanners still make sense for: larger-than-A4 documents (Photoshop-like controls), professional graphic-grade contrast/color tuning.
+
+For most personal and SMB use, **the built-in scanner is enough and more elegant**.
+
+## Scanning with DocuVault on iPhone: step by step
+
+Using DocuVault as an example:
+
+1. **Open the app.** Face ID unlocks the vault.
+2. **Tap the green "+" in the middle.**
+3. **Choose "Scan Document".** (Or "Gallery" / "File".)
+4. **Hold the camera over the page.** Auto edge detection draws a green frame.
+5. **Capture.** For multiple pages, tap "Add Page" and shoot the next one. Repeat as needed.
+6. **Tap "Finish".** AI reads the content, saves with a meaningful name ("Electricity Bill — March 2026"), and assigns it to the right one of 8 built-in categories.
+7. **Read the Executive Summary.** Within seconds, AI surfaces the **gist and critical points** of the document.
+
+For a step-by-step on bills specifically: [how to scan a bill on iPhone](/en/blog/iphone-fatura-tarama).
+
+## Data protection and document scanners — what you need to know
+
+Whether you're under Turkey's KVKK or the EU's GDPR, document scanning apps process **personal data** — compliance is non-negotiable.
+
+When evaluating a scanner app, check:
+
+- Are **data-subject rights** clearly stated? (KVKK Art. 11 / GDPR Art. 12-23)
+- Is there an **information notice / privacy notice**? See ours: [Privacy Policy](/en/privacy)
+- Are document contents used to **train AI**? (They shouldn't be!)
+- Where do the data **physically reside**? (EU or Türkiye is preferred)
+- Does the app request **ad identifiers (IDFA)**? (It shouldn't)
+
+Related: [the KVKK-compliant document storage guide](/en/blog/kvkk-belge-saklama) covers these in depth.
+
+## Summary
+
+Seven things to look for in a mobile document scanner:
+
+1. ✅ Auto edge detection
+2. ✅ Multi-page PDF stitching
+3. ✅ Auto-leveling and perspective correction
+4. ✅ OCR with Turkish + English support
+5. ✅ AES-256 local encryption
+6. ✅ Encrypted, EU-region cloud backup
+7. ✅ Biometric lock + backup PIN
+
+DocuVault V1.1's built-in scanner ticks all seven; download it free from the iOS App Store and try it yourself. If you prefer another app, keep this checklist handy.
+
+The way out of document chaos is to **scan once and organize it right**. Modern scanners do this in 30 seconds — the rest is up to you being systematic.

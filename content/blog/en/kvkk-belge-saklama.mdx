@@ -1,0 +1,204 @@
+---
+title: "KVKK-Compliant Document Storage: A 2026 Guide for Individuals and SMBs"
+description: "KVKK document storage principles, AES-256 encryption, cloud vs local trade-offs, data-subject rights, and a practical compliance checklist."
+date: "2026-05-24"
+author: "soykan-bayraktar"
+cover: "/blog/covers/kvkk-belge-saklama.webp"
+coverAlt: "KVKK-compliant secure document storage"
+tags: ["kvkk", "security", "data protection", "law"]
+category: "security"
+pillar: "kvkk-belge-saklama"
+pillarOf: true
+seoTitle: "KVKK-Compliant Document Storage 2026 Guide — DocuVault"
+seoDescription: "KVKK 2026: a practical guide to document storage for individuals and SMBs — AES-256, cloud vs local, data-subject rights (Article 11), and a compliance checklist."
+---
+
+Turkey's **Personal Data Protection Law No. 6698 (KVKK)** governs all personal data processing in Türkiye. Storing personal documents (bills, IDs, contracts) on your phone falls squarely under it. Even outside Türkiye, the principles align closely with the EU's GDPR — so most of what follows applies wherever you are.
+
+This guide covers:
+- The **practical implications** of KVKK for individuals and SMBs
+- A **compliance checklist** for evaluating a mobile document app
+- The plain-English meaning of terms like **AES-256, TLS 1.2+, biometric protection**
+- The KVKK answer to **"cloud or local"**
+- Your **data-subject rights** under KVKK Article 11
+
+I'm writing this as the founder of DocuVault, grounding every technical detail in choices we made in our own product.
+
+## What is KVKK in one paragraph?
+
+KVKK is Türkiye's primary data protection law. It largely mirrors the EU's GDPR. The definition of personal data is broad: **any information that identifies or makes identifiable** a person. So not just your national ID number — your email, phone, address, photo, even your IP address are personal data.
+
+**KVKK's three core questions for document management:**
+
+1. What personal data are you **collecting / storing**?
+2. **Who, where, how** is processing / storing it?
+3. What **rights** does the data subject (the document's actual owner) have, and how?
+
+## Five principles for storing personal documents
+
+### Principle 1: Data minimization
+
+KVKK Article 4 requires data to be **purpose-fit and limited**. In practice:
+
+- A scanner app **should not ask for your national ID number** just to scan a bill
+- **Location permission** is unnecessary for document scanning
+- **Microphone permission** is unnecessary for scanning (a separate consent for voice search)
+
+If an app requests unnecessary permissions, that's a KVKK violation. When picking an app, **read the permissions list**.
+
+### Principle 2: Robust technical infrastructure (AES-256 + TLS 1.2+)
+
+KVKK Article 12 obligates data controllers to take **appropriate technical and administrative measures**. In practice:
+
+**In the local archive:** **AES-256** symmetric encryption. NIST-approved industry standard. With today's combined computing power, breaking an AES-256-encrypted file would theoretically take **trillions of years**.
+
+**During transit:** **TLS 1.2+** (Transport Layer Security). Your documents on the way to the cloud cannot be eavesdropped on or tampered with.
+
+**In the cloud:** Encrypted storage. Even the cloud provider's employees can't read the content in plaintext.
+
+**On the device:** Biometric lock + backup PIN. A strong barrier between someone picking up your phone and accessing your documents.
+
+### Principle 3: Transparency (Article 10 — Information Notice)
+
+KVKK Article 10 obliges the data controller to **inform the data subject**. In practice: the app must have an **Information Notice** (Aydınlatma Metni).
+
+A good Information Notice states:
+- Who the data controller is
+- What data is collected
+- For what purposes it is processed
+- Whom it is shared with
+- The collection method
+- The legal basis
+- Data-subject rights
+
+We built [DocuVault's Information Notice](/en/aydinlatma-metni) in this structure; you can use it as a reference (the page itself is in Turkish since it pertains to Turkish law).
+
+### Principle 4: Consent vs contractual necessity
+
+Not all data processing requires consent. KVKK Article 5 lists **six legal bases**:
+- Explicit consent
+- Required by law
+- Vital interest
+- Establishment or performance of a contract
+- Legal obligation
+- Legitimate interest of the controller
+
+For a document management app, the most common basis is **"performance of the contract"** — i.e. the data must be processed for the service to function. Separate consent isn't required. But for **optional analytics cookies**, **explicit consent** is required — hence cookie banners.
+
+### Principle 5: Retention limitation
+
+KVKK Article 7 requires storage **only for as long as the purpose requires**:
+
+- Financial documents (tax law): 5 years
+- Contracts (legal): typically 10 years
+- Personal daily records: your own discretion
+
+When you delete your account, the app must remove the data from **all backup layers** within a defined window (30 days in DocuVault).
+
+## Cloud vs local storage — KVKK's stance
+
+A common question. KVKK allows both — **the decision turns on how the app handles them**.
+
+### Local storage — pros
+- ✅ Data never leaves your device; no third party can see it
+- ✅ No internet needed
+
+### Local storage — cons
+- ❌ If the device is lost or broken, data is gone
+- ❌ No cross-device sync
+- ❌ Must be strongly encrypted (in case of theft)
+
+### Cloud storage — pros
+- ✅ Restorable after device loss / damage
+- ✅ Cross-device sync (iPhone + iPad + Mac)
+- ✅ Automatic backups
+
+### Cloud storage — cons (if not done well)
+- ❌ Third-party cloud provider can access the data
+- ❌ Jurisdictional concerns (KVKK prefers EU-based endpoints)
+- ❌ Provider breach = your documents at risk
+
+### Correct answer: both — but encrypted
+
+A modern document management app **encrypts the local archive with AES-256**, **transmits cloud backups over TLS**, and **stores them encrypted** in the cloud. Both layers are secure, and a device loss leaves you with the cloud backup.
+
+**Important KVKK rule:** The cloud provider's **data-residency policy** (where the data physically lives) should be **EU-based**. U.S.-based servers require additional safeguards under KVKK; EU servers are GDPR-compliant, so they auto-align with KVKK.
+
+DocuVault uses [Supabase](https://supabase.com) with EU-based endpoints.
+
+## Why AES-256 and TLS 1.2+ matter
+
+Let's demystify both terms:
+
+### AES-256
+- **A**dvanced **E**ncryption **S**tandard, 256-bit key
+- Approved by the U.S. National Institute of Standards and Technology (NIST)
+- Industry standard for banks, defense, healthcare
+- Breaking it would theoretically take **trillions of years**
+
+**In practice:** If your device is stolen, the thief can't open the files. Without the AES-256 key, the documents are just random bytes.
+
+### TLS 1.2+
+- **T**ransport **L**ayer **S**ecurity, the successor to SSL
+- The protocol your browser uses when visiting HTTPS sites
+- Keeps data **encrypted and tamper-resistant** in transit
+- Versions 1.0 and 1.1 (older) are insecure; **1.2 and 1.3** are required
+
+**In practice:** A document going to the cloud can't be intercepted or modified on the way.
+
+Together, AES-256 + TLS 1.2+ keep your document **safe both at rest and in transit**.
+
+## KVKK Article 11 — your data-subject rights
+
+As the document's owner, KVKK gives you **9 fundamental rights**:
+
+1. **Learn whether** your data is being processed
+2. **Be informed** of the processing purpose, duration
+3. **Know who** the data is transferred to
+4. **Request correction** of inaccurate information
+5. **Request deletion** ("right to be forgotten")
+6. **Have the correction/deletion notified** to recipients
+7. **Object to automated decisions** that disadvantage you
+8. **Claim damages** for unlawful processing
+9. **Lodge a complaint** with the Personal Data Protection Authority directly
+
+To exercise these rights with DocuVault, email destek@appdocuvault.com — statutory response window is 30 days.
+
+Detailed KVKK compliance document: [Information Notice (Aydınlatma Metni)](/en/aydinlatma-metni).
+
+## DocuVault's KVKK posture
+
+Let's be candid: there is no formal KVKK compliance certificate — Türkiye has no official certification program for mobile apps. But our technical foundations implement the "appropriate technical and administrative measures" of KVKK Article 12:
+
+- ✅ **AES-256** local encryption
+- ✅ **TLS 1.2+** transit
+- ✅ **EU-based** Supabase infrastructure
+- ✅ **Information Notice** both in-app and on the web
+- ✅ **No IDFA** / ad identifier collection
+- ✅ **Face ID** + **backup PIN** + **auto-lock**
+- ✅ **30-day** account deletion
+- ✅ **No persistent record** in AI services (summarization / search is transient)
+- ✅ Your document content is **never used for model training**
+
+## Practical KVKK compliance checklist
+
+Keep this with you when choosing a mobile document app:
+
+- [ ] Is there an Information Notice? On the website AND in the app?
+- [ ] Is local data **AES-256** encrypted?
+- [ ] Is transit **TLS 1.2+**?
+- [ ] Is the cloud provider **EU-based**?
+- [ ] Does it request **ad SDK / IDFA**? (It shouldn't)
+- [ ] Is **biometric lock** present?
+- [ ] Does **auto-lock** work (when backgrounded)?
+- [ ] Is the **data-subject contact address** stated? (Article 11)
+- [ ] Is **account deletion** easy? Is the timeline stated?
+- [ ] Does the AI service **train on your documents?** (It shouldn't)
+
+If the app ticks 8 or more, it's reasonably KVKK-compliant. DocuVault meets all 10.
+
+---
+
+Your documents are sensitive. KVKK gives you the legal framework to protect them — but the ultimate responsibility is yours. Choose the right app, enable biometric and cloud backup right away.
+
+More practical guidance: [the document scanner guide](/en/blog/belge-tarayici-rehberi).
