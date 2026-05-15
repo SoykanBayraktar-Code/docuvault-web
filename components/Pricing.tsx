@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Check, Star, ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { track } from "@/lib/analytics";
 
 const COMPARISON_KEYS = [
   "storage",
@@ -108,7 +109,10 @@ export default function Pricing() {
 
             <div className="mt-4 flex items-center gap-1 p-1 rounded-full bg-white ring-1 ring-border-warm self-start">
               <button
-                onClick={() => setIsYearly(false)}
+                onClick={() => {
+                  setIsYearly(false);
+                  track.togglePricingBilling("monthly");
+                }}
                 className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                   !isYearly
                     ? "bg-secondary text-white shadow-warm-sm"
@@ -118,7 +122,10 @@ export default function Pricing() {
                 {t("monthly")}
               </button>
               <button
-                onClick={() => setIsYearly(true)}
+                onClick={() => {
+                  setIsYearly(true);
+                  track.togglePricingBilling("yearly");
+                }}
                 className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
                   isYearly
                     ? "bg-secondary text-white shadow-warm-sm"

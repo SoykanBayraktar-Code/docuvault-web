@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { track } from "@/lib/analytics";
 
 type FaqItem = { q: string; a: string };
 
@@ -46,7 +47,11 @@ export default function FAQ() {
                 className="rounded-2xl bg-surface ring-1 ring-border-warm shadow-warm-sm overflow-hidden"
               >
                 <button
-                  onClick={() => setOpenIdx(isOpen ? null : i)}
+                  onClick={() => {
+                    const willOpen = !isOpen;
+                    setOpenIdx(willOpen ? i : null);
+                    if (willOpen) track.expandFaq(item.q, i);
+                  }}
                   className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-surface-elevated transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                   aria-expanded={isOpen}
                   aria-controls={`faq-panel-${i}`}
