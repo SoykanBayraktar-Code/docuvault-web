@@ -59,16 +59,20 @@ export default function Scene({ locale }: { locale: string }) {
       tl.to(lid.rotation, { x: LID_OPEN_X, duration: 1.0 }, 0.6);
       // 0.8–1.6s — inner light blooms
       tl.fromTo(light, { intensity: 0 }, { intensity: INNER_LIGHT_MAX, duration: 0.8 }, 0.8);
-      // 1.4–2.4s — phone rises out
-      tl.from(phone.position, { y: -0.8, duration: 1.0, ease: "back.out(1.4)" }, 1.4);
-      // 2.6s onward — idle float
+      // 1.7s — phone emerges AFTER the lid is fully open. It's scaled to 0
+      // (invisible) until then, so it can never poke through the closed lid.
+      tl.from(phone.scale, { x: 0, y: 0, z: 0, duration: 0.9, ease: "back.out(1.5)" }, 1.7);
+      tl.from(phone.position, { y: PHONE_REST_Y - 0.7, duration: 0.9, ease: "power3.out" }, 1.7);
+      // idle float
       tl.to(
         phone.position,
         { y: `+=0.12`, duration: 4, ease: "sine.inOut", yoyo: true, repeat: -1 },
-        2.6,
+        2.8,
       );
     },
-    { dependencies: [reduced] },
+    // revertOnUpdate so the reduced-motion hydration flip can't leave the
+    // phone stuck at scale 0 (invisible).
+    { dependencies: [reduced], revertOnUpdate: true },
   );
 
   // Subtle mouse head-tracking + battery-friendly pause when hidden.
