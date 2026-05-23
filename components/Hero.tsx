@@ -1,19 +1,52 @@
 "use client";
 
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 import { ShieldCheck, Cloud, Fingerprint, Sparkles } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import AppStoreButtons from "./AppStoreButtons";
+import { useIsMobile } from "@/hooks/use-is-mobile";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
+// Three.js must never run on the server, and only loads on capable desktops.
+const HeroVaultCanvas = dynamic(() => import("@/components/three/hero-vault"), {
+  ssr: false,
+});
 
 type Props = {
   ratingBadge?: ReactNode;
 };
 
+/** Static phone screenshot — the LCP image, mobile/reduced-motion fallback,
+ *  and the placeholder while the 3D chunk loads. */
+function StaticPhone({ locale, alt }: { locale: string; alt: string }) {
+  return (
+    <div className="relative w-full max-w-[420px] lg:max-w-[480px] aspect-[720/1328]">
+      <div className="absolute inset-6 rounded-[56px] bg-primary/12 blur-3xl" aria-hidden />
+      <Image
+        src={`/phone/${locale}/01-vault.webp`}
+        alt={alt}
+        fill
+        priority
+        fetchPriority="high"
+        sizes="(min-width: 1024px) 480px, 90vw"
+        className="object-contain drop-shadow-[0_30px_60px_rgba(74,92,63,0.22)]"
+      />
+    </div>
+  );
+}
+
 export default function Hero({ ratingBadge }: Props) {
   const t = useTranslations("hero");
   const locale = useLocale();
+  const isMobile = useIsMobile();
+  const reduced = useReducedMotion();
+
+  // 3D only on capable desktops with motion allowed; everyone else keeps the
+  // proven static hero (also the SSR/first-paint output).
+  const enable3D = !isMobile && !reduced;
 
   return (
     <section className="relative overflow-hidden pt-10 lg:pt-16 pb-20 lg:pb-28">
@@ -82,21 +115,17 @@ export default function Hero({ ratingBadge }: Props) {
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
           className="lg:col-span-6 relative flex items-center justify-center"
         >
-          <div className="relative w-full max-w-[420px] lg:max-w-[480px] aspect-[720/1328]">
+          {enable3D ? (
             <div
-              className="absolute inset-6 rounded-[56px] bg-primary/12 blur-3xl"
-              aria-hidden
-            />
-            <Image
-              src={`/phone/${locale}/01-vault.webp`}
-              alt={t("imageAlt")}
-              fill
-              priority
-              fetchPriority="high"
-              sizes="(min-width: 1024px) 480px, 90vw"
-              className="object-contain drop-shadow-[0_30px_60px_rgba(74,92,63,0.22)]"
-            />
-          </div>
+              className="relative w-full max-w-[520px] aspect-[5/6]"
+              role="img"
+              aria-label={t("imageAlt")}
+            >
+              <HeroVaultCanvas locale={locale} />
+            </div>
+          ) : (
+            <StaticPhone locale={locale} alt={t("imageAlt")} />
+          )}
         </motion.div>
       </div>
     </section>
