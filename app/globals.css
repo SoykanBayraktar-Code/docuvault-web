@@ -182,6 +182,46 @@ body::after {
   -webkit-backdrop-filter: saturate(180%) blur(16px);
 }
 
+/* Premium rotating gold-trail border (Pricing Gold card) */
+@property --gold-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.gold-trail {
+  position: relative;
+  isolation: isolate;
+}
+.gold-trail::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gold-angle),
+    transparent 0deg,
+    #c9a961 40deg,
+    #e0c282 85deg,
+    #c9a961 130deg,
+    transparent 220deg,
+    transparent 360deg
+  );
+  animation: gold-rotate 4.5s linear infinite;
+}
+@keyframes gold-rotate {
+  to {
+    --gold-angle: 360deg;
+  }
+}
+/* reduced motion: freeze the trail into a calm static gold border */
+@media (prefers-reduced-motion: reduce) {
+  .gold-trail::before {
+    animation: none;
+    background: linear-gradient(135deg, #c9a961, #e0c282);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
