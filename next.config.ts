@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.resolve(__dirname),
   },
+  // three.js ships untranspiled ESM add-ons; transpile so they bundle cleanly.
+  transpilePackages: ["three"],
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000,
