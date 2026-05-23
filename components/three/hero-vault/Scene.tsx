@@ -8,7 +8,7 @@ import {
   type PerspectiveCamera as ThreePerspectiveCamera,
 } from "three";
 import { useFrame } from "@react-three/fiber";
-import { Environment, Lightformer, PerspectiveCamera, Sparkles } from "@react-three/drei";
+import { Environment, Lightformer, PerspectiveCamera } from "@react-three/drei";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { hex } from "@/lib/brand";
@@ -106,8 +106,6 @@ export default function Scene({ locale }: { locale: string }) {
           <Phone locale={locale} />
         </group>
       </group>
-
-      <Sparkles count={80} scale={[9, 9, 4]} size={2.2} speed={reduced ? 0 : 0.25} color={hex("gold")} opacity={0.5} />
     </>
   );
 }

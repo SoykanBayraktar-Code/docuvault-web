@@ -8,9 +8,8 @@ import {
   type MeshBasicMaterial,
 } from "three";
 import { useFrame } from "@react-three/fiber";
-import { RoundedBox, useTexture } from "@react-three/drei";
+import { useTexture } from "@react-three/drei";
 import gsap from "gsap";
-import { hex } from "@/lib/brand";
 import { usePageVisibility } from "@/hooks/use-page-visibility";
 
 export type Progress = { current: number };
@@ -45,7 +44,12 @@ export default function PhoneStage({
     STEP_IMAGES.map((id) => `/phone/${locale}/${id}.webp`),
     (texs) => {
       const arr = Array.isArray(texs) ? texs : [texs];
-      for (const tex of arr) tex.colorSpace = SRGBColorSpace;
+      for (const tex of arr) {
+        tex.colorSpace = SRGBColorSpace;
+        // crop the cream margin so only the device shows (no extra frame)
+        tex.repeat.set(0.85, 0.95);
+        tex.offset.set(0.075, 0.025);
+      }
     },
   );
 
@@ -88,17 +92,14 @@ export default function PhoneStage({
 
   return (
     <group ref={phoneRef}>
-      <RoundedBox args={[1.82, 3.18, 0.18]} radius={0.18} smoothness={6}>
-        <meshPhysicalMaterial color={hex("ink")} metalness={0.6} roughness={0.38} clearcoat={0.5} />
-      </RoundedBox>
-      {/* settled screen */}
-      <mesh position={[0, 0, 0.1]}>
-        <planeGeometry args={[1.62, 2.99]} />
-        <meshBasicMaterial ref={matA} map={screens[0]} toneMapped={false} />
+      {/* settled screen — the webp is the phone; no extra 3D body/frame */}
+      <mesh position={[0, 0, 0]}>
+        <planeGeometry args={[1.55, 3.2]} />
+        <meshBasicMaterial ref={matA} map={screens[0]} toneMapped={false} transparent />
       </mesh>
       {/* incoming screen (quick fade) */}
-      <mesh position={[0, 0, 0.102]}>
-        <planeGeometry args={[1.62, 2.99]} />
+      <mesh position={[0, 0, 0.01]}>
+        <planeGeometry args={[1.55, 3.2]} />
         <meshBasicMaterial ref={matB} map={screens[1]} transparent opacity={0} toneMapped={false} />
       </mesh>
     </group>

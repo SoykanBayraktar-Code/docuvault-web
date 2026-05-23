@@ -1,31 +1,29 @@
 "use client";
 
 import { SRGBColorSpace } from "three";
-import { RoundedBox, useTexture } from "@react-three/drei";
-import { hex } from "@/lib/brand";
+import { useTexture } from "@react-three/drei";
 
 type Props = { locale: string };
 
-/**
- * Placeholder phone: a dark body with the localized app screenshot
- * (01-vault.webp) as an emissive (toneMapped:false) screen. Swapped for a
- * real iphone.glb with a frameless screen texture in a later pass.
- * Positioning/animation is handled by the parent group in Scene.
- */
+// The webp already IS a phone (titanium frame + UI) on a cream margin, so we
+// add NO 3D body (that produced an ugly double black frame). We just show the
+// image on a plane and crop the cream margin away via texture repeat/offset so
+// only the device shows.
+const CROP_REPEAT: [number, number] = [0.85, 0.95];
+const CROP_OFFSET: [number, number] = [0.075, 0.025];
+
 export default function Phone({ locale }: Props) {
-  const screen = useTexture(`/phone/${locale}/01-vault.webp`);
+  const screen = useTexture(`/phone/${locale}/01-vault.webp`, (tex) => {
+    const t = Array.isArray(tex) ? tex[0] : tex;
+    t.colorSpace = SRGBColorSpace;
+    t.repeat.set(...CROP_REPEAT);
+    t.offset.set(...CROP_OFFSET);
+  });
 
   return (
-    <>
-      <RoundedBox args={[1.82, 3.18, 0.18]} radius={0.18} smoothness={6}>
-        <meshPhysicalMaterial color={hex("ink")} metalness={0.6} roughness={0.38} clearcoat={0.5} />
-      </RoundedBox>
-      <mesh position={[0, 0, 0.1]}>
-        <planeGeometry args={[1.62, 2.99]} />
-        {/* set texture colorSpace declaratively (pierced prop) to satisfy
-            the React Compiler immutability rule */}
-        <meshBasicMaterial map={screen} map-colorSpace={SRGBColorSpace} toneMapped={false} />
-      </mesh>
-    </>
+    <mesh>
+      <planeGeometry args={[1.55, 3.2]} />
+      <meshBasicMaterial map={screen} toneMapped={false} transparent />
+    </mesh>
   );
 }
