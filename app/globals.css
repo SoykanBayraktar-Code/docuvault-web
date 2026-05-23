@@ -222,6 +222,94 @@ body::after {
   }
 }
 
+/* Custom cursor (desktop + fine pointer + motion only) */
+.cursor-none,
+.cursor-none * {
+  cursor: none !important;
+}
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 9999px;
+  will-change: transform;
+}
+.cursor-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--color-gold);
+}
+.cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid var(--color-gold);
+}
+
+/* Branded loader — SVG vault stroke draw, then fade out (hard loads only) */
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: grid;
+  place-items: center;
+  background: var(--color-forest);
+  animation: loader-out 1.6s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+.loader-mark {
+  width: 88px;
+  height: 88px;
+}
+.loader-mark rect,
+.loader-mark circle,
+.loader-mark line {
+  fill: none;
+  stroke: var(--color-gold);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: loader-draw 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes loader-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes loader-out {
+  0%,
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .loader-overlay {
+    animation: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Page transition — opacity only (no transform, so sticky nav stays intact).
+   Replays on every route change via app/[locale]/template.tsx. */
+.page-enter {
+  animation: page-in 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes page-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

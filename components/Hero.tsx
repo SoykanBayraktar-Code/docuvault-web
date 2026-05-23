@@ -2,13 +2,18 @@
 
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { useRef, type ReactNode } from "react";
 import { motion } from "framer-motion";
-import type { ReactNode } from "react";
 import { ShieldCheck, Cloud, Fingerprint, Sparkles } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/SplitText";
 import AppStoreButtons from "./AppStoreButtons";
 import { useIsMobile } from "@/hooks/use-is-mobile";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+
+gsap.registerPlugin(useGSAP, SplitText);
 
 // Three.js must never run on the server, and only loads on capable desktops.
 const HeroVaultCanvas = dynamic(() => import("@/components/three/hero-vault"), {
@@ -43,10 +48,31 @@ export default function Hero({ ratingBadge }: Props) {
   const locale = useLocale();
   const isMobile = useIsMobile();
   const reduced = useReducedMotion();
+  const titleRef = useRef<HTMLHeadingElement>(null);
 
   // 3D only on capable desktops with motion allowed; everyone else keeps the
   // proven static hero (also the SSR/first-paint output).
   const enable3D = !isMobile && !reduced;
+
+  // Word-by-word headline reveal (skipped under reduced motion).
+  useGSAP(
+    () => {
+      if (reduced || !titleRef.current) return;
+      const split = new SplitText(titleRef.current, { type: "words" });
+      gsap.from(split.words, {
+        yPercent: 120,
+        opacity: 0,
+        stagger: 0.07,
+        duration: 0.9,
+        ease: "power3.out",
+        delay: 0.15,
+      });
+      return () => split.revert();
+    },
+    // revertOnUpdate: when reduced flips false→true (SSR→client hydration),
+    // revert the split + tween so the headline never stays stuck hidden.
+    { dependencies: [reduced], revertOnUpdate: true },
+  );
 
   return (
     <section className="relative overflow-hidden pt-10 lg:pt-16 pb-20 lg:pb-28">
@@ -75,7 +101,10 @@ export default function Hero({ ratingBadge }: Props) {
             {t("badge")}
           </span>
 
-          <h1 className="mt-5 text-4xl sm:text-5xl lg:text-[64px] lg:leading-[1.05] font-semibold tracking-tight text-text-primary">
+          <h1
+            ref={titleRef}
+            className="mt-5 text-4xl sm:text-5xl lg:text-[64px] lg:leading-[1.05] font-semibold tracking-tight text-text-primary"
+          >
             {t("title1")}
             <br />
             <span className="text-primary">{t("title2Highlight")}</span>

@@ -6,6 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { useLenis } from "@/hooks/use-lenis";
+import CustomCursor from "@/components/ui/CustomCursor";
+import Loader from "@/components/ui/Loader";
 
 /**
  * Client providers for the whole app: Lenis smooth scroll wired to the GSAP
@@ -26,5 +28,11 @@ export default function Providers({ children }: { children: React.ReactNode }) {
     return () => window.clearTimeout(id);
   }, []);
 
-  return <>{children}</>;
+  return (
+    <>
+      <Loader />
+      {children}
+      <CustomCursor />
+    </>
+  );
 }
