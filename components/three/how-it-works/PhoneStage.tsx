@@ -89,12 +89,12 @@ export default function PhoneStage({
     <group ref={phoneRef}>
       {/* settled screen — the webp is the phone; no extra 3D body/frame */}
       <mesh position={[0, 0, 0]}>
-        <planeGeometry args={[1.7, 3.2]} />
+        <planeGeometry args={[1.5, 3.2]} />
         <meshBasicMaterial ref={matA} map={screens[0]} toneMapped={false} transparent />
       </mesh>
       {/* incoming screen (quick fade) */}
       <mesh position={[0, 0, 0.01]}>
-        <planeGeometry args={[1.7, 3.2]} />
+        <planeGeometry args={[1.5, 3.2]} />
         <meshBasicMaterial ref={matB} map={screens[1]} transparent opacity={0} toneMapped={false} />
       </mesh>
     </group>

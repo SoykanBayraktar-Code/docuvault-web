@@ -79,7 +79,7 @@ export default function Screenshots() {
                   className="group block w-60 sm:w-72 lg:w-80 cursor-zoom-in rounded-[1.9rem] bg-surface-elevated ring-1 ring-border-warm shadow-warm-lg p-3 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-warm-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background"
                   aria-label={t(`items.${key}.alt`)}
                 >
-                  <div className="relative w-full aspect-[720/1356] overflow-hidden rounded-[1.4rem]">
+                  <div className="relative w-full aspect-[1250/2666] overflow-hidden rounded-[1.9rem]">
                     <Image
                       src={`/phone/${locale}/${SHOT_IMAGES[key]}.webp`}
                       alt={t(`items.${key}.alt`)}

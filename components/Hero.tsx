@@ -29,7 +29,7 @@ type Props = {
  *  and the placeholder while the 3D chunk loads. */
 function StaticPhone({ locale, alt }: { locale: string; alt: string }) {
   return (
-    <div className="relative w-full max-w-[420px] lg:max-w-[480px] aspect-[720/1328]">
+    <div className="relative w-full max-w-[420px] lg:max-w-[480px] aspect-[1250/2666]">
       <div className="absolute inset-6 rounded-[56px] bg-primary/12 blur-3xl" aria-hidden />
       <Image
         src={`/phone/${locale}/01-vault.webp`}

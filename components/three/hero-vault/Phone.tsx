@@ -15,7 +15,7 @@ export default function Phone({ locale }: Props) {
 
   return (
     <mesh>
-      <planeGeometry args={[1.7, 3.2]} />
+      <planeGeometry args={[1.5, 3.2]} />
       <meshBasicMaterial map={screen} transparent toneMapped={false} />
     </mesh>
   );

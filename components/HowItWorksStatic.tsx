@@ -75,7 +75,7 @@ export default function HowItWorksStatic() {
                 </div>
 
                 <div className="lg:col-span-6 flex justify-center">
-                  <div className="relative w-full max-w-[360px] aspect-[720/1328]">
+                  <div className="relative w-full max-w-[360px] aspect-[1250/2666]">
                     <div
                       className="absolute inset-4 rounded-[40px] bg-primary/10 blur-2xl"
                       aria-hidden
