@@ -74,28 +74,24 @@ export default function Screenshots() {
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 className="snap-center shrink-0"
               >
-                <figure className="flex flex-col items-center">
-                  <button
-                    onClick={() => setOpenIndex(i)}
-                    className="relative w-60 sm:w-72 lg:w-80 aspect-[720/1328] cursor-zoom-in transition-transform duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background rounded-2xl"
-                    aria-label={t(`items.${key}.alt`)}
-                  >
-                    <div
-                      className="absolute inset-3 rounded-[40px] bg-primary/12 blur-xl"
-                      aria-hidden
-                    />
+                <button
+                  onClick={() => setOpenIndex(i)}
+                  className="group block w-60 sm:w-72 lg:w-80 cursor-zoom-in rounded-[1.9rem] bg-surface-elevated ring-1 ring-border-warm shadow-warm-lg p-3 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-warm-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background"
+                  aria-label={t(`items.${key}.alt`)}
+                >
+                  <div className="relative w-full aspect-[720/1328] overflow-hidden rounded-[1.4rem]">
                     <Image
                       src={`/phone/${locale}/${SHOT_IMAGES[key]}.webp`}
                       alt={t(`items.${key}.alt`)}
                       fill
                       sizes="(min-width: 1024px) 320px, 280px"
-                      className="object-contain drop-shadow-[0_18px_36px_rgba(74,92,63,0.22)]"
+                      className="object-cover"
                     />
-                  </button>
-                  <figcaption className="mt-4 text-sm font-medium text-text-secondary tracking-wide">
+                  </div>
+                  <figcaption className="mt-3 pb-1 text-center text-sm font-medium text-text-secondary tracking-wide">
                     {t(`items.${key}.label`)}
                   </figcaption>
-                </figure>
+                </button>
               </motion.li>
             ))}
           </ul>

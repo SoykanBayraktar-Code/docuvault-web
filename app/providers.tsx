@@ -23,9 +23,20 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
-    // Re-measure triggers after fonts/images settle to avoid offset drift.
-    const id = window.setTimeout(() => ScrollTrigger.refresh(), 300);
-    return () => window.clearTimeout(id);
+    // Re-measure triggers once layout truly settles: after fonts load, after
+    // the window load event (images/3D chunks), and a safety tick. Without
+    // this, lazily-mounted canvases shift positions and ScrollTriggers fire
+    // at the wrong scroll offsets.
+    const refresh = () => ScrollTrigger.refresh();
+    const id = window.setTimeout(refresh, 800);
+    window.addEventListener("load", refresh);
+    if (typeof document !== "undefined" && "fonts" in document) {
+      document.fonts.ready.then(refresh).catch(() => {});
+    }
+    return () => {
+      window.clearTimeout(id);
+      window.removeEventListener("load", refresh);
+    };
   }, []);
 
   return (

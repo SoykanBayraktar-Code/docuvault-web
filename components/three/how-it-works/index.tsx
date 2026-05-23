@@ -15,13 +15,16 @@ import PhoneStage, { type Progress } from "./PhoneStage";
 export default function HowItWorksCanvas({
   locale,
   progress,
+  active = true,
 }: {
   locale: string;
   progress: Progress;
+  active?: boolean;
 }) {
   return (
     <Canvas
-      dpr={[1, 2]}
+      dpr={[1, 1.5]}
+      frameloop={active ? "always" : "never"}
       gl={{ antialias: true, alpha: true, toneMapping: ACESFilmicToneMapping }}
       style={{ background: "transparent" }}
     >

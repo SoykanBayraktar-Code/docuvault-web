@@ -9,9 +9,9 @@ import {
 } from "three";
 import { useFrame } from "@react-three/fiber";
 import { RoundedBox, useTexture } from "@react-three/drei";
+import gsap from "gsap";
 import { hex } from "@/lib/brand";
 import { usePageVisibility } from "@/hooks/use-page-visibility";
-import Decorations from "./Decorations";
 
 export type Progress = { current: number };
 
@@ -24,8 +24,8 @@ const STEP_IMAGES = [
   "06-security",
 ] as const;
 
-// Slight phone rotation per step for life.
-const ROT_Y = [-0.14, 0, 0.09, 0, 0];
+// Subtle phone rotation per step.
+const ROT_Y = [-0.1, 0, 0.07, 0, 0];
 const LAST = STEP_IMAGES.length - 1;
 
 export default function PhoneStage({
@@ -36,8 +36,9 @@ export default function PhoneStage({
   progress: Progress;
 }) {
   const phoneRef = useRef<Group>(null);
-  const matA = useRef<MeshBasicMaterial>(null);
-  const matB = useRef<MeshBasicMaterial>(null);
+  const matA = useRef<MeshBasicMaterial>(null); // settled (opaque) screen
+  const matB = useRef<MeshBasicMaterial>(null); // incoming screen (fades in)
+  const currentIdx = useRef(0);
   const visible = usePageVisibility();
 
   const screens = useTexture(
@@ -51,47 +52,55 @@ export default function PhoneStage({
   useFrame((state) => {
     if (!visible) return;
     const p = MathUtils.clamp(progress.current, 0, 1);
-    const step = p * STEP_IMAGES.length;
-    const idx = Math.min(Math.floor(step), LAST);
-    const frac = Math.min(step - idx, 1);
-    const next = Math.min(idx + 1, LAST);
+    const idx = Math.min(Math.floor(p * STEP_IMAGES.length), LAST);
 
-    if (matA.current && matB.current) {
-      matA.current.map = screens[idx];
-      matB.current.map = screens[next];
-      matB.current.opacity = idx === next ? 0 : frac;
+    // Discrete, quick snap-fade between steps — no persistent two-screen
+    // ghosting (a slow crossfade of text-heavy screenshots looks broken).
+    if (idx !== currentIdx.current) {
+      const a = matA.current;
+      const b = matB.current;
+      if (a && b) {
+        b.map = screens[idx];
+        b.opacity = 0;
+        gsap.killTweensOf(b);
+        gsap.to(b, {
+          opacity: 1,
+          duration: 0.4,
+          ease: "power2.inOut",
+          onComplete: () => {
+            a.map = screens[idx];
+            b.opacity = 0;
+          },
+        });
+      }
+      currentIdx.current = idx;
     }
 
     if (phoneRef.current) {
-      const targetRot = ROT_Y[idx] ?? 0;
       phoneRef.current.rotation.y = MathUtils.lerp(
         phoneRef.current.rotation.y,
-        targetRot,
+        ROT_Y[idx] ?? 0,
         0.08,
       );
-      phoneRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.8) * 0.05;
+      phoneRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.8) * 0.04;
     }
   });
 
   return (
-    <>
-      <group ref={phoneRef}>
-        <RoundedBox args={[1.82, 3.18, 0.18]} radius={0.18} smoothness={6}>
-          <meshPhysicalMaterial color={hex("ink")} metalness={0.6} roughness={0.38} clearcoat={0.5} />
-        </RoundedBox>
-        {/* base screen */}
-        <mesh position={[0, 0, 0.1]}>
-          <planeGeometry args={[1.62, 2.99]} />
-          <meshBasicMaterial ref={matA} map={screens[0]} toneMapped={false} />
-        </mesh>
-        {/* crossfade overlay */}
-        <mesh position={[0, 0, 0.102]}>
-          <planeGeometry args={[1.62, 2.99]} />
-          <meshBasicMaterial ref={matB} map={screens[1]} transparent opacity={0} toneMapped={false} />
-        </mesh>
-      </group>
-
-      <Decorations progress={progress} stepCount={STEP_IMAGES.length} />
-    </>
+    <group ref={phoneRef}>
+      <RoundedBox args={[1.82, 3.18, 0.18]} radius={0.18} smoothness={6}>
+        <meshPhysicalMaterial color={hex("ink")} metalness={0.6} roughness={0.38} clearcoat={0.5} />
+      </RoundedBox>
+      {/* settled screen */}
+      <mesh position={[0, 0, 0.1]}>
+        <planeGeometry args={[1.62, 2.99]} />
+        <meshBasicMaterial ref={matA} map={screens[0]} toneMapped={false} />
+      </mesh>
+      {/* incoming screen (quick fade) */}
+      <mesh position={[0, 0, 0.102]}>
+        <planeGeometry args={[1.62, 2.99]} />
+        <meshBasicMaterial ref={matB} map={screens[1]} transparent opacity={0} toneMapped={false} />
+      </mesh>
+    </group>
   );
 }

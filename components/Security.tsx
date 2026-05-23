@@ -6,6 +6,7 @@ import { Lock, ShieldCheck, Fingerprint, ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useIsMobile } from "@/hooks/use-is-mobile";
+import { useInView } from "@/hooks/use-in-view";
 
 const SecurityFlowCanvas = dynamic(
   () => import("@/components/three/security-flow"),
@@ -21,6 +22,7 @@ const PILLAR_META = [
 export default function Security() {
   const t = useTranslations("security");
   const isMobile = useIsMobile();
+  const [vpRef, inView] = useInView<HTMLDivElement>();
   // 3D backdrop renders on desktop regardless of reduced motion; the stream
   // falls back to a static scatter (no flow) under reduced motion.
   const enable3D = !isMobile;
@@ -39,8 +41,8 @@ export default function Security() {
         aria-hidden
       />
       {enable3D && (
-        <div className="absolute inset-0 z-[1] pointer-events-none" aria-hidden>
-          <SecurityFlowCanvas />
+        <div ref={vpRef} className="absolute inset-0 z-[1] pointer-events-none" aria-hidden>
+          <SecurityFlowCanvas active={inView} />
         </div>
       )}
 

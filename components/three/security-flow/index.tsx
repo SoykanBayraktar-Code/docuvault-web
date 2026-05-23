@@ -11,10 +11,11 @@ import Scene from "./Scene";
  * Decorative encryption-flow backdrop for the dark Security section.
  * ssr:false dynamic import; transparent over the forest background.
  */
-export default function SecurityFlowCanvas() {
+export default function SecurityFlowCanvas({ active = true }: { active?: boolean }) {
   return (
     <Canvas
-      dpr={[1, 2]}
+      dpr={[1, 1.5]}
+      frameloop={active ? "always" : "never"}
       gl={{ antialias: true, alpha: true, toneMapping: ACESFilmicToneMapping }}
       style={{ background: "transparent" }}
     >

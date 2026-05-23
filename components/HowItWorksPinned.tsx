@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useInView } from "@/hooks/use-in-view";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -26,6 +27,7 @@ export default function HowItWorksPinned() {
   const locale = useLocale();
   const stageRef = useRef<HTMLDivElement>(null);
   const progress = useRef(0);
+  const [vpRef, inView] = useInView<HTMLDivElement>();
 
   useGSAP(
     () => {
@@ -119,8 +121,8 @@ export default function HowItWorksPinned() {
           </div>
 
           {/* Right — pinned 3D phone */}
-          <div className="relative h-[58vh] lg:h-[78vh] order-1 lg:order-2">
-            <HowItWorksCanvas locale={locale} progress={progress} />
+          <div ref={vpRef} className="relative h-[58vh] lg:h-[78vh] order-1 lg:order-2">
+            <HowItWorksCanvas locale={locale} progress={progress} active={inView} />
           </div>
         </div>
       </div>

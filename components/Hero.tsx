@@ -12,6 +12,7 @@ import { SplitText } from "gsap/SplitText";
 import AppStoreButtons from "./AppStoreButtons";
 import { useIsMobile } from "@/hooks/use-is-mobile";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useInView } from "@/hooks/use-in-view";
 
 gsap.registerPlugin(useGSAP, SplitText);
 
@@ -49,6 +50,7 @@ export default function Hero({ ratingBadge }: Props) {
   const isMobile = useIsMobile();
   const reduced = useReducedMotion();
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const [vpRef, inView] = useInView<HTMLDivElement>();
 
   // 3D renders on any capable desktop — reduced motion only disables the
   // animation (the scene shows its composed final state). Mobile keeps the
@@ -147,11 +149,12 @@ export default function Hero({ ratingBadge }: Props) {
         >
           {enable3D ? (
             <div
+              ref={vpRef}
               className="relative w-full max-w-[520px] aspect-[5/6]"
               role="img"
               aria-label={t("imageAlt")}
             >
-              <HeroVaultCanvas locale={locale} />
+              <HeroVaultCanvas locale={locale} active={inView} />
             </div>
           ) : (
             <StaticPhone locale={locale} alt={t("imageAlt")} />

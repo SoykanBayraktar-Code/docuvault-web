@@ -29,7 +29,24 @@ export function useLenis(enabled = true): React.RefObject<Lenis | null> {
     gsap.ticker.add(onTick);
     gsap.ticker.lagSmoothing(0);
 
+    // In-page anchor links → smooth Lenis scroll with a sticky-nav offset
+    // (native anchor jumps don't go through Lenis).
+    const onClick = (e: MouseEvent) => {
+      const anchor = (e.target as Element)?.closest?.(
+        'a[href^="#"]',
+      ) as HTMLAnchorElement | null;
+      if (!anchor) return;
+      const hash = anchor.getAttribute("href");
+      if (!hash || hash === "#") return;
+      const target = document.querySelector(hash);
+      if (!target) return;
+      e.preventDefault();
+      lenis.scrollTo(target as HTMLElement, { offset: -88 });
+    };
+    document.addEventListener("click", onClick);
+
     return () => {
+      document.removeEventListener("click", onClick);
       gsap.ticker.remove(onTick);
       lenis.destroy();
       lenisRef.current = null;

@@ -10,10 +10,17 @@ import Scene from "./Scene";
  * `dynamic(() => import(...), { ssr: false })` from Hero — Three.js must not
  * run on the server. Transparent canvas so the aged-paper page shows behind.
  */
-export default function HeroVaultCanvas({ locale }: { locale: string }) {
+export default function HeroVaultCanvas({
+  locale,
+  active = true,
+}: {
+  locale: string;
+  active?: boolean;
+}) {
   return (
     <Canvas
-      dpr={[1, 2]}
+      dpr={[1, 1.5]}
+      frameloop={active ? "always" : "never"}
       gl={{ antialias: true, alpha: true, toneMapping: ACESFilmicToneMapping }}
       style={{ background: "transparent" }}
     >
