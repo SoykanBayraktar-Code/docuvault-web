@@ -107,7 +107,7 @@ export default function Scene({ locale }: { locale: string }) {
         </group>
       </group>
 
-      <Sparkles count={80} scale={[9, 9, 4]} size={2.2} speed={0.25} color={hex("gold")} opacity={0.5} />
+      <Sparkles count={80} scale={[9, 9, 4]} size={2.2} speed={reduced ? 0 : 0.25} color={hex("gold")} opacity={0.5} />
     </>
   );
 }

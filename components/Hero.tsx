@@ -50,9 +50,10 @@ export default function Hero({ ratingBadge }: Props) {
   const reduced = useReducedMotion();
   const titleRef = useRef<HTMLHeadingElement>(null);
 
-  // 3D only on capable desktops with motion allowed; everyone else keeps the
-  // proven static hero (also the SSR/first-paint output).
-  const enable3D = !isMobile && !reduced;
+  // 3D renders on any capable desktop — reduced motion only disables the
+  // animation (the scene shows its composed final state). Mobile keeps the
+  // static hero (also the SSR / first-paint output).
+  const enable3D = !isMobile;
 
   // Word-by-word headline reveal (skipped under reduced motion).
   useGSAP(
