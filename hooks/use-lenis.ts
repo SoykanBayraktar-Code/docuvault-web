@@ -17,10 +17,12 @@ export function useLenis(enabled = true): React.RefObject<Lenis | null> {
     gsap.registerPlugin(ScrollTrigger);
 
     const lenis = new Lenis({
-      duration: 1.1,
+      // frame-rate-independent lerp — snappier/more responsive than a long
+      // duration easing (which can read as laggy "takılma"), still smooth.
+      lerp: 0.12,
       smoothWheel: true,
-      // gentle, "weighty archive" feel — not a slippery slide
-      easing: (t: number) => 1 - Math.pow(1 - t, 3),
+      wheelMultiplier: 1,
+      touchMultiplier: 1.5,
     });
     lenisRef.current = lenis;
 
