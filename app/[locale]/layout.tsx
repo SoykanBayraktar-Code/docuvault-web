@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import Providers from "@/app/providers";
 import { routing, type Locale } from "@/i18n/routing";
 
 const inter = Inter({
@@ -216,7 +217,7 @@ export default async function LocaleLayout({
       <body className="min-h-full bg-background text-text-primary">
         <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <Providers>{children}</Providers>
         </NextIntlClientProvider>
         <Analytics />
         <SpeedInsights />

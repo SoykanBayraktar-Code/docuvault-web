@@ -1,9 +1,17 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { Lock, ShieldCheck, Fingerprint, ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { useIsMobile } from "@/hooks/use-is-mobile";
+import { useInView } from "@/hooks/use-in-view";
+
+const SecurityFlowCanvas = dynamic(
+  () => import("@/components/three/security-flow"),
+  { ssr: false },
+);
 
 const PILLAR_META = [
   { key: "encryption", icon: Lock },
@@ -13,9 +21,17 @@ const PILLAR_META = [
 
 export default function Security() {
   const t = useTranslations("security");
+  const isMobile = useIsMobile();
+  const [vpRef, inView] = useInView<HTMLDivElement>();
+  // 3D backdrop renders on desktop regardless of reduced motion; the stream
+  // falls back to a static scatter (no flow) under reduced motion.
+  const enable3D = !isMobile;
 
   return (
-    <section className="relative py-24 lg:py-32 bg-primary-dark text-white overflow-hidden">
+    <section
+      id="security"
+      className="relative py-24 lg:py-32 bg-primary-dark text-white overflow-hidden"
+    >
       <div
         className="absolute inset-0 opacity-30 mix-blend-overlay paper-grain pointer-events-none"
         aria-hidden
@@ -24,8 +40,13 @@ export default function Security() {
         className="absolute -top-40 right-0 w-150 h-150 rounded-full bg-secondary/20 blur-3xl pointer-events-none"
         aria-hidden
       />
+      {enable3D && (
+        <div ref={vpRef} className="absolute inset-0 z-[1] pointer-events-none" aria-hidden>
+          <SecurityFlowCanvas active={inView} />
+        </div>
+      )}
 
-      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

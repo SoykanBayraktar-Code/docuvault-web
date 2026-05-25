@@ -12,7 +12,19 @@
   --color-secondary-light: #b8844e;
   --color-secondary-muted: #f5ebe0;
 
-  --color-background: #f9f6f1;
+  /* Premium / cinematic tier (dark 3D scenes) — bridges Vault Meridiem.
+     Mirrored in lib/brand.ts; change both. #2e3d27 is the shared bridge. */
+  --color-forest: #2e3d27;
+  --color-forest-dark: #1a2418;
+  --color-gold: #c9a961;
+  --color-gold-bright: #e0c282;
+  --color-ink: #0f1410;
+  --color-sage: #a8b5a0;
+  --color-straw: #efe4cb;
+  --color-cream-warm: #fff8e7;
+
+  /* Aged-straw paper is now the base background (warm, archival). */
+  --color-background: #efe4cb;
   --color-surface: #ffffff;
   --color-surface-elevated: #fdfaf6;
 
@@ -62,17 +74,86 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Lenis smooth-scroll (only active once Lenis attaches the .lenis classes;
+   native scroll is untouched for reduced-motion users). */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 /* Anchor offset so sticky navbar doesn't cover section tops */
 :where(section[id]) {
   scroll-margin-top: 88px;
 }
 
 body {
-  background: var(--color-background);
+  position: relative;
   color: var(--color-text-primary);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Aged straw paper — base colour + uneven aging blotches (large scale).
+     Static, cheap (no image requests), reduced-motion-irrelevant.
+     NOT background-attachment:fixed — that repaints every scroll frame. */
+  background-color: var(--color-straw);
+  background-image:
+    radial-gradient(ellipse 70% 55% at 18% 12%, rgba(245, 238, 216, 0.9) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 85% 25%, rgba(232, 218, 184, 0.85) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 70% 85%, rgba(226, 210, 170, 0.8) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 30% 75%, rgba(240, 231, 205, 0.75) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, #f1e7cf 0%, #e9dcbe 60%, #e1d2af 100%);
+}
+
+/* Fine paper-fibre grain + faint long fibres (inline SVG noise, multiply).
+   absolute (page-level) not fixed → composited once, just translates on
+   scroll instead of repainting every frame. */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012 0.4' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+  background-size: 220px 220px, 600px 600px;
+  mix-blend-mode: multiply;
+  opacity: 0.09;
+}
+
+/* Aged edges (gentle vignette) + a few sparse foxing spots. */
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image:
+    radial-gradient(circle at 12% 88%, rgba(150, 110, 55, 0.09) 0%, transparent 9%),
+    radial-gradient(circle at 88% 16%, rgba(150, 110, 55, 0.07) 0%, transparent 7%),
+    radial-gradient(circle at 64% 60%, rgba(140, 100, 50, 0.05) 0%, transparent 6%),
+    radial-gradient(ellipse 120% 120% at 50% 50%, transparent 55%, rgba(70, 52, 22, 0.11) 100%);
+}
+
+/* Keep grain crisp but unobtrusive when the user prefers less motion;
+   the paper is static so it stays — only intensity is eased. */
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    opacity: 0.06;
+  }
 }
 
 /* Archival paper grain — subtle, cheap */
@@ -102,6 +183,134 @@ body {
   background: rgba(249, 246, 241, 0.75);
   backdrop-filter: saturate(180%) blur(16px);
   -webkit-backdrop-filter: saturate(180%) blur(16px);
+}
+
+/* Premium rotating gold-trail border (Pricing Gold card) */
+@property --gold-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.gold-trail {
+  position: relative;
+  isolation: isolate;
+}
+.gold-trail::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gold-angle),
+    transparent 0deg,
+    #c9a961 40deg,
+    #e0c282 85deg,
+    #c9a961 130deg,
+    transparent 220deg,
+    transparent 360deg
+  );
+  animation: gold-rotate 4.5s linear infinite;
+}
+@keyframes gold-rotate {
+  to {
+    --gold-angle: 360deg;
+  }
+}
+/* reduced motion: freeze the trail into a calm static gold border */
+@media (prefers-reduced-motion: reduce) {
+  .gold-trail::before {
+    animation: none;
+    background: linear-gradient(135deg, #c9a961, #e0c282);
+  }
+}
+
+/* Custom cursor (desktop + fine pointer + motion only) */
+.cursor-none,
+.cursor-none * {
+  cursor: none !important;
+}
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 9999px;
+  will-change: transform;
+}
+.cursor-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--color-gold);
+}
+.cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid var(--color-gold);
+}
+
+/* Branded loader — SVG vault stroke draw, then fade out (hard loads only) */
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: grid;
+  place-items: center;
+  background: var(--color-forest);
+  animation: loader-out 1.6s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+.loader-mark {
+  width: 88px;
+  height: 88px;
+}
+.loader-mark rect,
+.loader-mark circle,
+.loader-mark line {
+  fill: none;
+  stroke: var(--color-gold);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: loader-draw 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes loader-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes loader-out {
+  0%,
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .loader-overlay {
+    animation: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Page transition — opacity only (no transform, so sticky nav stays intact).
+   Replays on every route change via app/[locale]/template.tsx. */
+.page-enter {
+  animation: page-in 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes page-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
