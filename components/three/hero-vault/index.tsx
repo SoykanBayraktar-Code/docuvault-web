@@ -22,6 +22,7 @@ export default function HeroVaultCanvas({
       dpr={[1, 1.5]}
       frameloop={active ? "always" : "never"}
       gl={{ antialias: true, alpha: true, toneMapping: ACESFilmicToneMapping }}
+      onCreated={({ gl }) => gl.setClearAlpha(0)}
       style={{ background: "transparent" }}
     >
       <Suspense fallback={null}>

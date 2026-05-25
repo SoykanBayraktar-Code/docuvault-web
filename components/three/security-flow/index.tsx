@@ -17,6 +17,7 @@ export default function SecurityFlowCanvas({ active = true }: { active?: boolean
       dpr={[1, 1.5]}
       frameloop={active ? "always" : "never"}
       gl={{ antialias: true, alpha: true, toneMapping: ACESFilmicToneMapping }}
+      onCreated={({ gl }) => gl.setClearAlpha(0)}
       style={{ background: "transparent" }}
     >
       <PerspectiveCamera makeDefault fov={40} position={[0, 0, 12]} />
