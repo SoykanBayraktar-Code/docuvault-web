@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import {
+  LinearFilter,
   MathUtils,
   SRGBColorSpace,
   type Group,
@@ -46,7 +47,17 @@ export default function PhoneStage({
     STEP_IMAGES.map((id) => `/phone/${locale}/${id}.webp`),
     (texs) => {
       const arr = Array.isArray(texs) ? texs : [texs];
-      for (const tex of arr) tex.colorSpace = SRGBColorSpace;
+      for (const tex of arr) {
+        tex.colorSpace = SRGBColorSpace;
+        // Same pale-fringe fix as the hero phone: premultiplied alpha + no
+        // mipmaps stops the WebP transparent-margin RGB from bleeding a light
+        // halo around the device on dark backgrounds.
+        tex.premultiplyAlpha = true;
+        tex.generateMipmaps = false;
+        tex.minFilter = LinearFilter;
+        tex.magFilter = LinearFilter;
+        tex.needsUpdate = true;
+      }
     },
   );
 
@@ -84,7 +95,14 @@ export default function PhoneStage({
     <group ref={phoneRef}>
       <mesh>
         <planeGeometry args={[1.5, 3.2]} />
-        <meshBasicMaterial ref={mat} map={screens[0]} transparent toneMapped={false} />
+        <meshBasicMaterial
+          ref={mat}
+          map={screens[0]}
+          transparent
+          toneMapped={false}
+          alphaTest={0.04}
+          depthWrite={false}
+        />
       </mesh>
     </group>
   );
