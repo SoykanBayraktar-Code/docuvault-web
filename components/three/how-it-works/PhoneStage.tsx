@@ -14,7 +14,6 @@ import { usePageVisibility } from "@/hooks/use-page-visibility";
 
 export type Progress = { current: number };
 
-// The 5 "how it works" steps and their screenshots.
 const STEP_IMAGES = [
   "02-scanner",
   "03-collections",
@@ -23,10 +22,14 @@ const STEP_IMAGES = [
   "06-security",
 ] as const;
 
-// Subtle phone rotation per step.
-const ROT_Y = [-0.1, 0, 0.07, 0, 0];
+const ROT_Y = [-0.08, 0, 0.06, 0, 0];
 const LAST = STEP_IMAGES.length - 1;
 
+/**
+ * A single unlit phone plane (the framed screenshot). On step change the one
+ * material dips opacity and swaps the texture — no second plane, so there's
+ * no stray overlay/panel behind the device.
+ */
 export default function PhoneStage({
   locale,
   progress,
@@ -35,8 +38,7 @@ export default function PhoneStage({
   progress: Progress;
 }) {
   const phoneRef = useRef<Group>(null);
-  const matA = useRef<MeshBasicMaterial>(null); // settled (opaque) screen
-  const matB = useRef<MeshBasicMaterial>(null); // incoming screen (fades in)
+  const mat = useRef<MeshBasicMaterial>(null);
   const currentIdx = useRef(0);
   const visible = usePageVisibility();
 
@@ -53,25 +55,18 @@ export default function PhoneStage({
     const p = MathUtils.clamp(progress.current, 0, 1);
     const idx = Math.min(Math.floor(p * STEP_IMAGES.length), LAST);
 
-    // Discrete, quick snap-fade between steps — no persistent two-screen
-    // ghosting (a slow crossfade of text-heavy screenshots looks broken).
-    if (idx !== currentIdx.current) {
-      const a = matA.current;
-      const b = matB.current;
-      if (a && b) {
-        b.map = screens[idx];
-        b.opacity = 0;
-        gsap.killTweensOf(b);
-        gsap.to(b, {
-          opacity: 1,
-          duration: 0.4,
-          ease: "power2.inOut",
-          onComplete: () => {
-            a.map = screens[idx];
-            b.opacity = 0;
-          },
-        });
-      }
+    if (idx !== currentIdx.current && mat.current) {
+      const m = mat.current;
+      gsap.killTweensOf(m);
+      gsap.to(m, {
+        opacity: 0.12,
+        duration: 0.16,
+        ease: "power2.in",
+        onComplete: () => {
+          m.map = screens[idx];
+        },
+      });
+      gsap.to(m, { opacity: 1, duration: 0.24, delay: 0.16, ease: "power2.out" });
       currentIdx.current = idx;
     }
 
@@ -87,15 +82,9 @@ export default function PhoneStage({
 
   return (
     <group ref={phoneRef}>
-      {/* settled screen — the webp is the phone; no extra 3D body/frame */}
-      <mesh position={[0, 0, 0]}>
+      <mesh>
         <planeGeometry args={[1.5, 3.2]} />
-        <meshBasicMaterial ref={matA} map={screens[0]} toneMapped={false} transparent />
-      </mesh>
-      {/* incoming screen (quick fade) */}
-      <mesh position={[0, 0, 0.01]}>
-        <planeGeometry args={[1.5, 3.2]} />
-        <meshBasicMaterial ref={matB} map={screens[1]} transparent opacity={0} toneMapped={false} />
+        <meshBasicMaterial ref={mat} map={screens[0]} transparent toneMapped={false} />
       </mesh>
     </group>
   );

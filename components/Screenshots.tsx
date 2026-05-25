@@ -76,19 +76,21 @@ export default function Screenshots() {
               >
                 <button
                   onClick={() => setOpenIndex(i)}
-                  className="group block w-60 sm:w-72 lg:w-80 cursor-zoom-in rounded-[1.9rem] bg-surface-elevated ring-1 ring-border-warm shadow-warm-lg p-3 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-warm-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background"
+                  className="group block w-60 sm:w-72 lg:w-80 cursor-zoom-in rounded-[2rem] transition-transform duration-300 hover:-translate-y-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background"
                   aria-label={t(`items.${key}.alt`)}
                 >
-                  <div className="relative w-full aspect-[1250/2666] overflow-hidden rounded-[1.9rem]">
+                  {/* the webp is the device itself (transparent margin) — no card,
+                      just a soft shadow for lift */}
+                  <div className="relative w-full aspect-[1250/2666]">
                     <Image
                       src={`/phone/${locale}/${SHOT_IMAGES[key]}.webp`}
                       alt={t(`items.${key}.alt`)}
                       fill
                       sizes="(min-width: 1024px) 320px, 280px"
-                      className="object-contain"
+                      className="object-contain drop-shadow-[0_18px_30px_rgba(46,61,39,0.20)]"
                     />
                   </div>
-                  <figcaption className="mt-3 pb-1 text-center text-sm font-medium text-text-secondary tracking-wide">
+                  <figcaption className="mt-4 text-center text-sm font-medium text-text-secondary tracking-wide">
                     {t(`items.${key}.label`)}
                   </figcaption>
                 </button>
