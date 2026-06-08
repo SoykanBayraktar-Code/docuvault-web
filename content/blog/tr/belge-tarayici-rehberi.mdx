@@ -25,7 +25,7 @@ Bir belge tarayıcı uygulama, telefon kamerasını **dokümantasyon kalitesinde
 2. **AI ile zenginleştirilmiş** — Otomatik adlandırma, kategorilendirme, OCR ile aranabilir hâle gelir
 3. **Bulutla senkron** — Bir cihazda taradığınız belgeye diğer cihazlarınızdan erişebilirsiniz
 
-DocuVault'ta yerleşik tarayıcımızı geliştirirken kullanıcılarımızdan duyduğumuz en yaygın geri bildirim şuydu: **"Üçüncü taraf bir uygulamayı açmak, taramak, oradan paylaşmak, geri DocuVault'a yüklemek… çok hantal."** İşte bu yüzden V1.1'de [yerleşik tarayıcımızı](/) ekledik. Bu rehberin geri kalanı; ister DocuVault, ister başka bir uygulama kullanın, **bilinçli karar vermenize** yarayacak.
+DocuVault'ta yerleşik tarayıcımızı geliştirirken kullanıcılarımızdan duyduğumuz en yaygın geri bildirim şuydu: **"Üçüncü taraf bir uygulamayı açmak, taramak, oradan paylaşmak, geri DocuVault'a yüklemek… çok hantal."** İşte bu yüzden [yerleşik tarayıcımızı](/) ekledik. Bu rehberin geri kalanı; ister DocuVault, ister başka bir uygulama kullanın, **bilinçli karar vermenize** yarayacak.
 
 ## Bir belge tarayıcıda aranacak 7 özellik
 
@@ -53,9 +53,9 @@ OCR olmadan taranan belge sadece bir görseldir. OCR ile **içindeki metin arana
 
 OCR'nin Türkçe karakterleri (ç, ş, ğ, ü, ö, ı, İ) düzgün tanıması özellikle Türkiye kullanıcısı için kritik. Test edin: Bir Türkçe belge tarayın, sonuçta İstanbul → İstanbul mu, yoksa Istanbul mu yazıyor?
 
-### 5. AES-256 yerel şifreleme
+### 5. AES-256 şifreleme
 
-Belgeleriniz hassas. Kimlik fotokopisi, banka ekstresi, sigorta poliçesi — yanlış ele geçerse ciddi sonuçlar doğurabilir. Bu yüzden cihazınızdaki yerel arşivin **AES-256 simetrik şifreleme** ile korunması bir lüks değil, **zorunluluk**.
+Belgeleriniz hassas. Kimlik fotokopisi, banka ekstresi, sigorta poliçesi — yanlış ele geçerse ciddi sonuçlar doğurabilir. Bu yüzden belgelerinizin **AES-256 simetrik şifreleme** ile (saklama sırasında) korunması bir lüks değil, **zorunluluk**.
 
 AES-256 ne demek? 256-bit anahtarla şifreleme, NIST'in onayladığı endüstri standardı. Pratikte: bugün dünyadaki bilgisayar gücü ile bile **trilyonlarca yıl** sürer bir AES-256 anahtarı kırmak.
 
@@ -75,7 +75,7 @@ Telefonunuzu birinin eline almasıyla belgelerinize erişmesi arasında **bir bi
 
 Eskiden iki seçeneğiniz vardı: bir tarayıcı uygulaması (örn. Notes, Adobe Scan), bir de belge yönetim uygulaması (örn. DocuVault'un eski sürümü, Apple Files). Belgeyi tarar, sonra elle taşırdınız.
 
-**V1.1 ile DocuVault yerleşik tarayıcıyı entegre etti** — yani uygulama içinde tara, otomatik kaydet. Aradaki uygulama atlanır. Bu yaklaşımın avantajları:
+**DocuVault yerleşik tarayıcıyı entegre etti** — yani uygulama içinde tara, otomatik kaydet. Aradaki uygulama atlanır. Bu yaklaşımın avantajları:
 
 - **Daha hızlı:** Üçüncü taraf aç-tara-paylaş-yükle yerine tek akış
 - **Daha güvenli:** Belge dışarı çıkmaz, doğrudan şifreli kasaya gider
@@ -121,10 +121,10 @@ Bir mobil belge tarayıcı seçerken bakacağınız 7 özellik:
 2. ✅ Çoklu sayfa PDF birleştirme
 3. ✅ Otomatik hizalama ve perspektif düzeltme
 4. ✅ Türkçe destekli OCR
-5. ✅ AES-256 yerel şifreleme
-6. ✅ Şifreli, AB-bölgeli bulut yedek
+5. ✅ AES-256 şifreleme
+6. ✅ Şifreli, AB-bölgeli bulut depolama
 7. ✅ Biyometrik kilit + yedek PIN
 
-DocuVault V1.1'in yerleşik tarayıcısı bu 7 özelliği barındırıyor; iOS App Store'dan **ücretsiz** indirip kendiniz deneyebilirsiniz. Eğer farklı bir uygulamayı tercih ediyorsanız, bu kontrol listesini yanınızdan ayırmayın.
+DocuVault'un yerleşik tarayıcısı bu 7 özelliği barındırıyor; iOS App Store'dan **ücretsiz** indirip kendiniz deneyebilirsiniz. Eğer farklı bir uygulamayı tercih ediyorsanız, bu kontrol listesini yanınızdan ayırmayın.
 
 Belge kaosuyla başa çıkmanın yolu, **bir kez taramak ve doğru organize etmek**. Modern tarayıcılar bunu 30 saniyede yapıyor — gerisi sizin sistematik olmanıza bağlı.

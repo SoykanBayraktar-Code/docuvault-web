@@ -52,7 +52,7 @@ Bir uygulama gereksiz izin istiyorsa, KVKK ihlalidir. Kendi uygulamanızı seçe
 
 KVKK Madde 12'ye göre veri sorumluları **uygun teknik ve idari tedbirleri** almalıdır. Pratikte bu:
 
-**Yerel arşivde:** **AES-256** simetrik şifreleme. Bu, NIST onaylı endüstri standardıdır. Bugünkü bilgisayar gücü ile AES-256 ile şifrelenmiş bir veriyi kırmak teorik olarak **trilyonlarca yıl** sürer.
+**Saklama sırasında (at-rest):** **AES-256** simetrik şifreleme. Bu, NIST onaylı endüstri standardıdır. Bugünkü bilgisayar gücü ile AES-256 ile şifrelenmiş bir veriyi kırmak teorik olarak **trilyonlarca yıl** sürer.
 
 **Aktarım sırasında:** **TLS 1.2+** (Transport Layer Security). Yani belgeleriniz buluta gönderilirken yolda dinlenemez/değiştirilemez.
 
@@ -122,7 +122,7 @@ Sık sorulan soru. KVKK her ikisine de izin verir; **kararı uygulama nasıl ele
 
 ### Doğru cevap: İkisi de, ama şifreli
 
-Modern bir belge yönetim uygulaması **yerel arşivi cihazda AES-256 ile şifreler**, **bulut yedeği TLS üzerinden iletir** ve **bulutta şifreli depolar**. Hem cihaz hem bulut güvenli olur, hem de cihaz kayıp/kırılma durumunda yedek elinizdedir.
+Modern bir belge yönetim uygulaması **belgeleri AES-256 ile şifreler**, **TLS üzerinden iletir** ve **bulutta (AB tabanlı uçlarda) şifreli depolar**. Böylece hem aktarım hem saklama güvenli olur, hem de cihaz kayıp/kırılma durumunda belgeleriniz bulutta güvende kalır.
 
 **Önemli KVKK kuralı:** Bulut sağlayıcının **veri ikamet politikası** (yani verilerin fiziksel olarak hangi ülkede saklandığı) **AB tabanlı uçlarda** olmalıdır. ABD merkezli serverlar, KVKK uyumu için ek korumalar gerektirir; AB serverlar GDPR uyumlu olduğundan KVKK ile genelde otomatik uyumludur.
 
@@ -172,7 +172,7 @@ Detaylı KVKK uyum dokümanımız: [Aydınlatma Metni](/aydinlatma-metni).
 
 Açık konuşalım: bir KVKK uyum sertifikası **yok**; çünkü Türkiye'de mobil uygulamalar için resmi bir sertifika programı bulunmuyor. Ancak teknik altyapımız KVKK Madde 12'de tarif edilen "uygun teknik ve idari tedbirleri" uygulamaktadır:
 
-- ✅ **AES-256** yerel şifreleme
+- ✅ **AES-256** ile şifreli saklama
 - ✅ **TLS 1.2+** aktarım
 - ✅ **AB-bölgeli** Supabase altyapısı
 - ✅ **Aydınlatma metni** hem uygulama içinde hem web sitesinde
