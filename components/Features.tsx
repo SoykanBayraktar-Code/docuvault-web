@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import {
   ScanLine,
   FileText,
+  Package,
+  ShieldCheck,
+  CalendarClock,
   Sparkles,
   Mic,
   Wand2,
@@ -15,14 +18,20 @@ import { useTranslations } from "next-intl";
 type FeatureKey =
   | "scanner"
   | "aiSummary"
+  | "capsules"
+  | "secureSharing"
+  | "expiryReminder"
   | "naturalLanguage"
   | "voice"
   | "smartNaming"
   | "collections";
 
 const FEATURE_META: { key: FeatureKey; icon: LucideIcon; hasBadge: boolean }[] = [
-  { key: "scanner", icon: ScanLine, hasBadge: true },
-  { key: "aiSummary", icon: FileText, hasBadge: true },
+  { key: "scanner", icon: ScanLine, hasBadge: false },
+  { key: "aiSummary", icon: FileText, hasBadge: false },
+  { key: "capsules", icon: Package, hasBadge: true },
+  { key: "secureSharing", icon: ShieldCheck, hasBadge: true },
+  { key: "expiryReminder", icon: CalendarClock, hasBadge: true },
   { key: "naturalLanguage", icon: Sparkles, hasBadge: false },
   { key: "voice", icon: Mic, hasBadge: false },
   { key: "smartNaming", icon: Wand2, hasBadge: false },

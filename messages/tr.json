@@ -23,9 +23,9 @@
   "metadata": {
     "title": "DocuVault — Belgeleriniz Güvende, Saniyeler İçinde Bulun",
     "titleTemplate": "%s | DocuVault",
-    "description": "Yerleşik belge tarayıcı, AI özetleme ve doğal dil arama ile tüm kritik belgelerinizi tek bir şifrelenmiş kasada toplayın. iOS için. Türkçe ve İngilizce.",
+    "description": "Yerleşik tarayıcı, AI özet ve doğal dil aramanın yanı sıra süreç bazlı Kapsüller ve gizlilik korumalı güvenli paylaşım — tüm kritik belgeleriniz tek bir şifreli kasada. iOS için. Türkçe ve İngilizce.",
     "ogTitle": "DocuVault — Belgeleriniz Güvende, Saniyeler İçinde Bulun",
-    "ogDescription": "Yerleşik tarayıcı, AI özetleme ve doğal dil arama — tüm belgeleriniz tek bir şifreli kasada. iOS için.",
+    "ogDescription": "Yerleşik tarayıcı, AI özet, doğal dil arama, Kapsüller ve güvenli paylaşım — tüm belgeleriniz tek bir şifreli kasada. iOS için.",
     "twTitle": "DocuVault — Belgeleriniz Güvende",
     "twDescription": "Yerleşik tarayıcı, AI özet ve doğal dil arama. iOS için şifreli belge kasası."
   },
@@ -41,7 +41,7 @@
     "homeAriaLabel": "DocuVault ana sayfa"
   },
   "hero": {
-    "badge": "Sürüm 1.1 · Yerleşik Tarayıcı + AI Özet",
+    "badge": "Sürüm 1.4.1 · Kapsüller · Güvenli Paylaşım",
     "title1": "Belgeleriniz güvende.",
     "title2Highlight": "Saniyeler içinde",
     "title2Rest": "bulun.",
@@ -49,6 +49,7 @@
     "trustFaceId": "Face ID / Touch ID",
     "trustEncrypted": "AES-256 şifreli",
     "trustCloud": "Bulut yedekli",
+    "trustDark": "Koyu mod",
     "imageAlt": "DocuVault mobil uygulama arayüzü"
   },
   "features": {
@@ -60,13 +61,26 @@
     "items": {
       "scanner": {
         "title": "Yerleşik Belge Tarayıcı",
-        "body": "Otomatik kenar algılama, çoklu sayfa PDF birleştirme ve hizalama düzeltmesi. Üçüncü taraf uygulamaya gerek yok.",
-        "badge": "V1.1"
+        "body": "Otomatik kenar algılama, çoklu sayfa PDF birleştirme ve hizalama düzeltmesi. Üçüncü taraf uygulamaya gerek yok."
       },
       "aiSummary": {
         "title": "AI Yönetici Özeti",
-        "body": "Yüklediğiniz her belge için anlamlı özet, kritik noktalar ve öneriler. Sözleşmeyi okumaya saatler harcamadan, özünü 30 saniyede.",
-        "badge": "V1.1"
+        "body": "Yüklediğiniz her belge için anlamlı özet, kritik noktalar ve öneriler. Sözleşmeyi okumaya saatler harcamadan, özünü 30 saniyede."
+      },
+      "capsules": {
+        "title": "Kapsüller",
+        "body": "Bir işin gerektirdiği tüm belgeleri tek bir Kapsülde toplayın — vize başvurusu, vergi beyanı, kira. Uygulama eksikleri gösterir, gereken form ve dilekçeleri üretir, hepsini tek güvenli bağlantıyla paylaşır.",
+        "badge": "Yeni"
+      },
+      "secureSharing": {
+        "title": "Güvenli Paylaşım",
+        "body": "Paylaşmadan önce DocuVault hassas alanları (kimlik no, IBAN, imza, yüz) otomatik algılar; neyin karartılacağını siz onaylarsınız ve karartma paylaşılan kopyaya kalıcı işlenir. Süreli, iptal edilebilir bağlantı ve teslim makbuzu.",
+        "badge": "Yeni"
+      },
+      "expiryReminder": {
+        "title": "Vade Hatırlatıcı",
+        "body": "Sigorta, kimlik, sözleşme... DocuVault belgeleriniz son kullanma tarihine yaklaşmadan sizi uyarır. Hiçbir vadeyi kaçırmayın.",
+        "badge": "Yeni"
       },
       "naturalLanguage": {
         "title": "Doğal Dil AI Arama",
@@ -141,6 +155,8 @@
     "freeFeatures": [
       "50 MB şifreli bulut depolama",
       "Ayda 3 belgeye kadar OCR",
+      "1 kişisel kapsül",
+      "Aylık 3 güvenli bağlantı",
       "8 yerleşik kategori",
       "Yerel arama",
       "Yerleşik belge tarayıcı",
@@ -160,6 +176,8 @@
     "goldComparisons": {
       "storage": { "label": "Depolama", "from": "50 MB", "to": "2 GB (40×)" },
       "ocr": { "label": "OCR / ay", "from": "3 belge", "to": "Sınırsız" },
+      "capsules": { "label": "Kapsüller", "from": "1 kapsül", "to": "Sınırsız + AI" },
+      "secureSharing": { "label": "Güvenli Paylaşım", "from": "3/ay", "to": "Sınırsız" },
       "aiSummary": { "label": "AI Yönetici Özeti", "from": "Yok", "to": "Aktif" },
       "naturalLanguage": { "label": "Doğal Dil AI Arama", "from": "Yok", "to": "Aktif" },
       "voice": { "label": "Sesli Komut", "from": "Yok", "to": "Aktif" },
@@ -198,6 +216,14 @@
         "a": "Yerel arşivde cihazınızda AES-256 simetrik şifreleme ile saklanır. Bulut yedekleri sektör lideri Supabase altyapısında AB tabanlı uçlarda, TLS 1.2+ üzerinden iletilir ve şifreli olarak depolanır. DocuVault ekibinin içeriklerinize düz metin erişimi yoktur."
       },
       {
+        "q": "Kapsüller nedir ve nasıl çalışır?",
+        "a": "Kapsül, bir işin (vize başvurusu, kira, vergi beyanı gibi) gerektirdiği tüm belgeleri tek bir pakette toplamanızı sağlar. DocuVault hangi belgelerin eksik olduğunu gösterir, gereken bazı form ve dilekçeleri uygulama içinde üretir ve tüm paketi tek bir güvenli bağlantıyla paylaşmanıza olanak tanır. Ücretsiz planda 1 kişisel kapsül; Gold'da sınırsız kapsül ve yapay zekâ destekli özellikler sunulur."
+      },
+      {
+        "q": "Belgelerimi paylaşırken hassas bilgilerim korunur mu?",
+        "a": "Evet. Paylaşmadan önce DocuVault; kimlik numarası, IBAN, imza ve yüz gibi hassas alanları otomatik olarak algılar ve neyin karartılacağına siz karar verirsiniz. Onayladığınız karartma, paylaşılan kopyanın içine kalıcı olarak işlenir; orijinal belgeniz olduğu gibi kalır. Bağlantılar süreli ve iptal edilebilir; ne zaman açıldığını teslim makbuzundan görürsünüz."
+      },
+      {
         "q": "Aboneliğimi nasıl iptal ederim?",
         "a": "iPhone'unuzun Ayarlar > Apple ID > Abonelikler menüsünden istediğiniz zaman yönetebilir veya iptal edebilirsiniz. Mevcut dönem bitmeden en az 24 saat önce iptal edilmezse abonelik otomatik yenilenir."
       },
@@ -219,7 +245,7 @@
       },
       {
         "q": "Aile paylaşımı veya çoklu cihaz desteği var mı?",
-        "a": "Aynı Apple ID ile birden çok cihazda kullanılabilir. Aile paylaşımı (Family Sharing) Apple'ın standart abonelik çerçevesinde değerlendirilmektedir; ek bir DocuVault paylaşım özelliği şu an için sunulmuyor."
+        "a": "Aynı Apple ID ile birden çok cihazda kullanabilirsiniz. Belgelerinizi başkalarıyla paylaşmak için Güvenli Bağlantı özelliğini kullanabilirsiniz: süreli, iptal edilebilir ve teslim makbuzlu bir bağlantı oluşturur, alıcı uygulama kurmadan tarayıcıda açar. Aile paylaşımı (Family Sharing) ise abonelikler için Apple'ın standart çerçevesinde değerlendirilir."
       },
       {
         "q": "İnternet olmadan da çalışıyor mu?",
