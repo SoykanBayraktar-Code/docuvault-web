@@ -74,7 +74,7 @@
       },
       "secureSharing": {
         "title": "Secure Sharing",
-        "body": "Before you share, DocuVault automatically detects sensitive fields (national ID, IBAN, signatures, faces) and lets you approve what gets redacted — permanently burned into the shared copy. Expiring, revocable links with a delivery receipt.",
+        "body": "Before you share, DocuVault automatically detects sensitive fields (national ID, IBAN, signatures, faces) and lets you approve what gets redacted — permanently burned into the shared copy. Share the expiring, revocable link over WhatsApp — the recipient opens it in a browser, no app required.",
         "badge": "New"
       },
       "expiryReminder": {
@@ -97,6 +97,22 @@
       "collections": {
         "title": "Custom Collections",
         "body": "Home, work, health — unlimited collections with your own icon and color. Find related documents at a single glance."
+      },
+      "aiDocGen": {
+        "title": "AI Document & Petition Generator",
+        "body": "Answer a few prompts and let AI draft low-risk documents like petitions, declarations and applications. Review an editable preview, then save as PDF or share."
+      },
+      "shareExtension": {
+        "title": "Share Extension",
+        "body": "Send a document or PDF straight from another app into your DocuVault vault via the iOS share sheet — no app-switching required."
+      },
+      "quickActions": {
+        "title": "Home Screen Quick Actions",
+        "body": "Press and hold the app icon to jump straight to scanning or search in one tap. Your most common tasks, right at your fingertips."
+      },
+      "accessibility": {
+        "title": "Accessibility & Dark Mode",
+        "body": "A warm-toned dark mode, VoiceOver labels, Reduce Motion support and focus management in modals. A comfortable, platform-crafted experience for everyone."
       }
     }
   },
@@ -166,13 +182,13 @@
     "popularBadge": "Most Popular",
     "monthly": "Monthly",
     "yearly": "Yearly",
-    "yearlyDiscount": "8.3% off",
-    "monthlyPrice": "$21.99",
+    "yearlyDiscount": "40% off",
+    "monthlyPrice": "$5.49",
     "monthlyPerUnit": "/mo",
-    "monthlyNote": "Billed monthly · Approx. ₺999.99",
-    "yearlyPrice": "$241.99",
+    "monthlyNote": "Billed monthly · Approx. ₺249.99",
+    "yearlyPrice": "$39.99",
     "yearlyPerUnit": "/yr",
-    "yearlyNote": "$20.17/mo · 8.3% off · Approx. ₺10,999",
+    "yearlyNote": "$3.33/mo · 40% off · Approx. ₺1,799",
     "goldComparisons": {
       "storage": { "label": "Storage", "from": "50 MB", "to": "2 GB (40×)" },
       "ocr": { "label": "OCR / mo", "from": "3 docs", "to": "Unlimited" },
@@ -193,11 +209,11 @@
     "pillars": {
       "encryption": {
         "title": "AES-256 + TLS 1.2+",
-        "body": "AES-256 symmetric encryption in the local archive. All transport over TLS 1.2+. Industry standard, non-negotiable."
+        "body": "Your documents are stored encrypted with AES-256, and all transport runs over TLS 1.2+. Industry standard, non-negotiable."
       },
       "residency": {
         "title": "EU Data Residency",
-        "body": "Encrypted cloud stored on industry-leading Supabase infrastructure at EU-based endpoints. The DocuVault team has no access to your content."
+        "body": "Encrypted storage is kept on industry-leading Supabase infrastructure at EU-based endpoints. Access is restricted to your own account with row-level security (RLS)."
       },
       "biometric": {
         "title": "Face ID + Backup PIN",
@@ -213,7 +229,7 @@
     "items": [
       {
         "q": "Where are my documents stored?",
-        "a": "They are stored on your device with AES-256 symmetric encryption in the local archive. Cloud backups are kept on industry-leading Supabase infrastructure at EU-based endpoints, transmitted over TLS 1.2+, and stored encrypted. The DocuVault team has no plaintext access to your content."
+        "a": "Your documents are stored in a private space on industry-leading Supabase infrastructure at EU-based endpoints, encrypted with AES-256 and served only through short-lived secure links over TLS 1.2+. Access is restricted to your account with row-level security (RLS); the DocuVault team does not routinely view your documents."
       },
       {
         "q": "What are Capsules and how do they work?",
@@ -221,7 +237,7 @@
       },
       {
         "q": "Are my sensitive details protected when I share documents?",
-        "a": "Yes. Before you share, DocuVault automatically detects sensitive fields such as national ID numbers, IBAN, signatures and faces, and you decide what gets redacted. The redaction you approve is permanently burned into the shared copy, while your original stays intact. Links are time-limited and revocable, and a delivery receipt shows you when they were opened."
+        "a": "Yes. Before you share, DocuVault automatically detects sensitive fields such as national ID numbers, IBAN, signatures and faces, and you decide what gets redacted. The redaction you approve is permanently burned into the shared copy, while your original stays intact. You can share the resulting link over WhatsApp or any channel; the recipient opens it in a browser without installing the app. Links are time-limited and revocable, and a delivery receipt shows you when they were opened."
       },
       {
         "q": "How do I cancel my subscription?",
@@ -233,7 +249,7 @@
       },
       {
         "q": "When will Android be available?",
-        "a": "The current version is fully optimized for the iPhone interface. An Android implementation is on our roadmap, but no firm date has been announced yet."
+        "a": "DocuVault is currently available for iPhone only, with an interface fully optimized for iOS. We can't share a firm date or commitment for Android at this time."
       },
       {
         "q": "Can I delete my account?",
@@ -241,7 +257,7 @@
       },
       {
         "q": "Which devices are supported?",
-        "a": "iOS 15.1 and above on all iPhones (iPhone XR or newer recommended). A dedicated iPad interface is on our roadmap."
+        "a": "iOS 15.1 and above on all iPhones (iPhone XR or newer recommended). It runs on iPad with the iPhone interface; we don't have a firm commitment for a dedicated iPad interface."
       },
       {
         "q": "Is there Family Sharing or multi-device support?",

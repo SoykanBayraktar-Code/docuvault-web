@@ -74,7 +74,7 @@
       },
       "secureSharing": {
         "title": "Güvenli Paylaşım",
-        "body": "Paylaşmadan önce DocuVault hassas alanları (kimlik no, IBAN, imza, yüz) otomatik algılar; neyin karartılacağını siz onaylarsınız ve karartma paylaşılan kopyaya kalıcı işlenir. Süreli, iptal edilebilir bağlantı ve teslim makbuzu.",
+        "body": "Paylaşmadan önce DocuVault hassas alanları (kimlik no, IBAN, imza, yüz) otomatik algılar; neyin karartılacağını siz onaylarsınız, karartma paylaşılan kopyaya kalıcı işlenir. Süreli, iptal edilebilir bağlantıyı WhatsApp'tan paylaşın — alıcı uygulama kurmadan tarayıcıda açar.",
         "badge": "Yeni"
       },
       "expiryReminder": {
@@ -97,6 +97,22 @@
       "collections": {
         "title": "Özel Koleksiyonlar",
         "body": "Ev, iş, sağlık — kendi ikon ve renginizle sınırsız koleksiyon. İlgili belgeleri tek bakışta bulun."
+      },
+      "aiDocGen": {
+        "title": "AI Belge & Dilekçe Üretici",
+        "body": "Birkaç soruyla dilekçe, beyan ve başvuru gibi düşük riskli belgeleri yapay zekâ üretsin. Düzenleyebileceğiniz önizlemeyle gözden geçirin, PDF olarak kaydedin veya paylaşın."
+      },
+      "shareExtension": {
+        "title": "Paylaşım Uzantısı",
+        "body": "Başka bir uygulamadaki belgeyi veya PDF'i iOS paylaş menüsünden doğrudan DocuVault kasanıza aktarın — uygulamalar arası geçişe gerek yok."
+      },
+      "quickActions": {
+        "title": "Ana Ekran Hızlı Eylemler",
+        "body": "Uygulama ikonuna basılı tutun; doğrudan taramaya veya aramaya tek dokunuşla atlayın. En sık işleriniz parmağınızın ucunda."
+      },
+      "accessibility": {
+        "title": "Erişilebilirlik & Koyu Mod",
+        "body": "Sıcak tonlu koyu mod, VoiceOver etiketleri, Reduce Motion desteği ve modal odak yönetimi. Herkes için rahat, platforma özen gösterilmiş bir deneyim."
       }
     }
   },
@@ -166,13 +182,13 @@
     "popularBadge": "En Popüler",
     "monthly": "Aylık",
     "yearly": "Yıllık",
-    "yearlyDiscount": "%8,3 indirim",
-    "monthlyPrice": "₺999,99",
+    "yearlyDiscount": "%40 indirim",
+    "monthlyPrice": "₺249,99",
     "monthlyPerUnit": "/ay",
     "monthlyNote": "Aylık fatura",
-    "yearlyPrice": "₺10.999",
+    "yearlyPrice": "₺1.799",
     "yearlyPerUnit": "/yıl",
-    "yearlyNote": "₺916,58/ay · %8,3 indirim",
+    "yearlyNote": "₺149,92/ay · %40 indirim",
     "goldComparisons": {
       "storage": { "label": "Depolama", "from": "50 MB", "to": "2 GB (40×)" },
       "ocr": { "label": "OCR / ay", "from": "3 belge", "to": "Sınırsız" },
@@ -193,11 +209,11 @@
     "pillars": {
       "encryption": {
         "title": "AES-256 + TLS 1.2+",
-        "body": "Yerel arşivde AES-256 simetrik şifreleme. Tüm aktarım TLS 1.2+ üzerinden. Endüstri standardı, müzakere edilmez."
+        "body": "Belgeleriniz AES-256 ile şifrelenerek saklanır; tüm aktarım TLS 1.2+ üzerinden korunur. Endüstri standardı, müzakere edilmez."
       },
       "residency": {
         "title": "EU Veri İkameti",
-        "body": "Şifreli bulut, sektör lideri Supabase altyapısında AB tabanlı uçlarda saklanır. DocuVault ekibi içeriklere erişemez."
+        "body": "Şifreli depolama, sektör lideri Supabase altyapısında AB tabanlı uçlarda tutulur. Erişim satır düzeyi güvenlik (RLS) ile yalnızca sizin hesabınıza kısıtlıdır."
       },
       "biometric": {
         "title": "Face ID + Yedek PIN",
@@ -213,7 +229,7 @@
     "items": [
       {
         "q": "Belgelerim nerede saklanıyor?",
-        "a": "Yerel arşivde cihazınızda AES-256 simetrik şifreleme ile saklanır. Bulut yedekleri sektör lideri Supabase altyapısında AB tabanlı uçlarda, TLS 1.2+ üzerinden iletilir ve şifreli olarak depolanır. DocuVault ekibinin içeriklerinize düz metin erişimi yoktur."
+        "a": "Belgeleriniz, sektör lideri Supabase altyapısında AB tabanlı uçlarda; özel (private) bir alanda AES-256 ile şifrelenerek saklanır ve yalnızca kısa ömürlü güvenli bağlantılarla, TLS 1.2+ üzerinden iletilir. Erişim, satır düzeyi güvenlik (RLS) ile yalnızca sizin hesabınıza kısıtlıdır; DocuVault ekibi belgelerinizi rutin olarak görüntülemez."
       },
       {
         "q": "Kapsüller nedir ve nasıl çalışır?",
@@ -221,7 +237,7 @@
       },
       {
         "q": "Belgelerimi paylaşırken hassas bilgilerim korunur mu?",
-        "a": "Evet. Paylaşmadan önce DocuVault; kimlik numarası, IBAN, imza ve yüz gibi hassas alanları otomatik olarak algılar ve neyin karartılacağına siz karar verirsiniz. Onayladığınız karartma, paylaşılan kopyanın içine kalıcı olarak işlenir; orijinal belgeniz olduğu gibi kalır. Bağlantılar süreli ve iptal edilebilir; ne zaman açıldığını teslim makbuzundan görürsünüz."
+        "a": "Evet. Paylaşmadan önce DocuVault; kimlik numarası, IBAN, imza ve yüz gibi hassas alanları otomatik olarak algılar ve neyin karartılacağına siz karar verirsiniz. Onayladığınız karartma, paylaşılan kopyanın içine kalıcı olarak işlenir; orijinal belgeniz olduğu gibi kalır. Oluşan bağlantıyı WhatsApp'tan veya istediğiniz kanaldan paylaşabilirsiniz; alıcı uygulama kurmadan tarayıcıda açar. Bağlantılar süreli ve iptal edilebilir; ne zaman açıldığını teslim makbuzundan görürsünüz."
       },
       {
         "q": "Aboneliğimi nasıl iptal ederim?",
@@ -233,7 +249,7 @@
       },
       {
         "q": "Android sürümü ne zaman çıkacak?",
-        "a": "Mevcut sürüm tamamen iPhone arayüzü için optimize edilmiştir. Android için yol haritamızda bir çalışma yer almakta, ancak henüz kesin bir tarih duyurulmamıştır."
+        "a": "DocuVault şu an yalnızca iPhone için sunuluyor ve arayüzü tamamen iOS'a göre optimize edildi. Android için kesin bir tarih veya taahhüt paylaşamıyoruz."
       },
       {
         "q": "Hesabımı silebilir miyim?",
@@ -241,7 +257,7 @@
       },
       {
         "q": "Hangi cihazları destekliyor?",
-        "a": "iOS 15.1 ve üzeri tüm iPhone'lar (iPhone XR ve sonrası önerilir). iPad'e özgü ayrı bir arayüz çalışması yol haritamızda yer almaktadır."
+        "a": "iOS 15.1 ve üzeri tüm iPhone'lar (iPhone XR ve sonrası önerilir). iPad'de iPhone arayüzüyle çalışır; iPad'e özel ayrı bir arayüz için kesin bir taahhüdümüz yok."
       },
       {
         "q": "Aile paylaşımı veya çoklu cihaz desteği var mı?",

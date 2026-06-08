@@ -6,11 +6,15 @@ import {
   FileText,
   Package,
   ShieldCheck,
+  FileSignature,
   CalendarClock,
   Sparkles,
   Mic,
   Wand2,
   FolderOpen,
+  Share2,
+  Zap,
+  MoonStar,
   type LucideIcon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -20,22 +24,30 @@ type FeatureKey =
   | "aiSummary"
   | "capsules"
   | "secureSharing"
+  | "aiDocGen"
   | "expiryReminder"
   | "naturalLanguage"
   | "voice"
   | "smartNaming"
-  | "collections";
+  | "collections"
+  | "shareExtension"
+  | "quickActions"
+  | "accessibility";
 
 const FEATURE_META: { key: FeatureKey; icon: LucideIcon; hasBadge: boolean }[] = [
   { key: "scanner", icon: ScanLine, hasBadge: false },
   { key: "aiSummary", icon: FileText, hasBadge: false },
   { key: "capsules", icon: Package, hasBadge: true },
   { key: "secureSharing", icon: ShieldCheck, hasBadge: true },
-  { key: "expiryReminder", icon: CalendarClock, hasBadge: true },
+  { key: "aiDocGen", icon: FileSignature, hasBadge: false },
+  { key: "expiryReminder", icon: CalendarClock, hasBadge: false },
   { key: "naturalLanguage", icon: Sparkles, hasBadge: false },
   { key: "voice", icon: Mic, hasBadge: false },
   { key: "smartNaming", icon: Wand2, hasBadge: false },
   { key: "collections", icon: FolderOpen, hasBadge: false },
+  { key: "shareExtension", icon: Share2, hasBadge: false },
+  { key: "quickActions", icon: Zap, hasBadge: false },
+  { key: "accessibility", icon: MoonStar, hasBadge: false },
 ];
 
 export default function Features() {
