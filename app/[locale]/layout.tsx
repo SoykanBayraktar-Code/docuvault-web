@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { routing, type Locale } from "@/i18n/routing";
+import { getAppStoreRating } from "@/lib/app-store";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -95,6 +96,11 @@ export async function generateMetadata({
       },
     },
     category: "productivity",
+    verification: {
+      google:
+        process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ||
+        "HA3B0W2w_4sF2eNtDzeKTQA20StS4xYvCTmsQXK2LL4",
+    },
   };
 }
 
@@ -123,6 +129,7 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale as Locale);
   const messages = await getMessages();
+  const rating = await getAppStoreRating();
 
   const softwareJsonLd = {
     "@context": "https://schema.org",
@@ -144,13 +151,13 @@ export default async function LocaleLayout({
       {
         "@type": "Offer",
         name: locale === "en" ? "Gold Monthly" : "Gold Aylık",
-        price: locale === "en" ? "21.99" : "999.99",
+        price: locale === "en" ? "5.49" : "249.99",
         priceCurrency: locale === "en" ? "USD" : "TRY",
       },
       {
         "@type": "Offer",
         name: locale === "en" ? "Gold Yearly" : "Gold Yıllık",
-        price: locale === "en" ? "241.99" : "10999",
+        price: locale === "en" ? "39.99" : "1799",
         priceCurrency: locale === "en" ? "USD" : "TRY",
       },
     ],
@@ -158,24 +165,43 @@ export default async function LocaleLayout({
       locale === "tr"
         ? [
             "Yerleşik belge tarayıcı",
+            "DocuVault Kapsülleri (süreç bazlı evrak paketleme)",
+            "AI Belge & Dilekçe Üretici",
             "AI Yönetici Özeti",
             "Doğal dil ile AI arama",
             "Sesli komutla arama",
-            "AES-256 şifreleme",
+            "Gizlilik korumalı güvenli paylaşım (otomatik karartma + süreli bağlantı)",
+            "Vade hatırlatıcı",
+            "AES-256 şifreleme + TLS 1.2+",
             "Face ID / Touch ID koruması",
-            "Şifreli bulut yedekleme",
+            "Koyu mod",
             "Türkçe ve İngilizce arayüz",
           ]
         : [
             "Built-in document scanner",
+            "DocuVault Capsules (task-based document bundling)",
+            "AI document & petition generator",
             "AI Executive Summary",
             "Natural-language AI search",
             "Voice command search",
-            "AES-256 encryption",
+            "Privacy-conscious secure sharing (auto-redaction + expiring links)",
+            "Expiry reminders",
+            "AES-256 encryption + TLS 1.2+",
             "Face ID / Touch ID protection",
-            "Encrypted cloud backup",
+            "Dark mode",
             "Turkish and English UI",
           ],
+    ...(rating
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: rating.average,
+            ratingCount: rating.count,
+            bestRating: 5,
+            worstRating: 1,
+          },
+        }
+      : {}),
     publisher: {
       "@type": "Organization",
       name: "DocuVault",
@@ -191,6 +217,9 @@ export default async function LocaleLayout({
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     email: "destek@appdocuvault.com",
+    sameAs: [
+      "https://apps.apple.com/tr/app/docuvault-belge-kasasi/id6762083376",
+    ],
     contactPoint: {
       "@type": "ContactPoint",
       email: "destek@appdocuvault.com",

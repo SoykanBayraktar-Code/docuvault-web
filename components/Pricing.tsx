@@ -9,6 +9,8 @@ import { track } from "@/lib/analytics";
 const COMPARISON_KEYS = [
   "storage",
   "ocr",
+  "capsules",
+  "secureSharing",
   "aiSummary",
   "naturalLanguage",
   "voice",
