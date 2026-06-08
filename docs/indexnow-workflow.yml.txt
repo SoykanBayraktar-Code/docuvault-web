@@ -1,0 +1,32 @@
+name: IndexNow
+
+# Notify Bing / Yandex / Seznam / AI search of our URLs on every production
+# deploy. No secrets needed — ownership is proven by public/<key>.txt.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: indexnow-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  submit:
+    name: Submit URLs to IndexNow
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Wait for production deploy to propagate
+        run: sleep 120
+
+      - name: Submit URLs to IndexNow
+        run: node scripts/indexnow.mjs
