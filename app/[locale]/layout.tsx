@@ -96,9 +96,11 @@ export async function generateMetadata({
       },
     },
     category: "productivity",
-    verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-      ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
-      : undefined,
+    verification: {
+      google:
+        process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ||
+        "HA3B0W2w_4sF2eNtDzeKTQA20StS4xYvCTmsQXK2LL4",
+    },
   };
 }
 
