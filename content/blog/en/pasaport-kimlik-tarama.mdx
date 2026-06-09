@@ -1,0 +1,70 @@
+---
+title: "How to Scan a Passport or ID — and Share It Safely (2026)"
+description: "Scanning passports and ID cards on iPhone, quality tips, and most importantly: sharing them safely by redacting sensitive fields."
+date: "2026-06-09"
+author: "soykan-bayraktar"
+tags: ["passport", "id", "scanning", "security", "guide"]
+category: "güvenlik"
+pillar: "belge-tarayici-rehberi"
+seoTitle: "How to Scan a Passport or ID — Share Safely 2026 | DocuVault"
+seoDescription: "Scan passports/ID on iPhone, quality tips, and how to share safely by redacting sensitive fields. Privacy-conscious, expiring secure links."
+---
+
+Passports and ID cards are the documents most often copied — and the **riskiest** to share. Hotels, banks, visa offices, real-estate agents… everyone wants "a copy of your ID." But an ID photocopy in the wrong hands opens the door to **identity theft.** This guide covers scanning a passport/ID **at good quality** and — more importantly — **sharing it safely by redacting sensitive fields.**
+
+## Tips for scanning passports/IDs
+
+Readability is critical for official documents:
+
+- **Avoid glare.** ID cards and the passport photo page are glossy. Scan in **soft, even light** (not under direct light), and keep your phone's shadow off the document.
+- **Lay it flat.** Open the passport photo page fully and flatten it; a curl breaks the MRZ (the machine-readable lines at the bottom).
+- **Keep all edges in frame.** Auto edge detection finds the 4 corners; don't let them get cut off.
+- **Front and back.** Both sides of an ID card; the identity (photo) page of a passport, plus visa pages if needed.
+
+In DocuVault: green **"+"** → **Scan Document** → frame it → capture → for multiple pages tap **"Add Page"** → **"Finish."** The document enters your vault encrypted with AES-256 (on EU-based endpoints); OCR runs in the cloud to make it searchable.
+
+## The real issue: sharing your ID safely
+
+Scanning a document is easy; **controlling who sees what** is hard. Your ID card may carry **more data than necessary** — national ID number, serial number, parents' names. Most places **don't need all of it.**
+
+DocuVault's **Secure Sharing** feature is built for exactly this:
+
+1. **Automatic detection.** Before you share, DocuVault detects sensitive fields like national ID, IBAN, signatures and faces.
+2. **You approve.** **You** decide what gets redacted — human approval is required; the app never decides alone.
+3. **Permanent redaction.** The redaction you approve is permanently burned into the shared copy (at the pixel level); your original stays intact.
+4. **Expiring secure link.** Share the result via an **expiring, revocable** link; the recipient opens it in a browser without installing the app. A **delivery receipt** shows you when it was opened.
+
+So the "I left an ID copy at the hotel and have no idea what happened to it" worry goes away.
+
+## Privacy and sharing IDs
+
+IDs and passports are high-risk personal data. Things to know:
+
+- You don't need consent to store/process **your own** ID (it's your data).
+- Be careful when sharing **someone else's** ID (e.g. a family member); redact unnecessary fields.
+- The app you use should **not** use your documents for AI training, and should not request an **ad identifier (IDFA).**
+- If an organization asks for your ID, you have the right to ask **why** and **how long** they'll keep it.
+
+Details: [KVKK-compliant document storage guide](/blog/kvkk-belge-saklama).
+
+## Frequently asked questions
+
+### If I redact the ID number, does the document become invalid?
+
+It depends on the recipient. Banks/official processes usually need the full ID; for hotels, rentals or memberships a redacted copy is often enough. Ask what's actually required.
+
+### Is the redaction really permanent, or reversible?
+
+In the shared copy the redaction is burned permanently into the image — it is not a removable mask like drawing a line over text. Your original stays untouched in your vault.
+
+### Should I redact the passport MRZ too?
+
+The MRZ encodes all the passport's identity data. Where only identity verification is needed and the photo page suffices, redacting the MRZ makes sense; for visa/border processes the full page is required.
+
+### Does scanning require internet?
+
+Document capture happens on the device, but OCR, AI and creating the secure link run in the cloud, so internet is needed.
+
+---
+
+Scanning your passport and ID matters, but sharing them **under control** matters more. With redaction + an expiring secure link, you decide who sees what. Related: [merge PDFs on iPhone](/blog/iphone-pdf-birlestirme), [Schengen visa checklist](/blog/vize-evrak-listesi), and the [document scanner guide](/blog/belge-tarayici-rehberi).
