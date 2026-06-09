@@ -1,0 +1,70 @@
+---
+title: "Pasaport ve Kimlik Nasıl Taranır? Güvenli Saklama ve Paylaşma (2026)"
+description: "iPhone ile pasaport ve kimlik tarama, kaliteli tarama ipuçları ve en önemlisi: hassas alanları karartarak güvenle paylaşma."
+date: "2026-06-09"
+author: "soykan-bayraktar"
+tags: ["pasaport", "kimlik", "tarama", "güvenlik", "rehber"]
+category: "güvenlik"
+pillar: "belge-tarayici-rehberi"
+seoTitle: "Pasaport ve Kimlik Nasıl Taranır? Güvenli Paylaşım 2026 | DocuVault"
+seoDescription: "iPhone ile pasaport/kimlik tarama, kalite ipuçları ve hassas alanları karartarak güvenli paylaşma rehberi. KVKK uyumlu, süreli güvenli bağlantı."
+---
+
+Pasaport ve kimlik, en çok kopyası istenen ama paylaşması **en riskli** belgelerdir. Otel, banka, vize ofisi, emlakçı… herkes "kimliğinizin bir kopyasını" ister. Oysa kimlik fotokopisi yanlış ellerde **kimlik hırsızlığına** kapı açar. Bu rehberde pasaport/kimliği **kaliteli taramayı** ve —asıl önemlisi— **hassas alanları karartarak güvenle paylaşmayı** anlatıyorum.
+
+## Pasaport/kimlik taramanın püf noktaları
+
+Resmî belgelerde okunabilirlik kritiktir:
+
+- **Parlamayı önleyin.** Kimlik kartları ve pasaportun fotoğraf sayfası parlaktır. Direkt ışık altında değil, **yumuşak, eşit ışıkta** tarayın; telefonun gölgesi belgenin üstüne düşmesin.
+- **Düz zemine koyun.** Pasaportun fotoğraf sayfasını tam açıp düzleştirin; kıvrım MRZ (alttaki makine-okunur satırlar) okumasını bozar.
+- **Tüm kenarlar çerçevede olsun.** Otomatik kenar algılama 4 köşeyi bulur; köşeler kesilmesin.
+- **Ön ve arka.** Kimlik kartında her iki yüz; pasaportta kimlik (fotoğraf) sayfası ve gerekiyorsa vize sayfaları.
+
+DocuVault'ta: yeşil **"+"** → **Belge Tara** → kareleyin → çekin → çok sayfalıysa **"Sayfa Ekle"** → **"Bitir"**. Belge AES-256 ile şifreli olarak (AB tabanlı uçlarda) kasanıza girer; OCR bulutta çalışıp içeriği aranabilir kılar.
+
+## Asıl mesele: kimliğinizi güvenle paylaşmak
+
+Bir belgeyi taramak kolay; **kime, neyi gösterdiğinizi kontrol etmek** zordur. Kimlik kartınızda T.C. kimlik numarası, seri no, anne-baba adı gibi **gereğinden fazla** veri olabilir. Çoğu yerde bunların **hepsi gerekmez.**
+
+DocuVault'un **Güvenli Paylaşım** özelliği tam da bunun için:
+
+1. **Otomatik tespit.** Paylaşmadan önce DocuVault; kimlik numarası, IBAN, imza ve yüz gibi hassas alanları otomatik algılar.
+2. **Siz onaylarsınız.** Neyin karartılacağına **siz** karar verirsiniz — insan onayı şarttır, uygulama tek başına karar vermez.
+3. **Kalıcı karartma.** Onayladığınız karartma paylaşılan kopyaya **kalıcı** işlenir (piksel düzeyinde); orijinal belgeniz olduğu gibi kalır.
+4. **Süreli güvenli bağlantı.** Sonucu **süreli, iptal edilebilir** bir bağlantıyla paylaşırsınız; alıcı uygulama kurmadan tarayıcıda açar. **Teslim makbuzundan** ne zaman açıldığını görürsünüz.
+
+Böylece "otele kimlik fotokopisi bıraktım, kim ne yaptı bilmiyorum" endişesi biter.
+
+## KVKK ve kimlik paylaşımı
+
+Kimlik ve pasaport **özel nitelikli olmayan ama yüksek riskli** kişisel verilerdir. Bilmeniz gerekenler:
+
+- **Kendi kimliğinizi** saklamak/işlemek için rıza gerekmez (kendi verinizdir).
+- **Başkasının kimliğini** (örn. aile üyesi) paylaşırken dikkatli olun; gereksiz alanları karartın.
+- Kullandığınız uygulama belgelerinizi **AI eğitimine kullanmamalı**, **reklam tanımlayıcısı (IDFA)** istememelidir.
+- Bir kurum kimliğinizi istiyorsa, **neden** istediğini ve **ne kadar süre** saklayacağını sorma hakkınız var.
+
+Detay: [KVKK uyumlu belge saklama rehberi](/blog/kvkk-belge-saklama).
+
+## Sıkça sorulan sorular
+
+### Kimlik numarasını karartırsam belge geçersiz olur mu?
+
+Kuruma göre değişir. Banka/resmî işlemler genelde tam kimlik ister; otel, emlak, üyelik gibi yerlerde ise çoğu zaman karartılmış kopya yeterlidir. Karşı tarafa neyin gerekli olduğunu sorun.
+
+### Karartma gerçekten kalıcı mı, geri alınabilir mi?
+
+Paylaşılan kopyada karartma görüntüye **kalıcı** işlenir; üzerine çizgi koymak gibi geri alınabilir bir maskeleme değildir. Orijinaliniz kasanızda olduğu gibi durur.
+
+### Pasaportun MRZ satırlarını da karartmalı mıyım?
+
+MRZ, pasaportun tüm kimlik bilgisini kodlar. Yalnızca kimlik doğrulaması istenen yerlerde fotoğraf sayfası yeterliyse MRZ'yi karartmak mantıklıdır; vize/sınır işlemlerinde ise tam sayfa istenir.
+
+### Tarama internet gerektirir mi?
+
+Belge yakalama cihazda yapılır; ancak OCR, AI ve güvenli bağlantı oluşturma bulutta işlendiği için internet gerekir.
+
+---
+
+Pasaport ve kimliğinizi taramak kadar önemlisi, onları **kontrollü** paylaşmak. Karartma + süreli güvenli bağlantı ile kiminle neyi paylaştığınızı siz belirlersiniz. İlgili: [iPhone'da PDF birleştirme](/blog/iphone-pdf-birlestirme), [Schengen vize evrak listesi](/blog/vize-evrak-listesi) ve [belge tarayıcı rehberi](/blog/belge-tarayici-rehberi).
