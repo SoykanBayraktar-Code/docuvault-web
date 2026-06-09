@@ -14,7 +14,7 @@ seoDescription: "Step-by-step bill scanning on iPhone: 30-second digitization wi
 
 Bills are the gateway to most Turkish bureaucratic loops: electricity, water, natural gas, internet, credit card, insurance… The average household receives **120–150 bills per year**. Keeping them on paper wastes both time and your ability to find anything later.
 
-This guide walks through **digitizing a bill on iPhone in 30 seconds** — using DocuVault V1.1's built-in scanner. The principles apply to any modern scanner app.
+This guide walks through **digitizing a bill on iPhone in 30 seconds** — using DocuVault's built-in scanner. The principles apply to any modern scanner app.
 
 ## Why digitize your bills?
 
@@ -26,7 +26,7 @@ This guide walks through **digitizing a bill on iPhone in 30 seconds** — using
 
 ## Step by step: scanning a bill in 30 seconds with DocuVault
 
-Install DocuVault V1.1 from the [App Store](https://apps.apple.com/tr/app/docuvault-belge-kasas%C4%B1/id6762083376?l=tr) and follow the flow:
+Install DocuVault from the [App Store](https://apps.apple.com/tr/app/docuvault-belge-kasas%C4%B1/id6762083376?l=tr) and follow the flow:
 
 ### 1. Place the bill on a flat surface
 
@@ -100,8 +100,8 @@ If you're not satisfied with the first scan, retake. Each scan is 30 seconds; a 
 
 In DocuVault, after scanning your document:
 
-1. **On your local device** — stored with AES-256 symmetric encryption
-2. **Encrypted cloud backup** — sent automatically (TLS 1.2+, EU-based endpoints)
+1. **Stored encrypted with AES-256** (at rest, on EU-based endpoints) in the cloud
+2. **All transport over TLS 1.2+** — access is restricted to your account with row-level security (RLS)
 3. **Profile dashboard** — total storage, plan status, recent uploads visible
 
 When you open the document:
@@ -138,7 +138,7 @@ If you're a tax payer, your e-Archive invoices are already electronic. Paper cop
 
 ### Does scanning work without internet?
 
-Yes. The built-in scanner is fully local. AI summarization and natural-language search are cloud services and need internet, but scanning and OCR happen on-device.
+Document capture (edge detection and capture) works offline. However, OCR, AI summarization and natural-language search run in the cloud and require an internet connection. You can still view documents already in your vault offline.
 
 ### Can I scan multiple bills in one go?
 

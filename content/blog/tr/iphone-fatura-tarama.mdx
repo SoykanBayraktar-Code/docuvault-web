@@ -14,7 +14,7 @@ seoDescription: "iPhone'la fatura tarama adım adım: yerleşik tarayıcıyla 30
 
 Faturalar Türkiye'de en sık bürokratik döngünün başlangıcıdır: elektrik, su, doğal gaz, internet, kredi kartı, sigorta… Yılda ortalama bir hane **120-150 fatura** alır. Bunları kâğıt olarak biriktirmek hem zaman alır hem de aradığınızda bulamazsınız.
 
-Bu rehberde **iPhone'unuzla 30 saniyede bir faturayı dijitalleştirmenin** en hızlı yolunu göstereceğim — DocuVault V1.1'in yerleşik tarayıcısıyla, ama prensipler herhangi bir modern tarayıcı için geçerli.
+Bu rehberde **iPhone'unuzla 30 saniyede bir faturayı dijitalleştirmenin** en hızlı yolunu göstereceğim — DocuVault'un yerleşik tarayıcısıyla, ama prensipler herhangi bir modern tarayıcı için geçerli.
 
 ## Faturalarınızı neden dijitalleştirmelisiniz?
 
@@ -26,7 +26,7 @@ Bu rehberde **iPhone'unuzla 30 saniyede bir faturayı dijitalleştirmenin** en h
 
 ## Adım adım: DocuVault ile 30 saniyede fatura tarama
 
-DocuVault V1.1'i [App Store'dan](https://apps.apple.com/tr/app/docuvault-belge-kasas%C4%B1/id6762083376?l=tr) indirip aşağıdaki akışı izleyebilirsiniz:
+DocuVault'u [App Store'dan](https://apps.apple.com/tr/app/docuvault-belge-kasas%C4%B1/id6762083376?l=tr) indirip aşağıdaki akışı izleyebilirsiniz:
 
 ### 1. Faturayı düz bir yüzeye koyun
 
@@ -100,8 +100,8 @@ DocuVault'un OCR'si Türkçe ve İngilizce için optimize edilmiştir; karakter 
 
 DocuVault'ta tarama sonrası belgeniz:
 
-1. **Yerel cihazınızda** AES-256 simetrik şifreleme ile saklanır
-2. **Şifreli bulut yedek** otomatik gönderilir (TLS 1.2+, AB tabanlı uçlar)
+1. **AES-256 ile şifrelenerek** (AB tabanlı uçlarda, at-rest) bulutta saklanır
+2. Tüm aktarım **TLS 1.2+** üzerinden yapılır; erişim satır düzeyi güvenlik (RLS) ile yalnızca sizin hesabınıza kısıtlıdır
 3. **Profil paneli**'nde toplam depolama, plan durumu, son eklenen belge görünür
 
 Belgeyi açtığınızda:
@@ -138,7 +138,7 @@ Vergi mükellefiyseniz, e-Arşiv faturalarınız zaten elektronik. Kâğıt nüs
 
 ### Tarama internet olmadan çalışır mı?
 
-Evet. Yerleşik tarayıcı tamamen yereldir. AI özetleme ve doğal dil arama gibi bulut servisleri internet ister, ama tarama ve OCR cihazda işlenir.
+Belge yakalama (kenar algılama ve çekim) çevrimdışı çalışır. Ancak OCR, AI özetleme ve doğal dil arama bulutta işlendiği için internet bağlantısı gerektirir. Daha önce kasanıza alınmış belgeleri çevrimdışı görüntüleyebilirsiniz.
 
 ### Birden fazla faturayı tek seferde tarayabilir miyim?
 

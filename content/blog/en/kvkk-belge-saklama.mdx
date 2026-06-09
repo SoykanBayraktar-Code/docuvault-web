@@ -50,7 +50,7 @@ If an app requests unnecessary permissions, that's a KVKK violation. When pickin
 
 KVKK Article 12 obligates data controllers to take **appropriate technical and administrative measures**. In practice:
 
-**In the local archive:** **AES-256** symmetric encryption. NIST-approved industry standard. With today's combined computing power, breaking an AES-256-encrypted file would theoretically take **trillions of years**.
+**At rest:** **AES-256** symmetric encryption. NIST-approved industry standard. With today's combined computing power, breaking an AES-256-encrypted file would theoretically take **trillions of years**.
 
 **During transit:** **TLS 1.2+** (Transport Layer Security). Your documents on the way to the cloud cannot be eavesdropped on or tampered with.
 
@@ -120,7 +120,7 @@ A common question. KVKK allows both — **the decision turns on how the app hand
 
 ### Correct answer: both — but encrypted
 
-A modern document management app **encrypts the local archive with AES-256**, **transmits cloud backups over TLS**, and **stores them encrypted** in the cloud. Both layers are secure, and a device loss leaves you with the cloud backup.
+A modern document management app **encrypts documents with AES-256**, **transmits them over TLS**, and **stores them encrypted** in the cloud (EU-based endpoints). Both transit and storage are secure, and a device loss leaves your documents safe in the cloud.
 
 **Important KVKK rule:** The cloud provider's **data-residency policy** (where the data physically lives) should be **EU-based**. U.S.-based servers require additional safeguards under KVKK; EU servers are GDPR-compliant, so they auto-align with KVKK.
 
@@ -170,7 +170,7 @@ Detailed KVKK compliance document: [Information Notice (Aydınlatma Metni)](/en/
 
 Let's be candid: there is no formal KVKK compliance certificate — Türkiye has no official certification program for mobile apps. But our technical foundations implement the "appropriate technical and administrative measures" of KVKK Article 12:
 
-- ✅ **AES-256** local encryption
+- ✅ **AES-256** encryption at rest
 - ✅ **TLS 1.2+** transit
 - ✅ **EU-based** Supabase infrastructure
 - ✅ **Information Notice** both in-app and on the web
