@@ -7,7 +7,7 @@ import { useLocale, useTranslations } from "next-intl";
 const STEP_KEYS = ["scan", "organize", "summary", "find", "secure"] as const;
 const STEP_IMAGES: Record<(typeof STEP_KEYS)[number], string> = {
   scan: "02-scanner",
-  organize: "03-collections",
+  organize: "01-vault",
   summary: "04-ai-summary",
   find: "05-ai-search",
   secure: "06-security",
