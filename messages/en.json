@@ -120,17 +120,17 @@
       "scan": {
         "title": "Scan or Add",
         "body": "The built-in scanner finds the edges automatically and creates multi-page PDFs. You can also add from Photos, Files or the Share menu (Mail, WhatsApp, Safari).",
-        "alt": "Document scanning and import screen"
+        "alt": "Add document screen"
       },
       "organize": {
         "title": "It Fills Itself In",
         "body": "Text is read on your device; the name, category, due date and amount fill in automatically. Duplicate documents are detected.",
-        "alt": "Collections and categories screen"
+        "alt": "Vault screen: categories and upcoming dates"
       },
       "summary": {
         "title": "See the Summary, Ask the Document",
         "body": "Apple Intelligence prepares a short summary and highlights for every document. Use Ask Document to get answers straight from the document.",
-        "alt": "Document summary screen"
+        "alt": "Apple Intelligence settings: on-device summaries and Ask Document"
       },
       "find": {
         "title": "Find It in Seconds",
@@ -140,7 +140,7 @@
       "secure": {
         "title": "Store It Safely",
         "body": "Your documents are stored only in your own iCloud account. With the Face ID / Touch ID lock and a password-encrypted backup file, you stay in control.",
-        "alt": "Security and lock screen"
+        "alt": "Face ID lock and privacy settings"
       }
     }
   },
@@ -150,19 +150,19 @@
     "items": {
       "vault": {
         "label": "One Vault",
-        "alt": "All your documents in one place — main vault screen"
+        "alt": "Vault screen: document count, upcoming dates and categories"
       },
       "scanner": {
-        "label": "Built-in Scanner",
-        "alt": "One-tap document capture and built-in scanner"
+        "label": "Add Document",
+        "alt": "Add a document: scan, or choose from Files or Photos"
       },
       "collections": {
-        "label": "Collections",
-        "alt": "Your own collections — custom icon and color"
+        "label": "Document Sets",
+        "alt": "New Document Set: create with Apple Intelligence or pick a template"
       },
       "aiSummary": {
-        "label": "Summary",
-        "alt": "Document summary and highlights"
+        "label": "Apple Intelligence",
+        "alt": "Apple Intelligence on: on-device summaries and Ask Document"
       },
       "aiSearch": {
         "label": "Search",
@@ -170,7 +170,7 @@
       },
       "security": {
         "label": "Security",
-        "alt": "Vault locked with Face ID / Touch ID"
+        "alt": "Face ID / Touch ID lock and privacy settings"
       }
     }
   },

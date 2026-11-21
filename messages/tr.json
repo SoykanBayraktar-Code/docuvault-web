@@ -120,17 +120,17 @@
       "scan": {
         "title": "Tarayın veya Ekleyin",
         "body": "Yerleşik tarayıcı kenarları otomatik bulur ve çok sayfalı PDF oluşturur. Fotoğraflar, Dosyalar veya Paylaş menüsünden (Mail, WhatsApp, Safari) de ekleyebilirsiniz.",
-        "alt": "Belge tarama ve ekleme ekranı"
+        "alt": "Belge ekleme ekranı"
       },
       "organize": {
         "title": "Kendiliğinden Dolar",
         "body": "Belgedeki yazı cihazınızda okunur; ad, kategori, son ödeme tarihi ve tutar kendiliğinden dolar. Aynı belgeyi ikinci kez eklemeniz engellenir.",
-        "alt": "Koleksiyonlar ve kategoriler ekranı"
+        "alt": "Kasa ekranı: kategoriler ve yaklaşan tarihler"
       },
       "summary": {
         "title": "Özeti Görün, Belgeye Sorun",
         "body": "Apple Intelligence her belge için kısa bir özet ve öne çıkanları hazırlar. Merak ettiğinizi Belgeye Sor ile belgenin kendisinden öğrenin.",
-        "alt": "Belge özeti ekranı"
+        "alt": "Belge özeti ve öne çıkanlar"
       },
       "find": {
         "title": "Saniyeler İçinde Bulun",
@@ -140,7 +140,7 @@
       "secure": {
         "title": "Güvenle Saklayın",
         "body": "Belgeleriniz yalnızca sizin iCloud hesabınızda saklanır. Face ID / Touch ID kilidi ve parolayla şifrelenmiş yedek dosyası ile kontrol sizde.",
-        "alt": "Güvenlik ve kilit ekranı"
+        "alt": "Face ID kilidi ve gizlilik ayarları"
       }
     }
   },
@@ -150,19 +150,19 @@
     "items": {
       "vault": {
         "label": "Tek Kasa",
-        "alt": "Belgeleriniz tek yerde — ana kasa ekranı"
+        "alt": "Kasa ekranı: belge sayısı, yaklaşan tarihler ve kategoriler"
       },
       "scanner": {
-        "label": "Yerleşik Tarayıcı",
-        "alt": "Tek tuşla belge ekleme ve yerleşik tarayıcı"
+        "label": "Belge Ekle",
+        "alt": "Belge ekleme: tara, Dosyalar'dan veya Fotoğraflar'dan seç"
       },
       "collections": {
-        "label": "Koleksiyonlar",
-        "alt": "Kendi koleksiyonlarınız — özel ikon ve renk"
+        "label": "Belge Setleri",
+        "alt": "Yeni Belge Seti: Apple Intelligence ile oluştur veya hazır şablon seç"
       },
       "aiSummary": {
         "label": "Özet",
-        "alt": "Belge özeti ve öne çıkanlar"
+        "alt": "Belge özeti, öne çıkanlar ve Belgeye Sor"
       },
       "aiSearch": {
         "label": "Arama",
@@ -170,7 +170,7 @@
       },
       "security": {
         "label": "Güvenlik",
-        "alt": "Face ID / Touch ID ile kilitli kasa"
+        "alt": "Face ID / Touch ID kilidi ve gizlilik ayarları"
       }
     }
   },
