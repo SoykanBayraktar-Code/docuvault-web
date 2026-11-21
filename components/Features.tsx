@@ -3,18 +3,17 @@
 import { motion } from "framer-motion";
 import {
   ScanLine,
-  FileText,
-  Package,
-  ShieldCheck,
-  FileSignature,
-  CalendarClock,
   Sparkles,
+  MessageSquareText,
+  CalendarClock,
+  Signature,
+  Layers,
+  Search,
+  HeartPulse,
+  Users,
+  Link2,
+  Archive,
   Mic,
-  Wand2,
-  FolderOpen,
-  Share2,
-  Zap,
-  MoonStar,
   type LucideIcon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -22,32 +21,30 @@ import { useTranslations } from "next-intl";
 type FeatureKey =
   | "scanner"
   | "aiSummary"
-  | "capsules"
-  | "secureSharing"
-  | "aiDocGen"
-  | "expiryReminder"
-  | "naturalLanguage"
-  | "voice"
-  | "smartNaming"
+  | "askDocument"
+  | "reminders"
+  | "editing"
+  | "documentSets"
   | "collections"
-  | "shareExtension"
-  | "quickActions"
-  | "accessibility";
+  | "emergencyCard"
+  | "familyVault"
+  | "shareLinks"
+  | "backup"
+  | "shortcuts";
 
 const FEATURE_META: { key: FeatureKey; icon: LucideIcon; hasBadge: boolean }[] = [
   { key: "scanner", icon: ScanLine, hasBadge: false },
-  { key: "aiSummary", icon: FileText, hasBadge: false },
-  { key: "capsules", icon: Package, hasBadge: true },
-  { key: "secureSharing", icon: ShieldCheck, hasBadge: true },
-  { key: "aiDocGen", icon: FileSignature, hasBadge: false },
-  { key: "expiryReminder", icon: CalendarClock, hasBadge: false },
-  { key: "naturalLanguage", icon: Sparkles, hasBadge: false },
-  { key: "voice", icon: Mic, hasBadge: false },
-  { key: "smartNaming", icon: Wand2, hasBadge: false },
-  { key: "collections", icon: FolderOpen, hasBadge: false },
-  { key: "shareExtension", icon: Share2, hasBadge: false },
-  { key: "quickActions", icon: Zap, hasBadge: false },
-  { key: "accessibility", icon: MoonStar, hasBadge: false },
+  { key: "aiSummary", icon: Sparkles, hasBadge: false },
+  { key: "askDocument", icon: MessageSquareText, hasBadge: true },
+  { key: "reminders", icon: CalendarClock, hasBadge: false },
+  { key: "editing", icon: Signature, hasBadge: false },
+  { key: "documentSets", icon: Layers, hasBadge: true },
+  { key: "collections", icon: Search, hasBadge: false },
+  { key: "emergencyCard", icon: HeartPulse, hasBadge: true },
+  { key: "familyVault", icon: Users, hasBadge: false },
+  { key: "shareLinks", icon: Link2, hasBadge: false },
+  { key: "backup", icon: Archive, hasBadge: false },
+  { key: "shortcuts", icon: Mic, hasBadge: false },
 ];
 
 export default function Features() {

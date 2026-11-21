@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
-import { ShieldCheck, Cloud, Fingerprint, Sparkles, Moon } from "lucide-react";
+import { Cpu, Cloud, Fingerprint, Sparkles, UserX } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import AppStoreButtons from "./AppStoreButtons";
 
@@ -66,7 +66,7 @@ export default function Hero({ ratingBadge }: Props) {
               {t("trustFaceId")}
             </li>
             <li className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-primary" />
+              <Cpu className="w-4 h-4 text-primary" />
               {t("trustEncrypted")}
             </li>
             <li className="flex items-center gap-2">
@@ -74,7 +74,7 @@ export default function Hero({ ratingBadge }: Props) {
               {t("trustCloud")}
             </li>
             <li className="flex items-center gap-2">
-              <Moon className="w-4 h-4 text-primary" />
+              <UserX className="w-4 h-4 text-primary" />
               {t("trustDark")}
             </li>
           </ul>

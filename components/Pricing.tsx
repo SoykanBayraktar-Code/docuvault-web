@@ -7,20 +7,21 @@ import { useTranslations } from "next-intl";
 import { track } from "@/lib/analytics";
 
 const COMPARISON_KEYS = [
-  "storage",
-  "ocr",
-  "capsules",
-  "secureSharing",
-  "aiSummary",
-  "naturalLanguage",
-  "voice",
-  "collections",
+  "documents",
+  "askDocument",
+  "signatures",
+  "documentSets",
+  "familyVault",
+  "shareLinks",
+  "reminders",
+  "spending",
 ] as const;
 
 export default function Pricing() {
   const t = useTranslations("pricing");
   const [isYearly, setIsYearly] = useState(false);
   const freeFeatures = t.raw("freeFeatures") as string[];
+  const plusNotes = t.raw("plusNotes") as string[];
 
   return (
     <section id="pricing" className="relative py-24 lg:py-32">
@@ -89,7 +90,7 @@ export default function Pricing() {
             </a>
           </motion.div>
 
-          {/* Gold Plan */}
+          {/* Plus Plan */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -195,6 +196,21 @@ export default function Pricing() {
                       {t(`goldComparisons.${key}.to`)}
                     </span>
                   </div>
+                </li>
+              ))}
+            </ul>
+
+            <ul className="mt-5 pt-5 space-y-2.5 border-t border-border-warm">
+              {plusNotes.map((note) => (
+                <li
+                  key={note}
+                  className="flex items-start gap-2.5 text-[14px] text-text-secondary"
+                >
+                  <Check
+                    className="w-4 h-4 mt-0.5 shrink-0 text-secondary"
+                    strokeWidth={2.5}
+                  />
+                  <span>{note}</span>
                 </li>
               ))}
             </ul>

@@ -14,7 +14,7 @@
   "cookieBanner": {
     "ariaLabel": "Çerez tercihleri",
     "title": "Çerezlere izin verin",
-    "body": "Site deneyiminizi iyileştirmek ve anonim kullanım istatistikleri toplamak için temel çerezler kullanıyoruz. Detaylar için",
+    "body": "Bu web sitesinde, deneyiminizi iyileştirmek ve anonim ziyaret istatistikleri toplamak için temel çerezler kullanıyoruz. Uygulamanın kendisinde çerez, analitik veya izleme yoktur. Detaylar için",
     "privacyLink": "Gizlilik Politikası",
     "accept": "Kabul Et",
     "reject": "Sadece Gerekli",
@@ -23,11 +23,11 @@
   "metadata": {
     "title": "DocuVault — Belgeleriniz Güvende, Saniyeler İçinde Bulun",
     "titleTemplate": "%s | DocuVault",
-    "description": "Yerleşik tarayıcı, AI özet ve doğal dil aramanın yanı sıra süreç bazlı Kapsüller ve gizlilik korumalı güvenli paylaşım — tüm kritik belgeleriniz tek bir şifreli kasada. iOS için. Türkçe ve İngilizce.",
-    "ogTitle": "DocuVault — Belgeleriniz Güvende, Saniyeler İçinde Bulun",
-    "ogDescription": "Yerleşik tarayıcı, AI özet, doğal dil arama, Kapsüller ve güvenli paylaşım — tüm belgeleriniz tek bir şifreli kasada. iOS için.",
-    "twTitle": "DocuVault — Belgeleriniz Güvende",
-    "twDescription": "Yerleşik tarayıcı, AI özet ve doğal dil arama. iOS için şifreli belge kasası."
+    "description": "Hesap yok, sunucu yok. DocuVault belgelerinizi tarar, cihazınızda okur, Apple Intelligence ile özetler ve son tarihleri önceden hatırlatır. Belgeleriniz yalnızca sizin iCloud'unuzda. iPhone için, Türkçe ve İngilizce.",
+    "ogTitle": "DocuVault 2.0 — Hesap yok, sunucu yok",
+    "ogDescription": "Tara, özetle, hatırlat, sakla. Belgeler cihazınızda okunur, Apple Intelligence özetler, belgeleriniz yalnızca sizin iCloud'unuzda kalır.",
+    "twTitle": "DocuVault 2.0 — Belgeleriniz Güvende",
+    "twDescription": "Hesap yok, sunucu yok. Cihazda OCR, Apple Intelligence özetleri ve son tarih hatırlatmaları."
   },
   "nav": {
     "features": "Özellikler",
@@ -41,109 +41,105 @@
     "homeAriaLabel": "DocuVault ana sayfa"
   },
   "hero": {
-    "badge": "Sürüm 1.4.1 · Kapsüller · Güvenli Paylaşım",
+    "badge": "DocuVault 2.0 · Hesap yok · Sunucu yok",
     "title1": "Belgeleriniz güvende.",
     "title2Highlight": "Saniyeler içinde",
     "title2Rest": "bulun.",
-    "subtitle": "Yerleşik tarayıcıyla anında dijitalleştirin. AI'nin özetlediği, doğal dille bulduğunuz, AES-256 ile şifrelenmiş bir belge kasası — tek bir uygulamada.",
+    "subtitle": "Tarayın; DocuVault belgeyi cihazınızda okur, Apple Intelligence ile özetler ve son tarihi gelmeden hatırlatır. Hesap açmanız gerekmez, belgeleriniz yalnızca sizin iCloud'unuzda saklanır.",
     "trustFaceId": "Face ID / Touch ID",
-    "trustEncrypted": "AES-256 şifreli",
-    "trustCloud": "Bulut yedekli",
-    "trustDark": "Koyu mod",
+    "trustEncrypted": "Cihazda yapay zekâ",
+    "trustCloud": "Yalnızca sizin iCloud'unuz",
+    "trustDark": "Hesap gerekmez",
     "imageAlt": "DocuVault mobil uygulama arayüzü"
   },
   "features": {
     "eyebrow": "Özellikler",
     "title1": "Modern belge yönetimi,",
-    "titleHighlight": "el yapımı gibi",
+    "titleHighlight": "tamamen cihazınızda",
     "title2": ".",
-    "subtitle": "Güvenliği, hızı ve zekâyı tek bir uygulamada birleştiriyoruz. Her detay, bir arşivcinin titizliğiyle tasarlandı.",
+    "subtitle": "DocuVault 2.0, Apple teknolojileriyle baştan yazıldı. DocuVault'un sunucusu yoktur; reklam, izleme ve analitik de yoktur.",
     "items": {
       "scanner": {
-        "title": "Yerleşik Belge Tarayıcı",
-        "body": "Otomatik kenar algılama, çoklu sayfa PDF birleştirme ve hizalama düzeltmesi. Üçüncü taraf uygulamaya gerek yok."
+        "title": "Tara ve Otomatik Doldur",
+        "body": "Kenarları otomatik bulan çok sayfalı tarayıcı; Fotoğraflar, Dosyalar ve Paylaş menüsünden ekleme. Yazı cihazınızda okunur; ad, kategori, son ödeme tarihi ve tutar kendiliğinden dolar."
       },
       "aiSummary": {
-        "title": "AI Yönetici Özeti",
-        "body": "Yüklediğiniz her belge için anlamlı özet, kritik noktalar ve öneriler. Sözleşmeyi okumaya saatler harcamadan, özünü 30 saniyede."
+        "title": "Apple Intelligence ile Özet",
+        "body": "Her belge için kısa bir özet ve \"Öne çıkanlar\": şartlar, tutarlar, tarihler. Hepsi cihazda çalışır; belgeleriniz internete gönderilmez."
       },
-      "capsules": {
-        "title": "Kapsüller",
-        "body": "Bir işin gerektirdiği tüm belgeleri tek bir Kapsülde toplayın — vize başvurusu, vergi beyanı, kira. Uygulama eksikleri gösterir, gereken form ve dilekçeleri üretir, hepsini tek güvenli bağlantıyla paylaşır.",
+      "askDocument": {
+        "title": "Belgeye Sor",
+        "body": "\"Muafiyet ne kadar?\", \"Sözleşme ne zaman bitiyor?\" gibi sorulara yanıtı belgenin kendisinden alın. Apple Intelligence ile, cihazınızda.",
         "badge": "Yeni"
       },
-      "secureSharing": {
-        "title": "Güvenli Paylaşım",
-        "body": "Paylaşmadan önce DocuVault hassas alanları (kimlik no, IBAN, imza, yüz) otomatik algılar; neyin karartılacağını siz onaylarsınız, karartma paylaşılan kopyaya kalıcı işlenir. Süreli, iptal edilebilir bağlantıyı WhatsApp'tan paylaşın — alıcı uygulama kurmadan tarayıcıda açar.",
+      "reminders": {
+        "title": "Hatırlatma ve Harcamalar",
+        "body": "Son ödeme, poliçe bitişi ve garanti tarihleri için bildirim; tek dokunuşla takvime ekleme. Faturalardaki tutarlardan aylık harcama özeti ve yaklaşan ödemeler."
+      },
+      "editing": {
+        "title": "İmzala, Karart, Düzenle",
+        "body": "Belgeyi parmağınızla imzalayın. Kimlik no, IBAN, kart ve telefon numaralarını otomatik bulup kalıcı olarak karartın. Sayfaları sıralayın, döndürün, silin."
+      },
+      "documentSets": {
+        "title": "Belge Setleri",
+        "body": "Vize, ev kiralama, işe giriş, araç satışı ve vergi dönemi için hazır listeler; eksik belgeleri tek bakışta görün. Apple Intelligence ile kendi setinizi oluşturun.",
         "badge": "Yeni"
-      },
-      "expiryReminder": {
-        "title": "Vade Hatırlatıcı",
-        "body": "Sigorta, kimlik, sözleşme... DocuVault belgeleriniz son kullanma tarihine yaklaşmadan sizi uyarır. Hiçbir vadeyi kaçırmayın.",
-        "badge": "Yeni"
-      },
-      "naturalLanguage": {
-        "title": "Doğal Dil AI Arama",
-        "body": "\"Geçen ay elektrik faturam\" yazın — AI sorgunuzu yorumlar, içerik ve nitelik birlikte değerlendirilir."
-      },
-      "voice": {
-        "title": "Sesli Komut",
-        "body": "Türkçe ve İngilizce sesli arama. Elleriniz doluyken bile belgelerinize tek söylemle ulaşın."
-      },
-      "smartNaming": {
-        "title": "Akıllı Adlandırma",
-        "body": "AI içeriği okur; \"IMG_4519\" yerine \"Elektrik Faturası — Mart 2026\" gibi anlamlı bir isimle 8 yerleşik kategoriden doğru olanına atar."
       },
       "collections": {
-        "title": "Özel Koleksiyonlar",
-        "body": "Ev, iş, sağlık — kendi ikon ve renginizle sınırsız koleksiyon. İlgili belgeleri tek bakışta bulun."
+        "title": "Koleksiyonlar ve Arama",
+        "body": "Belgelerinizi \"Ev\", \"Araba\" gibi koleksiyonlarda toplayın. Arama, Türkçe karakterlerden bağımsız çalışır ve belgenin içindeki yazıyı da bulur."
       },
-      "aiDocGen": {
-        "title": "AI Belge & Dilekçe Üretici",
-        "body": "Birkaç soruyla dilekçe, beyan ve başvuru gibi düşük riskli belgeleri yapay zekâ üretsin. Düzenleyebileceğiniz önizlemeyle gözden geçirin, PDF olarak kaydedin veya paylaşın."
+      "emergencyCard": {
+        "title": "Acil Durum Kartı",
+        "body": "Kan grubu, alerjiler, ilaçlar ve acil kişiler tek kartta. Kilit ekranı widget'ı ve Siri ile, Apple Watch'ta da. Kart iCloud'a gönderilmez.",
+        "badge": "Yeni"
       },
-      "shareExtension": {
-        "title": "Paylaşım Uzantısı",
-        "body": "Başka bir uygulamadaki belgeyi veya PDF'i iOS paylaş menüsünden doğrudan DocuVault kasanıza aktarın — uygulamalar arası geçişe gerek yok."
+      "familyVault": {
+        "title": "Aile Kasası",
+        "body": "Seçtiğiniz belgeleri eşinizle ve ailenizle iCloud paylaşımı üzerinden paylaşın; davet edilenler ücretsiz katılır. Plus ile."
       },
-      "quickActions": {
-        "title": "Ana Ekran Hızlı Eylemler",
-        "body": "Uygulama ikonuna basılı tutun; doğrudan taramaya veya aramaya tek dokunuşla atlayın. En sık işleriniz parmağınızın ucunda."
+      "shareLinks": {
+        "title": "Şifreli Paylaşım Linkleri",
+        "body": "Uçtan uca şifreli, süresi dolan linkler. Anahtar yalnızca linkin içindedir; alıcı uygulama kurmadan tarayıcıda açar. Plus ile."
       },
-      "accessibility": {
-        "title": "Erişilebilirlik & Koyu Mod",
-        "body": "Sıcak tonlu koyu mod, VoiceOver etiketleri, Reduce Motion desteği ve modal odak yönetimi. Herkes için rahat, platforma özen gösterilmiş bir deneyim."
+      "backup": {
+        "title": "Şifreli Yedek",
+        "body": "Tüm kasanızı parolayla şifrelenmiş tek bir dosyaya yedekleyin; Dosyalar'da, bilgisayarınızda ya da USB bellekte saklayın."
+      },
+      "shortcuts": {
+        "title": "Siri, Kestirmeler ve Widget'lar",
+        "body": "Siri, Kestirmeler, Görsel Zekâ, ana ekran ve kilit ekranı widget'ları, Denetim Merkezi düğmeleri. Türkçe ve İngilizce."
       }
     }
   },
   "howItWorks": {
     "eyebrow": "Nasıl Çalışır",
     "title": "Beş adımda belge kaosunun sonu.",
-    "subtitle": "Tarayın, düzenleyin, özetleyin, bulun ve güvenle saklayın. Gerisini DocuVault halleder.",
+    "subtitle": "Tarayın, düzenleyin, özetleyin, bulun ve güvenle saklayın. Hepsi cihazınızda.",
     "steps": {
       "scan": {
-        "title": "Tarayın veya Yükleyin",
-        "body": "Yerleşik tarayıcıyı açın, çerçeveye alın — otomatik kenar algılama, çoklu sayfa PDF ve hizalama düzeltmesi arka planda halleder. Galeri, kamera ve dosya yükleme de açık.",
-        "alt": "Belge tarama ve yükleme ekranı"
+        "title": "Tarayın veya Ekleyin",
+        "body": "Yerleşik tarayıcı kenarları otomatik bulur ve çok sayfalı PDF oluşturur. Fotoğraflar, Dosyalar veya Paylaş menüsünden (Mail, WhatsApp, Safari) de ekleyebilirsiniz.",
+        "alt": "Belge tarama ve ekleme ekranı"
       },
       "organize": {
-        "title": "AI Düzenler",
-        "body": "Yapay zeka içeriği okur, belgeyi anlamlı bir isimle (örn. \"Elektrik Faturası — Mart 2026\") kaydeder ve 8 yerleşik kategoriden doğru olanına atar.",
+        "title": "Kendiliğinden Dolar",
+        "body": "Belgedeki yazı cihazınızda okunur; ad, kategori, son ödeme tarihi ve tutar kendiliğinden dolar. Aynı belgeyi ikinci kez eklemeniz engellenir.",
         "alt": "Koleksiyonlar ve kategoriler ekranı"
       },
       "summary": {
-        "title": "Yönetici Özetini Görün",
-        "body": "Belge detayında AI özeti, kritik noktalar ve öneriler birkaç saniyede gözünüzün önünde. Saatlerce tarama yerine, 30 saniyede özü.",
-        "alt": "AI Yönetici Özeti ekranı"
+        "title": "Özeti Görün, Belgeye Sorun",
+        "body": "Apple Intelligence her belge için kısa bir özet ve öne çıkanları hazırlar. Merak ettiğinizi Belgeye Sor ile belgenin kendisinden öğrenin.",
+        "alt": "Belge özeti ekranı"
       },
       "find": {
-        "title": "Doğal Dilde Bulun",
-        "body": "Yazın veya söyleyin — \"geçen ay ki elektrik faturam\" gibi doğal sorgular için AI içerik ve niteliği birlikte değerlendirir.",
-        "alt": "Doğal dil AI arama ekranı"
+        "title": "Saniyeler İçinde Bulun",
+        "body": "Arama, belgenin adında ve içindeki yazıda çalışır; Türkçe karakter yazmasanız da bulur. Siri ve Kestirmeler ile sesle de ulaşın.",
+        "alt": "Arama ekranı"
       },
       "secure": {
         "title": "Güvenle Saklayın",
-        "body": "AES-256 yerel şifreleme, TLS 1.2+ aktarım, Face ID/Touch ID kilidi ve şifreli bulut yedek. Yalnızca siz erişebilirsiniz.",
+        "body": "Belgeleriniz yalnızca sizin iCloud hesabınızda saklanır. Face ID / Touch ID kilidi ve parolayla şifrelenmiş yedek dosyası ile kontrol sizde.",
         "alt": "Güvenlik ve kilit ekranı"
       }
     }
@@ -152,72 +148,127 @@
     "eyebrow": "Uygulamadan Kareler",
     "title": "Her ekran, bir arşivin huzuru.",
     "items": {
-      "vault": { "label": "Tek Kasa", "alt": "Belgeleriniz tek yerde — ana kasa ekranı" },
-      "scanner": { "label": "Yerleşik Tarayıcı", "alt": "Tek tuşla belge ekleme ve yerleşik tarayıcı" },
-      "collections": { "label": "Koleksiyonlar", "alt": "Kendi koleksiyonlarınız — özel ikon ve renk" },
-      "aiSummary": { "label": "AI Özet", "alt": "AI Yönetici Özeti — kritik noktalar ve öneriler" },
-      "aiSearch": { "label": "Doğal Dil Arama", "alt": "Doğal dilde AI arama" },
-      "security": { "label": "Güvenlik", "alt": "Face ID ile güvende — AES-256 ve biyometrik" }
+      "vault": {
+        "label": "Tek Kasa",
+        "alt": "Belgeleriniz tek yerde — ana kasa ekranı"
+      },
+      "scanner": {
+        "label": "Yerleşik Tarayıcı",
+        "alt": "Tek tuşla belge ekleme ve yerleşik tarayıcı"
+      },
+      "collections": {
+        "label": "Koleksiyonlar",
+        "alt": "Kendi koleksiyonlarınız — özel ikon ve renk"
+      },
+      "aiSummary": {
+        "label": "Özet",
+        "alt": "Belge özeti ve öne çıkanlar"
+      },
+      "aiSearch": {
+        "label": "Arama",
+        "alt": "Belge adında ve içeriğinde arama"
+      },
+      "security": {
+        "label": "Güvenlik",
+        "alt": "Face ID / Touch ID ile kilitli kasa"
+      }
     }
   },
   "pricing": {
     "eyebrow": "Fiyatlandırma",
     "title": "Size uyan bir plan var.",
-    "subtitle": "Ücretsiz başlayın, ihtiyacınız büyüdükçe yükseltin. İstediğiniz zaman iptal edin.",
+    "subtitle": "Ücretsiz başlayın, ihtiyacınız büyüdükçe Plus'a geçin. İstediğiniz zaman iptal edin.",
     "freeTitle": "Ücretsiz",
     "freePrice": "₺0",
-    "freeCurrentBadge": "Mevcut Plan",
+    "freeCurrentBadge": "Hesap gerekmez",
     "freeCta": "Uygulamayı İndir",
     "freeFeatures": [
-      "50 MB şifreli bulut depolama",
-      "Ayda 3 belgeye kadar OCR",
-      "1 kişisel kapsül",
-      "Aylık 3 güvenli bağlantı",
-      "8 yerleşik kategori",
-      "Yerel arama",
-      "Yerleşik belge tarayıcı",
-      "Face ID / PIN koruması"
+      "5 belge",
+      "Ayda 5 Belgeye Sor sorusu",
+      "3 imza",
+      "1 belge seti + 1 Apple Intelligence ile set denemesi",
+      "Tek hatırlatma zamanı",
+      "Face ID / Touch ID kilidi",
+      "iCloud senkronu",
+      "Acil Durum Kartı",
+      "Şifreli yedek ve karartma"
     ],
-    "goldTitle": "Gold",
+    "goldTitle": "DocuVault Plus",
     "popularBadge": "En Popüler",
     "monthly": "Aylık",
     "yearly": "Yıllık",
-    "yearlyDiscount": "%40 indirim",
-    "monthlyPrice": "₺249,99",
+    "yearlyDiscount": "2 ay bedava",
+    "monthlyPrice": "₺349,99",
     "monthlyPerUnit": "/ay",
-    "monthlyNote": "Aylık fatura",
-    "yearlyPrice": "₺1.799",
+    "monthlyNote": "Aylık yenilenir",
+    "yearlyPrice": "₺3.499,99",
     "yearlyPerUnit": "/yıl",
-    "yearlyNote": "₺149,92/ay · %40 indirim",
+    "yearlyNote": "1 hafta ücretsiz deneme · ayda yaklaşık ₺291,67",
     "goldComparisons": {
-      "storage": { "label": "Depolama", "from": "50 MB", "to": "2 GB (40×)" },
-      "ocr": { "label": "OCR / ay", "from": "3 belge", "to": "Sınırsız" },
-      "capsules": { "label": "Kapsüller", "from": "1 kapsül", "to": "Sınırsız + AI" },
-      "secureSharing": { "label": "Güvenli Paylaşım", "from": "3/ay", "to": "Sınırsız" },
-      "aiSummary": { "label": "AI Yönetici Özeti", "from": "Yok", "to": "Aktif" },
-      "naturalLanguage": { "label": "Doğal Dil AI Arama", "from": "Yok", "to": "Aktif" },
-      "voice": { "label": "Sesli Komut", "from": "Yok", "to": "Aktif" },
-      "collections": { "label": "Özel Koleksiyon", "from": "Yok", "to": "Sınırsız" }
+      "documents": {
+        "label": "Belge",
+        "from": "5",
+        "to": "Sınırsız"
+      },
+      "askDocument": {
+        "label": "Belgeye Sor",
+        "from": "5/ay",
+        "to": "Sınırsız"
+      },
+      "signatures": {
+        "label": "İmza",
+        "from": "3",
+        "to": "Sınırsız"
+      },
+      "documentSets": {
+        "label": "Belge Setleri",
+        "from": "1",
+        "to": "Sınırsız"
+      },
+      "familyVault": {
+        "label": "Aile Kasası",
+        "from": "Katılım",
+        "to": "Kur ve davet et"
+      },
+      "shareLinks": {
+        "label": "Şifreli linkler",
+        "from": "Yok",
+        "to": "Aktif"
+      },
+      "reminders": {
+        "label": "Hatırlatma zamanı",
+        "from": "1",
+        "to": "Birden çok"
+      },
+      "spending": {
+        "label": "Harcama grafikleri",
+        "from": "Yok",
+        "to": "Aktif"
+      }
     },
-    "goldCta": "Gold'a Yükselt",
-    "footnote": "Aboneliğiniz, satın alma onayında Apple ID hesabınızdan ücretlendirilir. Abonelikler App Store üzerinden yönetilir."
+    "plusNotes": [
+      "Aile Paylaşımı ile tüm aileniz yararlanır",
+      "Plus bittiğinde hiçbir belgeniz kilitlenmez"
+    ],
+    "goldCta": "Plus'ı Dene",
+    "footnote": "Plus, aylık ve yıllık otomatik yenilenen abonelik olarak sunulur; yıllık planda 1 hafta ücretsiz deneme vardır. Ödeme, satın alma onayında Apple hesabınızdan alınır. Abonelik, dönem bitiminden en az 24 saat önce iptal edilmezse kendiliğinden yenilenir; App Store hesap ayarlarından yönetebilir ve iptal edebilirsiniz. Fiyatlar Türkiye App Store fiyatlarıdır."
   },
   "security": {
     "eyebrow": "Güvenlik & Gizlilik",
     "title": "Gizliliğiniz bizim için kutsaldır.",
-    "subtitle": "Belgeleriniz hayatınızın en mahrem parçalarından biri. Biz de böyle davranıyoruz.",
+    "subtitle": "Belgeleriniz hayatınızın en mahrem parçalarından biri. Bu yüzden onları biz bile göremeyiz.",
     "pillars": {
       "encryption": {
-        "title": "AES-256 + TLS 1.2+",
-        "body": "Belgeleriniz AES-256 ile şifrelenerek saklanır; tüm aktarım TLS 1.2+ üzerinden korunur. Endüstri standardı, müzakere edilmez."
+        "title": "Hesap yok, sunucu yok",
+        "body": "Hesap açmanız, e-posta vermeniz ya da şifre belirlemeniz gerekmez. DocuVault'un belgelerinizi tutan bir sunucusu yoktur; reklam, izleme ve analitik de yoktur."
       },
       "residency": {
-        "title": "EU Veri İkameti",
-        "body": "Şifreli depolama, sektör lideri Supabase altyapısında AB tabanlı uçlarda tutulur. Erişim satır düzeyi güvenlik (RLS) ile yalnızca sizin hesabınıza kısıtlıdır."
+        "title": "Yalnızca sizin iCloud'unuz",
+        "body": "Belgeleriniz, okunan metinleri ve özetleri yalnızca sizin Apple iCloud hesabınızda saklanır. Yazı tanıma ve Apple Intelligence cihazınızda çalışır; belgeleriniz hiçbir sunucuya gönderilmez."
       },
       "biometric": {
-        "title": "Face ID + Yedek PIN",
-        "body": "Biyometrik doğrulama, yedek PIN ve uygulama arka plana alındığında otomatik kilit. Reklam SDK'sı veya IDFA tanımlayıcısı yok."
+        "title": "Face ID ve şifreli paylaşım",
+        "body": "Face ID / Touch ID kilidi; uygulama değiştiricide içerik bulanık. Paylaşım linkleri uçtan uca şifrelidir, anahtar yalnızca linkin içindedir. Yedek dosyası parolanızla şifrelenir."
       }
     },
     "privacyLinkLabel": "Gizlilik Politikasını İncele"
@@ -229,43 +280,51 @@
     "items": [
       {
         "q": "Belgelerim nerede saklanıyor?",
-        "a": "Belgeleriniz, sektör lideri Supabase altyapısında AB tabanlı uçlarda; özel (private) bir alanda AES-256 ile şifrelenerek saklanır ve yalnızca kısa ömürlü güvenli bağlantılarla, TLS 1.2+ üzerinden iletilir. Erişim, satır düzeyi güvenlik (RLS) ile yalnızca sizin hesabınıza kısıtlıdır; DocuVault ekibi belgelerinizi rutin olarak görüntülemez."
+        "a": "Yalnızca sizin Apple iCloud hesabınızda (CloudKit özel veritabanı). DocuVault 2.0'ın belgelerinizi tutan bir sunucusu yoktur ve DocuVault ekibi belgelerinize erişemez. Belgeyi uygulamadan sildiğinizde iCloud'dan da silinir."
       },
       {
-        "q": "Kapsüller nedir ve nasıl çalışır?",
-        "a": "Kapsül, bir işin (vize başvurusu, kira, vergi beyanı gibi) gerektirdiği tüm belgeleri tek bir pakette toplamanızı sağlar. DocuVault hangi belgelerin eksik olduğunu gösterir, gereken bazı form ve dilekçeleri uygulama içinde üretir ve tüm paketi tek bir güvenli bağlantıyla paylaşmanıza olanak tanır. Ücretsiz planda 1 kişisel kapsül; Gold'da sınırsız kapsül ve yapay zekâ destekli özellikler sunulur."
+        "q": "Hesap açmam gerekiyor mu?",
+        "a": "Hayır. DocuVault 2.0'da hesap, e-posta veya şifre yoktur; uygulamayı indirip hemen kullanmaya başlarsınız. Aynı Apple hesabıyla oturum açtığınız iPhone'lar arasında belgeleriniz iCloud ile eşitlenir."
+      },
+      {
+        "q": "Yapay zekâ belgelerimi bir sunucuya gönderiyor mu?",
+        "a": "Hayır. Yazı tanıma cihazınızda yapılır; özet, \"Öne çıkanlar\" ve Belgeye Sor Apple'ın cihazdaki modeliyle (Apple Intelligence) çalışır. Belgeleriniz internete gönderilmez ve model eğitimi için kullanılmaz. Apple Intelligence özellikleri iPhone 15 Pro ve sonrasında kullanılabilir."
+      },
+      {
+        "q": "Belge Setleri nedir?",
+        "a": "Bir işin (vize başvurusu, ev kiralama, işe giriş, araç satışı, vergi dönemi) gerektirdiği belgeleri tek listede toplar ve eksikleri gösterir. Hazır şablonları kullanabilir ya da \"Almanya öğrenci vizesi\" gibi yazıp Apple Intelligence ile kendi listenizi oluşturabilirsiniz. Ücretsiz planda 1 set ve 1 yapay zekâ denemesi, Plus'ta sınırsız set vardır."
       },
       {
         "q": "Belgelerimi paylaşırken hassas bilgilerim korunur mu?",
-        "a": "Evet. Paylaşmadan önce DocuVault; kimlik numarası, IBAN, imza ve yüz gibi hassas alanları otomatik olarak algılar ve neyin karartılacağına siz karar verirsiniz. Onayladığınız karartma, paylaşılan kopyanın içine kalıcı olarak işlenir; orijinal belgeniz olduğu gibi kalır. Oluşan bağlantıyı WhatsApp'tan veya istediğiniz kanaldan paylaşabilirsiniz; alıcı uygulama kurmadan tarayıcıda açar. Bağlantılar süreli ve iptal edilebilir; ne zaman açıldığını teslim makbuzundan görürsünüz."
+        "a": "Evet. DocuVault kimlik numarası, IBAN, kart ve telefon numaralarını otomatik bulur; onayladığınız alanlar kalıcı olarak karartılır. Plus ile oluşturduğunuz paylaşım linkleri uçtan uca şifreli ve sürelidir; anahtar yalnızca linkin içindedir, alıcı uygulama kurmadan tarayıcıda açar."
+      },
+      {
+        "q": "Acil Durum Kartı nasıl çalışır?",
+        "a": "Kan grubu, alerjiler, ilaçlar ve acil kişileri tek kartta tutar. Kilit ekranı widget'ı ve Siri ile hızlıca ulaşabilir, Apple Watch'ta da görebilirsiniz. Kart yalnızca cihazınızda (ve eşlenmiş Apple Watch'ınızda) saklanır, iCloud'a gönderilmez."
+      },
+      {
+        "q": "Plus'ta neler var, bittiğinde ne olur?",
+        "a": "Plus sınırsız belge, sınırsız Belgeye Sor, sınırsız imza, Aile Kasası, şifreli paylaşım linkleri, birden çok hatırlatma zamanı ve harcama grafiklerini açar; Aile Paylaşımı ile ailenizle paylaşılabilir. Plus bittiğinde hiçbir belgeniz kilitlenmez; yalnızca ücretsiz plan sınırlarının üstündeki yeni eklemeler durur."
       },
       {
         "q": "Aboneliğimi nasıl iptal ederim?",
-        "a": "iPhone'unuzun Ayarlar > Apple ID > Abonelikler menüsünden istediğiniz zaman yönetebilir veya iptal edebilirsiniz. Mevcut dönem bitmeden en az 24 saat önce iptal edilmezse abonelik otomatik yenilenir."
+        "a": "iPhone'unuzun Ayarlar > [adınız] > Abonelikler menüsünden istediğiniz zaman yönetebilir veya iptal edebilirsiniz. Mevcut dönem bitmeden en az 24 saat önce iptal edilmezse abonelik otomatik yenilenir."
       },
       {
-        "q": "AI özetleme ve arama belgelerimi eğitime mi kullanıyor?",
-        "a": "Hayır. AI Yönetici Özeti ve doğal dil arama için belge içeriğinin küçük bir parçası işlem süresince yapay zekâ servisine gönderilir; işlem bitince kalıcı kayıt tutulmaz. İçerikleriniz model eğitimi veya başka bir veri ürünü için kullanılmaz, satılmaz."
+        "q": "DocuVault 1.x kullanıyordum. Belgelerime ne olacak?",
+        "a": "Kasa ekranındaki \"DocuVault'u daha önce kullandın mı?\" kartından eski hesabınıza bir kez giriş yaparak belgelerinizi 2.0'a taşıyabilirsiniz. Taşınan belgeler sizin iCloud'unuza kaydedilir."
+      },
+      {
+        "q": "Verilerimi nasıl silerim?",
+        "a": "Bir belgeyi uygulamada silmeniz onu iCloud'dan da siler. Tüm DocuVault verilerini silmek için iPhone Ayarlar > [adınız] > iCloud > Depolamayı Yönet > DocuVault yolunu kullanabilirsiniz. Silinecek bir hesap yoktur."
       },
       {
         "q": "Android sürümü ne zaman çıkacak?",
-        "a": "DocuVault şu an yalnızca iPhone için sunuluyor ve arayüzü tamamen iOS'a göre optimize edildi. Android için kesin bir tarih veya taahhüt paylaşamıyoruz."
-      },
-      {
-        "q": "Hesabımı silebilir miyim?",
-        "a": "Evet, uygulamadan Profil > Hesabı Sil seçeneğiyle istediğiniz zaman silebilirsiniz. Belgeleriniz hem cihazınızdan hem de buluttan eş zamanlı kaldırılır; tüm yedek katmanlardan tamamen silinmesi 30 günü bulabilir."
-      },
-      {
-        "q": "Hangi cihazları destekliyor?",
-        "a": "iOS 15.1 ve üzeri tüm iPhone'lar (iPhone XR ve sonrası önerilir). iPad'de iPhone arayüzüyle çalışır; iPad'e özel ayrı bir arayüz için kesin bir taahhüdümüz yok."
-      },
-      {
-        "q": "Aile paylaşımı veya çoklu cihaz desteği var mı?",
-        "a": "Aynı Apple ID ile birden çok cihazda kullanabilirsiniz. Belgelerinizi başkalarıyla paylaşmak için Güvenli Bağlantı özelliğini kullanabilirsiniz: süreli, iptal edilebilir ve teslim makbuzlu bir bağlantı oluşturur, alıcı uygulama kurmadan tarayıcıda açar. Aile paylaşımı (Family Sharing) ise abonelikler için Apple'ın standart çerçevesinde değerlendirilir."
+        "a": "DocuVault, Apple teknolojileriyle (iCloud, Apple Intelligence, Face ID) yerel olarak yazıldığı için yalnızca iPhone için sunuluyor. Android için bir planımız yok."
       },
       {
         "q": "İnternet olmadan da çalışıyor mu?",
-        "a": "Evet, kasaya alınmış belgelerinize çevrimdışı erişebilirsiniz. AI özetleme ve doğal dil arama gibi bulut tabanlı özellikler internet bağlantısı gerektirir."
+        "a": "Evet. Tarama, yazı tanıma, arama, özet ve Belgeye Sor cihazınızda çalıştığı için internet gerekmez. iCloud senkronu, Aile Kasası ve paylaşım linkleri bağlantı geldiğinde çalışır."
       }
     ]
   },
@@ -284,14 +343,14 @@
       },
       "email": {
         "title": "E-posta Desteği",
-        "body": "Teknik sorunlar, hesap işlemleri veya geri bildirimleriniz için bize yazın."
+        "body": "Teknik sorunlar, abonelik işlemleri veya geri bildirimleriniz için bize yazın."
       }
     },
     "emailLabel": "Destek e-postamız"
   },
   "finalCta": {
     "title": "Belge kaosuna bugün son verin.",
-    "subtitle": "DocuVault'u ücretsiz indirin. Dakikalar içinde kasanızı kurun, belgelerinizi güvenle saklayın.",
+    "subtitle": "DocuVault'u ücretsiz indirin. Hesap açmadan dakikalar içinde kasanızı kurun; belgeleriniz yalnızca sizin iCloud'unuzda.",
     "qrLabel": "Telefonunuzla tara\nuygulamayı aç"
   },
   "appStore": {
@@ -323,7 +382,7 @@
     "noPosts": "Henüz yazı yok.",
     "back": "Tüm yazılar",
     "ctaTitle": "DocuVault'u indirin",
-    "ctaSubtitle": "Yerleşik tarayıcı, AI özetleme ve doğal dil arama — tek bir uygulamada.",
+    "ctaSubtitle": "Tara, özetle, hatırlat, sakla — hesap yok, sunucu yok.",
     "ctaButton": "App Store'dan indir"
   },
   "footer": {
