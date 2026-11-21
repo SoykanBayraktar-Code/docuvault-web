@@ -14,7 +14,7 @@
   "cookieBanner": {
     "ariaLabel": "Cookie preferences",
     "title": "Allow cookies?",
-    "body": "We use essential cookies to improve your experience and collect anonymous usage stats. For details, see our",
+    "body": "This website uses essential cookies to improve your experience and collect anonymous visit stats. The app itself has no cookies, analytics or tracking. For details, see our",
     "privacyLink": "Privacy Policy",
     "accept": "Accept",
     "reject": "Essential only",
@@ -23,11 +23,11 @@
   "metadata": {
     "title": "DocuVault — Your Documents, Safe. Found in Seconds.",
     "titleTemplate": "%s | DocuVault",
-    "description": "Built-in scanner, AI summaries and natural-language search, plus task-based Capsules and privacy-conscious secure sharing — all your critical documents in one encrypted vault. For iOS. Turkish and English.",
-    "ogTitle": "DocuVault — Your Documents, Safe. Found in Seconds.",
-    "ogDescription": "Built-in scanner, AI summaries, natural-language search, Capsules and secure sharing — all your documents in one encrypted vault. For iOS.",
-    "twTitle": "DocuVault — Your Documents, Safe.",
-    "twDescription": "Built-in scanner, AI summary and natural-language search. Encrypted document vault for iOS."
+    "description": "No account, no servers. DocuVault scans your documents, reads them on your device, summarizes them with Apple Intelligence and reminds you before anything is due. Your documents stay in your own iCloud. For iPhone, in English and Turkish.",
+    "ogTitle": "DocuVault 2.0 — No account, no servers",
+    "ogDescription": "Scan, summarize, remind, store. Documents are read on your device, summarized by Apple Intelligence and stored only in your own iCloud.",
+    "twTitle": "DocuVault 2.0 — Your Documents, Safe",
+    "twDescription": "No account, no servers. On-device text recognition, Apple Intelligence summaries and due date reminders."
   },
   "nav": {
     "features": "Features",
@@ -41,109 +41,105 @@
     "homeAriaLabel": "DocuVault home"
   },
   "hero": {
-    "badge": "Version 1.4.1 · Capsules · Secure Sharing",
+    "badge": "DocuVault 2.0 · No account · No servers",
     "title1": "Your documents, safe.",
     "title2Highlight": "Found in seconds",
     "title2Rest": ".",
-    "subtitle": "Digitize instantly with the built-in scanner. AI summarizes, natural language finds, AES-256 protects — all in one app.",
+    "subtitle": "Scan it; DocuVault reads it on your device, summarizes it with Apple Intelligence and reminds you before it's due. No account to create, and your documents are stored only in your own iCloud.",
     "trustFaceId": "Face ID / Touch ID",
-    "trustEncrypted": "AES-256 encrypted",
-    "trustCloud": "Cloud backup",
-    "trustDark": "Dark mode",
+    "trustEncrypted": "On-device AI",
+    "trustCloud": "Only your iCloud",
+    "trustDark": "No account needed",
     "imageAlt": "DocuVault mobile app interface"
   },
   "features": {
     "eyebrow": "Features",
     "title1": "Modern document management,",
-    "titleHighlight": "handcrafted",
+    "titleHighlight": "entirely on your device",
     "title2": ".",
-    "subtitle": "Security, speed and intelligence — combined in a single app. Every detail designed with the discipline of a master archivist.",
+    "subtitle": "DocuVault 2.0 was rebuilt from the ground up with Apple technologies. DocuVault has no servers, no ads, no tracking and no analytics.",
     "items": {
       "scanner": {
-        "title": "Built-in Document Scanner",
-        "body": "Automatic edge detection, multi-page PDF stitching and skew correction. No third-party app required."
+        "title": "Scan and Auto-Fill",
+        "body": "A multi-page scanner with automatic edge detection; add from Photos, Files or the Share menu. Text is read on your device, and the name, category, due date and amount fill in automatically."
       },
       "aiSummary": {
-        "title": "AI Executive Summary",
-        "body": "Meaningful summary, critical points and recommendations for every document you upload. Get the gist in 30 seconds instead of hours of reading."
+        "title": "Summaries with Apple Intelligence",
+        "body": "A short summary and \"Highlights\" for every document: terms, amounts, dates. All on device; your documents are never sent to the internet."
       },
-      "capsules": {
-        "title": "Capsules",
-        "body": "Bundle every document a real-life task needs into one Capsule — a visa application, a tax filing, a rental. The app shows what's missing, generates the forms and petitions you need, and shares the whole bundle as one secure link.",
+      "askDocument": {
+        "title": "Ask Document",
+        "body": "Get answers to questions like \"What's the deductible?\" or \"When does the contract end?\" straight from the document. With Apple Intelligence, on your device.",
         "badge": "New"
       },
-      "secureSharing": {
-        "title": "Secure Sharing",
-        "body": "Before you share, DocuVault automatically detects sensitive fields (national ID, IBAN, signatures, faces) and lets you approve what gets redacted — permanently burned into the shared copy. Share the expiring, revocable link over WhatsApp — the recipient opens it in a browser, no app required.",
+      "reminders": {
+        "title": "Reminders and Spending",
+        "body": "Notifications for payment due dates, policy expiry and warranties; add to Calendar with one tap. A monthly spending summary and upcoming payments from the amounts on your bills."
+      },
+      "editing": {
+        "title": "Sign, Redact, Edit",
+        "body": "Sign documents with your finger. Find and permanently redact ID numbers, IBANs, card and phone numbers. Reorder, rotate and delete pages."
+      },
+      "documentSets": {
+        "title": "Document Sets",
+        "body": "Ready-made lists for visas, renting a home, a new job, selling a car and tax periods; see what's missing at a glance. Create your own set with Apple Intelligence.",
         "badge": "New"
-      },
-      "expiryReminder": {
-        "title": "Expiry Guardian",
-        "body": "Insurance, ID, contracts… DocuVault reminds you before your documents reach their due date. Never miss a renewal.",
-        "badge": "New"
-      },
-      "naturalLanguage": {
-        "title": "Natural-Language AI Search",
-        "body": "Type \"last month's electricity bill\" — AI interprets your query, weighing content and document attributes together."
-      },
-      "voice": {
-        "title": "Voice Command",
-        "body": "Voice search in Turkish and English. Reach your documents hands-free, with a single spoken command."
-      },
-      "smartNaming": {
-        "title": "Smart Naming",
-        "body": "AI reads the content and files it as \"Electricity Bill — March 2026\" instead of \"IMG_4519\", sorting it into the right one of 8 built-in categories."
       },
       "collections": {
-        "title": "Custom Collections",
-        "body": "Home, work, health — unlimited collections with your own icon and color. Find related documents at a single glance."
+        "title": "Collections and Search",
+        "body": "Group documents in collections like \"Home\" or \"Car\". Search finds words in document names and even inside the documents themselves."
       },
-      "aiDocGen": {
-        "title": "AI Document & Petition Generator",
-        "body": "Answer a few prompts and let AI draft low-risk documents like petitions, declarations and applications. Review an editable preview, then save as PDF or share."
+      "emergencyCard": {
+        "title": "Emergency Card",
+        "body": "Blood type, allergies, medications and emergency contacts on one card. From the Lock Screen widget and Siri, and on Apple Watch. The card is never sent to iCloud.",
+        "badge": "New"
       },
-      "shareExtension": {
-        "title": "Share Extension",
-        "body": "Send a document or PDF straight from another app into your DocuVault vault via the iOS share sheet — no app-switching required."
+      "familyVault": {
+        "title": "Family Vault",
+        "body": "Share the documents you choose with your partner and family through iCloud sharing; invited members join for free. With Plus."
       },
-      "quickActions": {
-        "title": "Home Screen Quick Actions",
-        "body": "Press and hold the app icon to jump straight to scanning or search in one tap. Your most common tasks, right at your fingertips."
+      "shareLinks": {
+        "title": "Encrypted Share Links",
+        "body": "End-to-end encrypted, expiring links. The key lives only in the link; recipients open it in their browser without installing anything. With Plus."
       },
-      "accessibility": {
-        "title": "Accessibility & Dark Mode",
-        "body": "A warm-toned dark mode, VoiceOver labels, Reduce Motion support and focus management in modals. A comfortable, platform-crafted experience for everyone."
+      "backup": {
+        "title": "Encrypted Backup",
+        "body": "Back up your whole vault to a single password-encrypted file and keep it in Files, on your computer or on a USB drive."
+      },
+      "shortcuts": {
+        "title": "Siri, Shortcuts and Widgets",
+        "body": "Siri, Shortcuts, Visual Intelligence, Home Screen and Lock Screen widgets, and Control Center buttons. In English and Turkish."
       }
     }
   },
   "howItWorks": {
     "eyebrow": "How It Works",
     "title": "Document chaos ends in five steps.",
-    "subtitle": "Scan, organize, summarize, find and store securely. DocuVault handles the rest.",
+    "subtitle": "Scan, organize, summarize, find and store safely. All on your device.",
     "steps": {
       "scan": {
-        "title": "Scan or Upload",
-        "body": "Open the built-in scanner and frame the page — automatic edge detection, multi-page PDF and skew correction happen in the background. Gallery, camera and file upload are all supported.",
-        "alt": "Document scan and upload screen"
+        "title": "Scan or Add",
+        "body": "The built-in scanner finds the edges automatically and creates multi-page PDFs. You can also add from Photos, Files or the Share menu (Mail, WhatsApp, Safari).",
+        "alt": "Document scanning and import screen"
       },
       "organize": {
-        "title": "AI Organizes",
-        "body": "AI reads the content, saves it under a meaningful name (e.g. \"Electricity Bill — March 2026\") and assigns it to the right one of 8 built-in categories.",
+        "title": "It Fills Itself In",
+        "body": "Text is read on your device; the name, category, due date and amount fill in automatically. Duplicate documents are detected.",
         "alt": "Collections and categories screen"
       },
       "summary": {
-        "title": "Read the Executive Summary",
-        "body": "On the document detail screen, AI gives you the summary, critical points and recommendations within seconds. The gist in 30 seconds, not hours of scanning.",
-        "alt": "AI Executive Summary screen"
+        "title": "See the Summary, Ask the Document",
+        "body": "Apple Intelligence prepares a short summary and highlights for every document. Use Ask Document to get answers straight from the document.",
+        "alt": "Document summary screen"
       },
       "find": {
-        "title": "Find with Natural Language",
-        "body": "Type or speak — for natural queries like \"last month's electricity bill\", AI weighs both content and document attributes.",
-        "alt": "Natural-language AI search screen"
+        "title": "Find It in Seconds",
+        "body": "Search works on document names and the text inside them. Reach your documents by voice with Siri and Shortcuts, too.",
+        "alt": "Search screen"
       },
       "secure": {
-        "title": "Store Securely",
-        "body": "AES-256 local encryption, TLS 1.2+ transport, Face ID/Touch ID lock and encrypted cloud backup. Only you have access.",
+        "title": "Store It Safely",
+        "body": "Your documents are stored only in your own iCloud account. With the Face ID / Touch ID lock and a password-encrypted backup file, you stay in control.",
         "alt": "Security and lock screen"
       }
     }
@@ -152,72 +148,127 @@
     "eyebrow": "From the App",
     "title": "Every screen, the calm of an archive.",
     "items": {
-      "vault": { "label": "One Vault", "alt": "All your documents in one place — main vault screen" },
-      "scanner": { "label": "Built-in Scanner", "alt": "One-tap document capture and built-in scanner" },
-      "collections": { "label": "Collections", "alt": "Your own collections — custom icon and color" },
-      "aiSummary": { "label": "AI Summary", "alt": "AI Executive Summary — critical points and recommendations" },
-      "aiSearch": { "label": "Natural-Language Search", "alt": "Natural-language AI search" },
-      "security": { "label": "Security", "alt": "Safe with Face ID — AES-256 and biometric" }
+      "vault": {
+        "label": "One Vault",
+        "alt": "All your documents in one place — main vault screen"
+      },
+      "scanner": {
+        "label": "Built-in Scanner",
+        "alt": "One-tap document capture and built-in scanner"
+      },
+      "collections": {
+        "label": "Collections",
+        "alt": "Your own collections — custom icon and color"
+      },
+      "aiSummary": {
+        "label": "Summary",
+        "alt": "Document summary and highlights"
+      },
+      "aiSearch": {
+        "label": "Search",
+        "alt": "Search in document names and contents"
+      },
+      "security": {
+        "label": "Security",
+        "alt": "Vault locked with Face ID / Touch ID"
+      }
     }
   },
   "pricing": {
     "eyebrow": "Pricing",
     "title": "A plan that fits you.",
-    "subtitle": "Start free, upgrade as your needs grow. Cancel anytime.",
     "freeTitle": "Free",
     "freePrice": "$0",
-    "freeCurrentBadge": "Current Plan",
     "freeCta": "Download the App",
-    "freeFeatures": [
-      "50 MB encrypted cloud storage",
-      "Up to 3 documents/month OCR",
-      "1 personal capsule",
-      "3 secure links / month",
-      "8 built-in categories",
-      "Local search",
-      "Built-in document scanner",
-      "Face ID / PIN protection"
-    ],
-    "goldTitle": "Gold",
     "popularBadge": "Most Popular",
     "monthly": "Monthly",
     "yearly": "Yearly",
-    "yearlyDiscount": "40% off",
-    "monthlyPrice": "$5.49",
     "monthlyPerUnit": "/mo",
-    "monthlyNote": "Billed monthly · Approx. ₺249.99",
-    "yearlyPrice": "$39.99",
     "yearlyPerUnit": "/yr",
-    "yearlyNote": "$3.33/mo · 40% off · Approx. ₺1,799",
+    "subtitle": "Start free and move to Plus as your needs grow. Cancel anytime.",
+    "freeCurrentBadge": "No account needed",
+    "freeFeatures": [
+      "5 documents",
+      "5 Ask Document questions per month",
+      "3 signatures",
+      "1 document set + 1 Apple Intelligence set try",
+      "One reminder time",
+      "Face ID / Touch ID lock",
+      "iCloud sync",
+      "Emergency Card",
+      "Encrypted backup and redaction"
+    ],
+    "goldTitle": "DocuVault Plus",
+    "yearlyDiscount": "2 months free",
+    "monthlyPrice": "$6.99",
+    "monthlyNote": "Renews monthly",
+    "yearlyPrice": "$69.99",
+    "yearlyNote": "1-week free trial · about $5.83/mo",
     "goldComparisons": {
-      "storage": { "label": "Storage", "from": "50 MB", "to": "2 GB (40×)" },
-      "ocr": { "label": "OCR / mo", "from": "3 docs", "to": "Unlimited" },
-      "capsules": { "label": "Capsules", "from": "1 capsule", "to": "Unlimited + AI" },
-      "secureSharing": { "label": "Secure Sharing", "from": "3 / mo", "to": "Unlimited" },
-      "aiSummary": { "label": "AI Executive Summary", "from": "None", "to": "Active" },
-      "naturalLanguage": { "label": "Natural-Language AI Search", "from": "None", "to": "Active" },
-      "voice": { "label": "Voice Command", "from": "None", "to": "Active" },
-      "collections": { "label": "Custom Collections", "from": "None", "to": "Unlimited" }
+      "documents": {
+        "label": "Documents",
+        "from": "5",
+        "to": "Unlimited"
+      },
+      "askDocument": {
+        "label": "Ask Document",
+        "from": "5/mo",
+        "to": "Unlimited"
+      },
+      "signatures": {
+        "label": "Signatures",
+        "from": "3",
+        "to": "Unlimited"
+      },
+      "documentSets": {
+        "label": "Document Sets",
+        "from": "1",
+        "to": "Unlimited"
+      },
+      "familyVault": {
+        "label": "Family Vault",
+        "from": "Join",
+        "to": "Create & invite"
+      },
+      "shareLinks": {
+        "label": "Encrypted links",
+        "from": "None",
+        "to": "Included"
+      },
+      "reminders": {
+        "label": "Reminder times",
+        "from": "1",
+        "to": "Multiple"
+      },
+      "spending": {
+        "label": "Spending charts",
+        "from": "None",
+        "to": "Included"
+      }
     },
-    "goldCta": "Upgrade to Gold",
-    "footnote": "Approximate USD prices shown; final charge may differ slightly with App Store conversion. Subscription is charged to your Apple ID on confirmation. Manage subscriptions through the App Store."
+    "plusNotes": [
+      "Family Sharing: your whole family benefits",
+      "If Plus ends, none of your documents get locked"
+    ],
+    "goldCta": "Try Plus",
+    "footnote": "Plus is offered as monthly and yearly auto-renewing subscriptions; the yearly plan includes a 1-week free trial. Payment is charged to your Apple Account at confirmation of purchase. The subscription renews automatically unless canceled at least 24 hours before the end of the current period; you can manage and cancel it in your App Store account settings. Prices shown are US App Store prices; local prices apply elsewhere."
   },
   "security": {
     "eyebrow": "Security & Privacy",
     "title": "Your privacy is sacred to us.",
-    "subtitle": "Your documents are among the most private parts of your life. We treat them that way.",
+    "subtitle": "Your documents are among the most private parts of your life. That's why even we can't see them.",
     "pillars": {
       "encryption": {
-        "title": "AES-256 + TLS 1.2+",
-        "body": "Your documents are stored encrypted with AES-256, and all transport runs over TLS 1.2+. Industry standard, non-negotiable."
+        "title": "No account, no servers",
+        "body": "No account, no email, no password. DocuVault has no servers holding your documents, and no ads, tracking or analytics."
       },
       "residency": {
-        "title": "EU Data Residency",
-        "body": "Encrypted storage is kept on industry-leading Supabase infrastructure at EU-based endpoints. Access is restricted to your own account with row-level security (RLS)."
+        "title": "Only your iCloud",
+        "body": "Your documents, their recognized text and summaries are stored only in your own Apple iCloud account. Text recognition and Apple Intelligence run on your device; your documents are never sent to any server."
       },
       "biometric": {
-        "title": "Face ID + Backup PIN",
-        "body": "Biometric authentication, backup PIN and automatic lock when the app moves to the background. No ad SDKs, no IDFA identifier."
+        "title": "Face ID and encrypted sharing",
+        "body": "Face ID / Touch ID lock, with content blurred in the app switcher. Share links are end-to-end encrypted and the key lives only in the link. Backup files are encrypted with your password."
       }
     },
     "privacyLinkLabel": "Read the Privacy Policy"
@@ -229,43 +280,51 @@
     "items": [
       {
         "q": "Where are my documents stored?",
-        "a": "Your documents are stored in a private space on industry-leading Supabase infrastructure at EU-based endpoints, encrypted with AES-256 and served only through short-lived secure links over TLS 1.2+. Access is restricted to your account with row-level security (RLS); the DocuVault team does not routinely view your documents."
+        "a": "Only in your own Apple iCloud account (CloudKit private database). DocuVault 2.0 has no servers holding your documents, and the DocuVault team can't access them. Deleting a document in the app also deletes it from iCloud."
       },
       {
-        "q": "What are Capsules and how do they work?",
-        "a": "A Capsule lets you bundle every document a real-life task needs — a visa application, a rental, a tax filing — into one package. DocuVault shows which documents are still missing, can generate some of the forms and petitions you need right inside the app, and lets you share the whole bundle as a single secure link. The free plan includes 1 personal capsule; Gold offers unlimited capsules and AI-powered features."
+        "q": "Do I need to create an account?",
+        "a": "No. DocuVault 2.0 has no account, email or password; download the app and start right away. Your documents sync through iCloud across iPhones signed in to the same Apple Account."
       },
       {
-        "q": "Are my sensitive details protected when I share documents?",
-        "a": "Yes. Before you share, DocuVault automatically detects sensitive fields such as national ID numbers, IBAN, signatures and faces, and you decide what gets redacted. The redaction you approve is permanently burned into the shared copy, while your original stays intact. You can share the resulting link over WhatsApp or any channel; the recipient opens it in a browser without installing the app. Links are time-limited and revocable, and a delivery receipt shows you when they were opened."
+        "q": "Does the AI send my documents to a server?",
+        "a": "No. Text recognition happens on your device; summaries, \"Highlights\" and Ask Document run on Apple's on-device model (Apple Intelligence). Your documents are never sent to the internet or used for model training. Apple Intelligence features are available on iPhone 15 Pro and later."
+      },
+      {
+        "q": "What are Document Sets?",
+        "a": "A Document Set gathers everything a task needs (a visa application, renting a home, a new job, selling a car, a tax period) in one list and shows what's missing. Use a ready-made template or type something like \"German student visa\" to create your own with Apple Intelligence. The free plan includes 1 set and 1 AI try; Plus has unlimited sets."
+      },
+      {
+        "q": "Is my sensitive information protected when I share?",
+        "a": "Yes. DocuVault finds ID numbers, IBANs, card and phone numbers automatically, and the fields you approve are permanently redacted. Share links created with Plus are end-to-end encrypted and expire; the key lives only in the link, and recipients open it in their browser without installing anything."
+      },
+      {
+        "q": "How does the Emergency Card work?",
+        "a": "It keeps your blood type, allergies, medications and emergency contacts on one card. Reach it quickly from the Lock Screen widget and Siri, and see it on Apple Watch. The card is stored only on your device (and paired Apple Watch) and is never sent to iCloud."
+      },
+      {
+        "q": "What's in Plus, and what happens if it ends?",
+        "a": "Plus unlocks unlimited documents, unlimited Ask Document, unlimited signatures, the Family Vault, encrypted share links, multiple reminder times and spending charts, and can be shared with your family through Family Sharing. If Plus ends, none of your documents get locked; only new additions beyond the free limits stop."
       },
       {
         "q": "How do I cancel my subscription?",
-        "a": "Manage or cancel anytime via Settings > Apple ID > Subscriptions on your iPhone. If you do not cancel at least 24 hours before the end of the current period, the subscription renews automatically."
+        "a": "Manage or cancel it anytime from Settings > [your name] > Subscriptions on your iPhone. The subscription renews automatically unless canceled at least 24 hours before the end of the current period."
       },
       {
-        "q": "Are my documents used to train AI?",
-        "a": "No. For AI Executive Summary and natural-language search, a small portion of document content is sent to the AI service during processing; no persistent record is kept after processing. Your content is never used or sold for model training or any other data product."
+        "q": "I used DocuVault 1.x. What happens to my documents?",
+        "a": "Use the \"Have you used DocuVault before?\" card in your vault to sign in to your old account once and move your documents to 2.0. Moved documents are saved to your own iCloud."
       },
       {
-        "q": "When will Android be available?",
-        "a": "DocuVault is currently available for iPhone only, with an interface fully optimized for iOS. We can't share a firm date or commitment for Android at this time."
+        "q": "How do I delete my data?",
+        "a": "Deleting a document in the app also deletes it from iCloud. To remove all DocuVault data, go to iPhone Settings > [your name] > iCloud > Manage Storage > DocuVault. There is no account to delete."
       },
       {
-        "q": "Can I delete my account?",
-        "a": "Yes — anytime via Profile > Delete Account in the app. Documents are removed from both your device and the cloud simultaneously; complete removal across all backup layers may take up to 30 days."
-      },
-      {
-        "q": "Which devices are supported?",
-        "a": "iOS 15.1 and above on all iPhones (iPhone XR or newer recommended). It runs on iPad with the iPhone interface; we don't have a firm commitment for a dedicated iPad interface."
-      },
-      {
-        "q": "Is there Family Sharing or multi-device support?",
-        "a": "You can use the app on multiple devices with the same Apple ID. To share documents with others, use the Secure Link feature: it creates a time-limited, revocable link with a delivery receipt that the recipient opens in a browser without installing the app. Family Sharing follows Apple's standard subscription framework for subscriptions."
+        "q": "When is the Android version coming?",
+        "a": "DocuVault is built natively on Apple technologies (iCloud, Apple Intelligence, Face ID), so it's available for iPhone only. We have no plans for Android."
       },
       {
         "q": "Does it work offline?",
-        "a": "Yes — you can access documents already in your vault offline. Cloud-based features such as AI summarization and natural-language search require an internet connection."
+        "a": "Yes. Scanning, text recognition, search, summaries and Ask Document all run on your device, so no internet is needed. iCloud sync, the Family Vault and share links work once you're connected."
       }
     ]
   },
@@ -284,14 +343,14 @@
       },
       "email": {
         "title": "Email Support",
-        "body": "Write to us for technical issues, account matters or product feedback."
+        "body": "Write to us for technical issues, subscription matters or product feedback."
       }
     },
     "emailLabel": "Support email"
   },
   "finalCta": {
     "title": "End document chaos today.",
-    "subtitle": "Download DocuVault for free. Set up your vault in minutes and store your documents securely.",
+    "subtitle": "Download DocuVault for free. Set up your vault in minutes without an account; your documents stay in your own iCloud.",
     "qrLabel": "Scan with your phone\nto open the app"
   },
   "appStore": {
@@ -323,7 +382,7 @@
     "noPosts": "No posts yet.",
     "back": "All articles",
     "ctaTitle": "Get DocuVault",
-    "ctaSubtitle": "Built-in scanner, AI summarization and natural-language search — in one app.",
+    "ctaSubtitle": "Scan, summarize, remind, store — no account, no servers.",
     "ctaButton": "Download on the App Store"
   },
   "footer": {
