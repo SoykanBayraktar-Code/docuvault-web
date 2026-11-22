@@ -384,6 +384,7 @@ export const privacyTr: LegalCopy = {
       items: [
         "Kişisel verilerinin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltme, silme ve işlemeye itiraz etme haklarına sahipsin.",
         "DocuVault 2.0'da senden kişisel veri tutmadığımız için bu talepler çoğunlukla 1.x verileriyle ilgilidir.",
+        "Veri sorumlusu: WOOWCODE YAZILIM ve TİCARET A.Ş., Şirinyalı Mah. 1533. Sokak No:49/2, Muratpaşa / Antalya / Türkiye.",
         "Haklarını kullanmak için destek@appdocuvault.com adresinden bize ulaş.",
       ],
     },
@@ -510,6 +511,7 @@ export const privacyEn: LegalCopy = {
       items: [
         "You have the right to know whether your personal data is processed, to request information, correction and deletion, and to object to processing.",
         "Since DocuVault 2.0 holds no personal data about you, these requests mostly concern 1.x data.",
+        "Data controller: WOOWCODE YAZILIM ve TİCARET A.Ş., Şirinyalı Mah. 1533. Sokak No:49/2, Muratpaşa, Antalya, Türkiye.",
         "To exercise your rights, contact us at destek@appdocuvault.com.",
       ],
     },
@@ -560,7 +562,8 @@ export const kvkkTr: LegalCopy = {
       icon: Building2,
       title: "Veri Sorumlusunun Kimliği",
       items: [
-        "Veri sorumlusu: DocuVault",
+        "Veri sorumlusu: WOOWCODE YAZILIM ve TİCARET A.Ş. (DocuVault uygulamasının geliştiricisi ve yayıncısı)",
+        "Adres: Şirinyalı Mah. 1533. Sokak No:49/2, Muratpaşa / Antalya / Türkiye",
         "İletişim adresi: destek@appdocuvault.com",
         "Web sitesi: https://www.appdocuvault.com",
         "Hizmet türü: Mobil belge yönetim uygulaması (iOS, iPadOS, watchOS)",
