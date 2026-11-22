@@ -16,6 +16,24 @@ const nextConfig: NextConfig = {
   },
   poweredByHeader: false,
   compress: true,
+  // DocuVault's web pages moved to woowcode.com (22.11.2026). Every page here
+  // redirects permanently to its counterpart there; link.appdocuvault.com (the
+  // share-link viewer) is a separate project and keeps working.
+  async redirects() {
+    const base = "https://www.woowcode.com/apps/docuvault";
+    return [
+      { source: "/en/privacy", destination: `${base}/privacy`, permanent: true },
+      { source: "/privacy", destination: `${base}/gizlilik`, permanent: true },
+      { source: "/tr/privacy", destination: `${base}/gizlilik`, permanent: true },
+      { source: "/en/terms", destination: `${base}/terms`, permanent: true },
+      { source: "/terms", destination: `${base}/kosullar`, permanent: true },
+      { source: "/tr/terms", destination: `${base}/kosullar`, permanent: true },
+      { source: "/:locale(en|tr)?/aydinlatma-metni", destination: `${base}/kvkk`, permanent: true },
+      { source: "/:locale(en|tr)?/kvkk", destination: `${base}/kvkk`, permanent: true },
+      { source: "/", destination: base, permanent: true },
+      { source: "/:path((?!_next|api).*)", destination: base, permanent: true },
+    ];
+  },
   async headers() {
     return [
       {
