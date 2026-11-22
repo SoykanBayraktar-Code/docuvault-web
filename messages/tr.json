@@ -197,13 +197,13 @@
     "popularBadge": "En Popüler",
     "monthly": "Aylık",
     "yearly": "Yıllık",
-    "yearlyDiscount": "2 ay bedava",
+    "yearlyDiscount": "%28 tasarruf",
     "monthlyPrice": "₺349,99",
     "monthlyPerUnit": "/ay",
     "monthlyNote": "Aylık yenilenir",
-    "yearlyPrice": "₺3.499,99",
+    "yearlyPrice": "₺2.999,99",
     "yearlyPerUnit": "/yıl",
-    "yearlyNote": "1 hafta ücretsiz deneme · ayda yaklaşık ₺291,67",
+    "yearlyNote": "1 hafta ücretsiz deneme · ayda yaklaşık ₺250",
     "goldComparisons": {
       "documents": {
         "label": "Belge",

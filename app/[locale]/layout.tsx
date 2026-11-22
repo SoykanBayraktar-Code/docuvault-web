@@ -158,7 +158,7 @@ export default async function LocaleLayout({
       {
         "@type": "Offer",
         name: locale === "en" ? "DocuVault Plus Yearly" : "DocuVault Plus Yıllık",
-        price: locale === "en" ? "69.99" : "3499.99",
+        price: locale === "en" ? "59.99" : "2999.99",
         priceCurrency: locale === "en" ? "USD" : "TRY",
       },
     ],
