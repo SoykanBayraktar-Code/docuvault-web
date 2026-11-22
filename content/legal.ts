@@ -47,7 +47,7 @@ export const termsTr: LegalCopy = {
   pageTitle: "Kullanım Şartları",
   pageDescription:
     "DocuVault kullanım şartları — hizmetin tanımı, DocuVault Plus aboneliği, kullanıcı sorumlulukları ve yasal bilgiler.",
-  lastUpdated: "Son güncelleme: 21 Kasım 2026",
+  lastUpdated: "Son güncelleme: 22 Kasım 2026",
   intro:
     "DocuVault'u kullanarak aşağıdaki şartları kabul etmiş olursunuz. Lütfen dikkatlice okuyunuz. Kişisel verilerin nasıl işlendiği Gizlilik Politikası'nda anlatılır.",
   headerIcon: FileText,
@@ -58,6 +58,7 @@ export const termsTr: LegalCopy = {
       icon: Info,
       title: "Hizmetin Tanımı",
       items: [
+        "DocuVault, WOOWCODE YAZILIM ve TİCARET A.Ş. (Şirinyalı Mah. 1533. Sokak No:49/2, Muratpaşa / Antalya / Türkiye) tarafından geliştirilen ve yayınlanan bir uygulamadır. Bu şartlarda \"biz\" ifadesi bu şirketi anlatır.",
         "DocuVault, kişisel belgelerinizi (faturalar, kimlik, sözleşmeler, poliçeler vb.) taramak, düzenlemek, aramak ve saklamak için tasarlanmış bir iPhone, iPad ve Apple Watch uygulamasıdır.",
         "DocuVault 2.0'da belgeler cihazınızda işlenir ve Apple iCloud hesabınızda saklanır; DocuVault'un belgelerinizi tutan bir sunucusu yoktur.",
         "Hizmet, ücretsiz bir plan ve \"DocuVault Plus\" adlı ücretli bir abonelik içerir. Planların içeriği uygulamada ve App Store sayfasında gösterilir.",
@@ -154,7 +155,7 @@ export const termsTr: LegalCopy = {
       title: "Uygulanacak Hukuk",
       items: [
         "Bu sözleşme Türkiye Cumhuriyeti yasalarına tabidir.",
-        "Anlaşmazlıklar İstanbul Mahkemeleri ve İcra Daireleri'nde çözülür.",
+        "Anlaşmazlıklarda Antalya Mahkemeleri ve İcra Daireleri yetkilidir. Tüketici olarak kanundan doğan haklarınız (tüketici hakem heyetleri ve yerleşim yerinizdeki tüketici mahkemeleri dahil) saklıdır.",
       ],
     },
   ],
@@ -164,7 +165,7 @@ export const termsEn: LegalCopy = {
   pageTitle: "Terms of Use",
   pageDescription:
     "DocuVault terms of use — service description, DocuVault Plus subscription, user responsibilities and legal information.",
-  lastUpdated: "Last updated: November 21, 2026",
+  lastUpdated: "Last updated: November 22, 2026",
   intro:
     "By using DocuVault you agree to the following terms. Please read them carefully. How personal data is handled is described in the Privacy Policy.",
   headerIcon: FileText,
@@ -175,6 +176,7 @@ export const termsEn: LegalCopy = {
       icon: Info,
       title: "Service Description",
       items: [
+        "DocuVault is developed and published by WOOWCODE YAZILIM ve TİCARET A.Ş. (Şirinyalı Mah. 1533. Sokak No:49/2, Muratpaşa, Antalya, Türkiye). In these terms, \"we\" means this company.",
         "DocuVault is an iPhone, iPad and Apple Watch app for scanning, organizing, searching and storing personal documents (bills, IDs, contracts, insurance policies, etc.).",
         "In DocuVault 2.0, documents are processed on your device and stored in your Apple iCloud account; DocuVault has no server that holds your documents.",
         "The service includes a free plan and a paid subscription called \"DocuVault Plus\". What each plan includes is shown in the app and on the App Store page.",
@@ -271,7 +273,7 @@ export const termsEn: LegalCopy = {
       title: "Governing Law",
       items: [
         "This agreement is governed by the laws of the Republic of Türkiye.",
-        "Disputes shall be resolved before the courts and enforcement offices of Istanbul.",
+        "The courts and enforcement offices of Antalya have jurisdiction over disputes. Your statutory rights as a consumer (including consumer arbitration committees and consumer courts where you live) are not affected.",
       ],
     },
   ],
@@ -285,7 +287,7 @@ export const privacyTr: LegalCopy = {
   pageTitle: "Gizlilik Politikası",
   pageDescription:
     "DocuVault gizlilik politikası — DocuVault 2.0'da hesap ve sunucu yoktur; belgeler cihazda işlenir ve yalnızca kullanıcının iCloud hesabında saklanır.",
-  lastUpdated: "Son güncelleme: 21 Kasım 2026",
+  lastUpdated: "Son güncelleme: 22 Kasım 2026",
   intro:
     "DocuVault 2.0'da hesap yoktur ve DocuVault'un belgelerini tuttuğu bir sunucusu yoktur. Belgelerin cihazında işlenir ve yalnızca senin Apple iCloud hesabında saklanır. Bu sayfanın sonunda, eski sürümü (1.x) kullananlar için geçiş dönemi bilgileri yer alır.",
   headerIcon: ShieldCheck,
@@ -412,7 +414,7 @@ export const privacyEn: LegalCopy = {
   pageTitle: "Privacy Policy",
   pageDescription:
     "DocuVault privacy policy — DocuVault 2.0 has no account and no servers; documents are processed on device and stored only in the user's iCloud account.",
-  lastUpdated: "Last updated: November 21, 2026",
+  lastUpdated: "Last updated: November 22, 2026",
   intro:
     "DocuVault 2.0 has no account, and DocuVault has no server that holds your documents. Your documents are processed on your device and stored only in your own Apple iCloud account. At the end of this page you will find transition details for people using the old version (1.x).",
   headerIcon: ShieldCheck,
@@ -551,7 +553,7 @@ export const kvkkTr: LegalCopy = {
   pageTitle: "KVKK Aydınlatma Metni",
   pageDescription:
     "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında DocuVault aydınlatma metni — veri sorumlusu, işleme amaçları, veri sahibi hakları ve başvuru yöntemleri.",
-  lastUpdated: "Son güncelleme: 21 Kasım 2026",
+  lastUpdated: "Son güncelleme: 22 Kasım 2026",
   intro:
     "6698 sayılı Kişisel Verilerin Korunması Kanunu (\"KVKK\") Madde 10 uyarınca, kişisel verilerinizin işlenmesine ilişkin bu aydınlatma metnini bilgilerinize sunarız. DocuVault 2.0'da hesap yoktur ve belgeleriniz bizim sunucumuzda değil, kendi iCloud hesabınızda saklanır; bu nedenle 2.0 kapsamında işlediğimiz kişisel veri çok sınırlıdır.",
   headerIcon: Scale,
